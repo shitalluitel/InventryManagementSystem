@@ -1,0 +1,91 @@
+.form-horizontal .control-label {
+    text-align: left;
+}
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        font-size: 16px;
+    }
+
+    .dropdown-menu > li > a {
+        font-size: 15px;
+    }
+
+    .dropdown-menu > li > a > .fa {
+        font-size: 18px;
+    }
+}
+
+.alert-error {
+    background-color: #ee0007;
+    border-color: #ee0007;
+    color: #fff0f9;
+    text-align: left;
+}
+
+.fa-trash-color {
+    color: red;
+}
+
+.fa-heart {
+    color: red;
+}
+
+/* Credit to bootsnipp.com for the css for the color graph */
+/*For Login page*/
+
+body {
+    font-family: 'Lato', 'Open Sans', sans-serif;
+}
+
+.login-message {
+    color: white;
+    background-color: #ff0039;
+    border-color: #ff0039;
+}
+
+.inventory-title {
+    margin-bottom: 85px;
+}
+
+.login-form {
+    margin-top: 80px;
+}
+
+/*ends here*/
+
+/*for navigation bar*/
+.navbar-brand > img, .navbar-brand {
+    max-height: 100%;
+}
+
+.navbar-login {
+    min-height: 76px;
+}
+
+/*ende here*/
+
+/*For company profile */
+.table {
+    border-bottom: 0px !important;
+}
+
+.table th, .table td {
+    border: 1px !important;
+}
+
+.fixed-table-container {
+    border: 0px !important;
+}
+
+table>tbody>tr>.text-doc,table>tbody>tr>.text-doc>a{
+    color: #812c28;
+    font-weight: bold;
+}
+
+table>tbody>tr>.text-doc>a:hover{
+    text-decoration: none;
+    color: #1000ee;
+}
+
+/*!*ends here*!*/

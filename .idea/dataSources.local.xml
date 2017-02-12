@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - zefinsys_development@localhost" uuid="db6b4976-3368-48e1-b266-9cc074dcdb9a">
+      <database-info product="PostgreSQL" version="9.5.4" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>shital</user-name>
+      <introspection-scope>zefinsys_development:pg_catalog,public,shital</introspection-scope>
+      <resolve-scope>zefinsys_development:public,shital</resolve-scope>
+    </data-source>
+  </component>
+</project>

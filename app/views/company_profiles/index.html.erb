@@ -1,0 +1,91 @@
+<% if @company_profile.nil? %>
+    <a href="<%= new_company_profile_path %>">Create Company</a>
+<%else %>
+    <% @company_profile.each do |companyprofile| %>
+        <div class="row">
+          <div class="col-md-3 col-xs-6">
+            <a target="_blank" href="<%= companyprofile.logo.url %>"><%= image_tag companyprofile.logo.thumb.url, :class => "img img-student img-responsive img-thumbnail" %></a>
+            <br>
+            <br>
+            <a href="<%= edit_company_profile_path(companyprofile) %>" class="btn btn-success"><i class="fa fa-edit fa-fw">&nbsp;</i>Edit company</a>
+            <br>
+            <br>
+            <a title="Delete Record" data-toggle="tooltip" data-confirm="Are you sure to delete" rel="nofollow" data-method="delete" href="<%= company_profile_path(companyprofile) %> " class="btn btn-danger" >
+              <i class="fa fa-trash fa-th-large">&nbsp;</i>
+              Delete Company
+            </a>
+          </div>
+          <div class="col-md-4 col-xs-3">
+            <table class="table table-profile">
+              <tbody>
+              <tr>
+                <th class="col-xs-4 text-success ">
+                  Name:
+                </th>
+                <td class="text-doc">
+                  <%= companyprofile.name %>
+                </td>
+              </tr>
+              <tr>
+                <th class="col-xs-4 text-success">
+                  Vat/Pan Number:
+                </th>
+                <td class="text-doc">
+                  <%= companyprofile.vat_pan_no %>
+                </td>
+              </tr>
+              <tr>
+                <th class="col-xs-4 text-success">
+                  Address:
+                </th>
+                <td class="text-doc">
+                  <%= companyprofile.address %>
+                </td>
+              </tr>
+              <tr>
+                <th class="col-xs-4 text-success">
+                  VDC/MUN:
+                </th>
+                <td class="text-doc">
+                  <%= companyprofile.vdc_mun %>
+                </td>
+              </tr>
+              <tr>
+                <th class="col-xs-4 text-success">
+                  District:
+                </th>
+                <td class="text-doc">
+                  <%= companyprofile.district %>
+                </td>
+              </tr>
+              <tr>
+                <th class="col-xs-4 text-success">
+                  Zone:
+                </th>
+                <td class="text-doc">
+                  <%= companyprofile.zone %>
+                </td>
+              </tr>
+              <tr>
+                <th class="col-xs-4 text-success">
+                  Email:
+                </th>
+                <td class="text-doc">
+                  <%= companyprofile.email%>
+                </td>
+              </tr>
+              <tr>
+                <th class="col-xs-4 text-success">
+                  Website:
+                </th>
+                <td class="text-doc">
+                  <a class="company-website" href="http://<%= companyprofile.website %>"><%= companyprofile.website %></a>
+                </td>
+              </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+    <% end %>
+<% end %>

@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-hover">
+      <thead>
+      <tr class="bg-primary">
+        <th>S.N.</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Time</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <% @logs.each_with_index do |u, i| %>
+          <tbody>
+          <tr>
+            <td><%= (@page.to_i - 1) * @perpage + i+1 %></td>
+            <td>
+              <% if u.user.first_name.present? %>
+                  <%= u.user.first_name.slice(0, 1).capitalize + u.user.first_name.slice(1..-1) %>
+              <% end %>
+              <% if u.user.middle_name.present? %>
+                  <%= u.user.middle_name.slice(0, 1).capitalize + u.user.middle_name.slice(1..-1) %>
+              <% end %>
+              <% if u.user.last_name.present? %>
+                  <%= u.user.last_name.slice(0, 1).capitalize + u.user.last_name.slice(1..-1) %>
+              <% end %>
+            </td>
+            <td>
+              <%= u.user.email %>
+            </td>
+            <td>
+              <%= u.created_at %>
+            </td>
+            <td><%= u.description %>
+            </td>
+          </tr>
+          </tbody>
+      <% end %>
+    </table>
+  </div>
+</div>
+<%= will_paginate @logs, renderer: BootstrapPagination::Rails %>

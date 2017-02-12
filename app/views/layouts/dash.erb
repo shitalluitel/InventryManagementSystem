@@ -1,0 +1,21 @@
+<%= render "shared/header" %>
+<body>
+<%= render "shared/navigation" %>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<div class="container-fluid">
+  <% unless flash.empty? %>
+      <script type="text/javascript">
+        <% flash.each do |f| %>
+            <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info') %>
+            toastr['<%= type %>']('<%= f[1] %>');
+        <% end %>
+      </script>
+  <% end %>
+  <%= yield %>
+</div>
+<hr>
+<div class="container-fluid ">
+  <%= render "shared/footer" %>
+</div>
+</body>
+</html>

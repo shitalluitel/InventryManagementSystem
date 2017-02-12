@@ -1,0 +1,60 @@
+<fieldset>
+
+  <div class="row">
+    <div class="col-md-offset-3 col-md-6">
+      <div class="alert-danger login-message">
+        <% unless flash.empty? %>
+            <script type="text/javascript">
+              <% flash.each do |f| %>
+                <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info') %>
+                toastr['<%= type %>']('<%= f[1] %>');
+              <% end %>
+            </script>
+        <% end %>
+
+      </div>
+      <div class="login-form well tt-modal">
+        <div class="row ">
+          <div class="inventory-title">
+            <div class="col-md-12">
+              <h3 class="text-center">Inventory Management</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <%= f.text_field :email, autofocus: true, :class => 'form-control ', :placeholder => 'Username or Email Address' %>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <%= f.password_field :password, autocomplete: "off", :class => 'form-control', :placeholder => 'Password' %>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <%= f.submit "Log in", :class => 'btn btn-primary btn-block' %>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                  <% if devise_mapping.rememberable? -%>
+                        <span class=" pull-left">
+                           <%= f.check_box :remember_me %> Remember Me
+                       </span>
+                  <% end -%>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                  <% if devise_mapping.recoverable? -%>
+                      <%= link_to "Forgot password?", new_password_path(resource_name) %>
+                  <% end -%>
+                </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</fieldset>
