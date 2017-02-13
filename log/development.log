@@ -45618,3 +45618,780 @@ Completed 200 OK in 3822ms (Views: 1217.6ms | ActiveRecord: 2253.9ms)
   Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
   Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (555.3ms)
+Started GET "/" for 127.0.0.1 at 2017-02-13 08:24:18 +0545
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2017-02-13 08:24:19 +0545
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs"[0m
+  Rendering admin/index.html.erb within layouts/dash
+  Rendered admin/index.html.erb within layouts/dash (9.7ms)
+  Rendered shared/_header.html.erb (1403.6ms)
+  Rendered shared/_navigation.erb (2.7ms)
+  Rendered shared/_footer.erb (0.5ms)
+Completed 200 OK in 2052ms (Views: 1669.6ms | ActiveRecord: 27.2ms)
+
+
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs"[0m
+  Rendering admin/index.html.erb within layouts/dash
+  Rendered admin/index.html.erb within layouts/dash (0.2ms)
+  Rendered shared/_header.html.erb (28.5ms)
+  Rendered shared/_navigation.erb (1.1ms)
+  Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 61ms (Views: 33.1ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/admin/user" for 127.0.0.1 at 2017-02-13 08:24:24 +0545
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /home/shital/InventorySystem/app/controllers/users_controller.rb:2)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /home/shital/InventorySystem/app/controllers/users_controller.rb:3)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.3ms)
+
+
+  
+ArgumentError (unsupported parameters: :order):
+  
+app/controllers/users_controller.rb:12:in `index'
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.2ms)
+Started GET "/admin/user" for 127.0.0.1 at 2017-02-13 08:24:46 +0545
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /home/shital/InventorySystem/app/controllers/users_controller.rb:2)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /home/shital/InventorySystem/app/controllers/users_controller.rb:3)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/dash
+  [1m[36mUser Load (69.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE ("users"."id" != $1) AND ("users"."order" != $2) LIMIT $3 OFFSET $4[0m  [["id", 22], ["order", "first_name  ASC"], ["LIMIT", 10], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/dash (72.3ms)
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 73.7ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column users.order does not exist
+LINE 1: ...s".* FROM "users" WHERE ("users"."id" != $1) AND ("users"."o...
+                                                             ^
+: SELECT  "users".* FROM "users" WHERE ("users"."id" != $1) AND ("users"."order" != $2) LIMIT $3 OFFSET $4):
+    20:             <th>Action</th>
+    21:           </tr>
+    22:           </thead>
+    23:           <% @users.each_with_index do |u, i| %>
+    24:               <tbody>
+    25:               <tr>
+    26:                 <td><%= (@page.to_i - 1) * @perpage+ i+1 %></td>
+  
+app/views/users/index.html.erb:23:in `each_with_index'
+app/views/users/index.html.erb:23:in `_app_views_users_index_html_erb__998819960062503242_70249341773320'
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.4ms)
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.7ms)
+Started GET "/admin/user" for 127.0.0.1 at 2017-02-13 08:27:18 +0545
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /home/shital/InventorySystem/app/controllers/users_controller.rb:2)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /home/shital/InventorySystem/app/controllers/users_controller.rb:3)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/dash
+  [1m[36mUser Load (86.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE ("users"."id" != $1) ORDER BY first_name ASC LIMIT $2 OFFSET $3[0m  [["id", 22], ["LIMIT", 10], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE ("users"."id" != $1)[0m  [["id", 22]]
+  Rendered users/index.html.erb within layouts/dash (292.6ms)
+  Rendered shared/_header.html.erb (26.5ms)
+  Rendered shared/_navigation.erb (1.6ms)
+  Rendered shared/_footer.erb (0.3ms)
+Completed 200 OK in 344ms (Views: 238.0ms | ActiveRecord: 87.7ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2017-02-13 08:27:26 +0545
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/dash
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE ("users"."id" != $1) ORDER BY first_name ASC LIMIT $2 OFFSET $3[0m  [["id", 22], ["LIMIT", 10], ["OFFSET", 10]]
+  Rendered users/index.html.erb within layouts/dash (5.3ms)
+  Rendered shared/_header.html.erb (35.6ms)
+  Rendered shared/_navigation.erb (3.1ms)
+  Rendered shared/_footer.erb (0.4ms)
+Completed 200 OK in 59ms (Views: 51.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users?page=1" for 127.0.0.1 at 2017-02-13 08:27:28 +0545
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/dash
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE ("users"."id" != $1) ORDER BY first_name ASC LIMIT $2 OFFSET $3[0m  [["id", 22], ["LIMIT", 10], ["OFFSET", 0]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE ("users"."id" != $1)[0m  [["id", 22]]
+  Rendered users/index.html.erb within layouts/dash (9.0ms)
+  Rendered shared/_header.html.erb (24.8ms)
+  Rendered shared/_navigation.erb (1.5ms)
+  Rendered shared/_footer.erb (0.3ms)
+Completed 200 OK in 46ms (Views: 38.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-13 08:28:49 +0545
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs"[0m
+  Rendering admin/index.html.erb within layouts/dash
+  Rendered admin/index.html.erb within layouts/dash (0.7ms)
+  Rendered shared/_header.html.erb (140.8ms)
+  Rendered shared/_navigation.erb (2.9ms)
+  Rendered shared/_footer.erb (0.6ms)
+Completed 200 OK in 162ms (Views: 149.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/logs" for 127.0.0.1 at 2017-02-13 08:28:53 +0545
+Processing by LogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering logs/index.html.erb within layouts/dash
+  [1m[36mLog Load (0.4ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 50], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered logs/index.html.erb within layouts/dash (96.2ms)
+  Rendered shared/_header.html.erb (26.4ms)
+  Rendered shared/_navigation.erb (1.5ms)
+  Rendered shared/_footer.erb (0.3ms)
+Completed 200 OK in 153ms (Views: 126.0ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/company_profiles" for 127.0.0.1 at 2017-02-13 08:29:07 +0545
+Processing by CompanyProfilesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (16.2ms)[0m  [1m[34mSELECT "company_profiles"."id" FROM "company_profiles" WHERE "company_profiles"."userid" = $1[0m  [["userid", 22]]
+  Rendering company_profiles/index.html.erb within layouts/dash
+  [1m[36mCompanyProfile Load (0.4ms)[0m  [1m[34mSELECT  "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = $1 LIMIT $2 OFFSET $3[0m  [["id", 9], ["LIMIT", 2], ["OFFSET", 0]]
+  Rendered company_profiles/index.html.erb within layouts/dash (10.0ms)
+  Rendered shared/_header.html.erb (37.1ms)
+  Rendered shared/_navigation.erb (1.5ms)
+  Rendered shared/_footer.erb (0.3ms)
+Completed 200 OK in 125ms (Views: 52.4ms | ActiveRecord: 20.3ms)
+
+
+Started DELETE "/company_profiles/9" for 127.0.0.1 at 2017-02-13 08:29:34 +0545
+Processing by CompanyProfilesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Tgm1zV5D3x6YqV3Xe3KC3Xcv3ZofDTdHT4JowY0CxkYcyUnO+k0YJ9vtlFxmJhof9XR+/AWnnkWevnD/wClX2w==", "id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCompanyProfile Load (0.7ms)[0m  [1m[34mSELECT  "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (25.5ms)[0m  [1m[31mDELETE FROM "company_profiles" WHERE "company_profiles"."id" = $1[0m  [["id", 9]]
+  [1m[35m (30.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35mSQL (98.7ms)[0m  [1m[32mINSERT INTO "logs" ("description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "Zeftware has been destroy."], ["user_id", 22], ["created_at", 2017-02-13 02:44:34 UTC], ["updated_at", 2017-02-13 02:44:34 UTC]]
+  [1m[35m (13.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 195ms (ActiveRecord: 169.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-13 08:29:34 +0545
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs"[0m
+  Rendering admin/index.html.erb within layouts/dash
+  Rendered admin/index.html.erb within layouts/dash (0.7ms)
+  Rendered shared/_header.html.erb (29.1ms)
+  Rendered shared/_navigation.erb (2.8ms)
+  Rendered shared/_footer.erb (0.5ms)
+Completed 200 OK in 44ms (Views: 38.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/logs" for 127.0.0.1 at 2017-02-13 08:29:35 +0545
+Processing by LogsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering logs/index.html.erb within layouts/dash
+  [1m[36mLog Load (0.5ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 50], ["OFFSET", 0]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered logs/index.html.erb within layouts/dash (40.7ms)
+  Rendered shared/_header.html.erb (28.1ms)
+  Rendered shared/_navigation.erb (2.6ms)
+  Rendered shared/_footer.erb (0.3ms)
+Completed 200 OK in 80ms (Views: 72.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/admin/user" for 127.0.0.1 at 2017-02-13 08:43:36 +0545
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /home/shital/InventorySystem/app/controllers/users_controller.rb:2)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /home/shital/InventorySystem/app/controllers/users_controller.rb:3)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/dash
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE ("users"."id" != $1) ORDER BY first_name ASC LIMIT $2 OFFSET $3[0m  [["id", 22], ["LIMIT", 10], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE ("users"."id" != $1)[0m  [["id", 22]]
+  Rendered users/index.html.erb within layouts/dash (5.8ms)
+  Rendered shared/_header.html.erb (126.6ms)
+  Rendered shared/_navigation.erb (29.7ms)
+  Rendered shared/_footer.erb (0.3ms)
+Completed 200 OK in 179ms (Views: 165.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/logs" for 127.0.0.1 at 2017-02-13 08:43:38 +0545
+Processing by LogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering logs/index.html.erb within layouts/dash
+  [1m[36mLog Load (0.4ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 50], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered logs/index.html.erb within layouts/dash (30.3ms)
+  Rendered shared/_header.html.erb (24.9ms)
+  Rendered shared/_navigation.erb (1.8ms)
+  Rendered shared/_footer.erb (0.3ms)
+Completed 200 OK in 78ms (Views: 54.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/admin/user" for 127.0.0.1 at 2017-02-13 08:43:40 +0545
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/dash
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE ("users"."id" != $1) ORDER BY first_name ASC LIMIT $2 OFFSET $3[0m  [["id", 22], ["LIMIT", 10], ["OFFSET", 0]]
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE ("users"."id" != $1)[0m  [["id", 22]]
+  Rendered users/index.html.erb within layouts/dash (14.5ms)
+  Rendered shared/_header.html.erb (45.0ms)
+  Rendered shared/_navigation.erb (1.6ms)
+  Rendered shared/_footer.erb (0.3ms)
+Completed 200 OK in 71ms (Views: 60.9ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/admin/user" for 127.0.0.1 at 2017-02-13 08:45:51 +0545
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /home/shital/InventorySystem/app/controllers/users_controller.rb:2)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /home/shital/InventorySystem/app/controllers/users_controller.rb:3)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/dash
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE ("users"."id" != $1) ORDER BY first_name ASC LIMIT $2 OFFSET $3[0m  [["id", 22], ["LIMIT", 10], ["OFFSET", 0]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE ("users"."id" != $1)[0m  [["id", 22]]
+  Rendered users/index.html.erb within layouts/dash (8.9ms)
+  Rendered shared/_header.html.erb (26.6ms)
+  Rendered shared/_navigation.erb (2.7ms)
+  Rendered shared/_footer.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 41.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/company_profiles" for 127.0.0.1 at 2017-02-13 08:45:54 +0545
+  
+SyntaxError (/home/shital/InventorySystem/app/controllers/company_profiles_controller.rb:27: syntax error, unexpected ':', expecting keyword_end):
+  
+app/controllers/company_profiles_controller.rb:27: syntax error, unexpected ':', expecting keyword_end
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.4ms)
+Started GET "/company_profiles" for 127.0.0.1 at 2017-02-13 08:46:03 +0545
+Processing by CompanyProfilesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "company_profiles"."id" FROM "company_profiles" WHERE "company_profiles"."userid" = $1[0m  [["userid", 22]]
+  Rendering company_profiles/index.html.erb within layouts/dash
+  Rendered company_profiles/index.html.erb within layouts/dash (0.8ms)
+  Rendered shared/_header.html.erb (21.8ms)
+  Rendered shared/_navigation.erb (2.5ms)
+  Rendered shared/_footer.erb (0.3ms)
+Completed 200 OK in 111ms (Views: 28.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/company_profiles/new" for 127.0.0.1 at 2017-02-13 08:46:05 +0545
+Processing by CompanyProfilesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering company_profiles/new.html.erb within layouts/dash
+  Rendered company_profiles/_form.html.erb (51.9ms)
+  Rendered company_profiles/new.html.erb within layouts/dash (66.1ms)
+  Rendered shared/_header.html.erb (21.8ms)
+  Rendered shared/_navigation.erb (1.5ms)
+  Rendered shared/_footer.erb (0.3ms)
+Completed 200 OK in 132ms (Views: 93.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/company_profiles" for 127.0.0.1 at 2017-02-13 08:46:45 +0545
+Processing by CompanyProfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cazlzFjmO5pkPAkkarxoSqvV5XIoS/dyhRGFoEZFe7cSBoNiGvZk9FyRs2c9CSoqxRePlyPO2nafL3X4yQAq/g==", "company_profile"=>{"name"=>"Zeftware", "address"=>"Biratnagar", "vdc_mun"=>"MUN", "email"=>"zeftware@gmail.com", "website"=>"zeftware.com", "phone"=>"123123", "vat_pan_no"=>"123we", "district"=>"Morang", "zone"=>"Koshi", "logo"=>#<ActionDispatch::Http::UploadedFile:0x007fc868db8750 @tempfile=#<Tempfile:/tmp/RackMultipart20170213-28801-pveefs.png>, @original_filename="logo.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"company_profile[logo]\"; filename=\"logo.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (24.2ms)[0m  [1m[32mINSERT INTO "company_profiles" ("name", "address", "vdc_mun", "phone", "vat_pan_no", "district", "zone", "email", "website", "userid", "created_at", "updated_at", "logo") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Zeftware"], ["address", "Biratnagar"], ["vdc_mun", "MUN"], ["phone", "123123"], ["vat_pan_no", "123we"], ["district", "Morang"], ["zone", "Koshi"], ["email", "zeftware@gmail.com"], ["website", "zeftware.com"], ["userid", 22], ["created_at", 2017-02-13 03:01:47 UTC], ["updated_at", 2017-02-13 03:01:47 UTC], ["logo", "logo.png"]]
+  [1m[35m (155.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35mSQL (49.3ms)[0m  [1m[32mINSERT INTO "logs" ("description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "Zeftware company has been added."], ["user_id", 22], ["created_at", 2017-02-13 03:01:47 UTC], ["updated_at", 2017-02-13 03:01:47 UTC]]
+  [1m[35m (45.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to 
+Completed 500 Internal Server Error in 3020ms (ActiveRecord: 278.6ms)
+
+
+  
+NoMethodError (undefined method `index_url' for #<CompanyProfilesController:0x007fc868db94c0>
+Did you mean?  index):
+  
+app/controllers/company_profiles_controller.rb:12:in `create'
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.9ms)
+Started POST "/company_profiles" for 127.0.0.1 at 2017-02-13 08:47:23 +0545
+Processing by CompanyProfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cazlzFjmO5pkPAkkarxoSqvV5XIoS/dyhRGFoEZFe7cSBoNiGvZk9FyRs2c9CSoqxRePlyPO2nafL3X4yQAq/g==", "company_profile"=>{"name"=>"Zeftware", "address"=>"Biratnagar", "vdc_mun"=>"MUN", "email"=>"zeftware@gmail.com", "website"=>"zeftware.com", "phone"=>"123123", "vat_pan_no"=>"123we", "district"=>"Morang", "zone"=>"Koshi", "logo"=>#<ActionDispatch::Http::UploadedFile:0x007fc8660cd790 @tempfile=#<Tempfile:/tmp/RackMultipart20170213-28801-cb0855.png>, @original_filename="logo.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"company_profile[logo]\"; filename=\"logo.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "company_profiles" ("name", "address", "vdc_mun", "phone", "vat_pan_no", "district", "zone", "email", "website", "userid", "created_at", "updated_at", "logo") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Zeftware"], ["address", "Biratnagar"], ["vdc_mun", "MUN"], ["phone", "123123"], ["vat_pan_no", "123we"], ["district", "Morang"], ["zone", "Koshi"], ["email", "zeftware@gmail.com"], ["website", "zeftware.com"], ["userid", 22], ["created_at", 2017-02-13 03:02:23 UTC], ["updated_at", 2017-02-13 03:02:23 UTC], ["logo", "logo.png"]]
+  [1m[35m (31.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "Zeftware company has been added."], ["user_id", 22], ["created_at", 2017-02-13 03:02:23 UTC], ["updated_at", 2017-02-13 03:02:23 UTC]]
+  [1m[35m (16.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "company_profiles"."id" FROM "company_profiles" WHERE "company_profiles"."userid" = $1[0m  [["userid", 22]]
+Redirected to 
+Completed 500 Internal Server Error in 268ms (ActiveRecord: 52.3ms)
+
+
+  
+NoMethodError (undefined method `to_model' for 1:Fixnum
+Did you mean?  to_yaml):
+  
+app/controllers/company_profiles_controller.rb:12:in `create'
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.8ms)
+Started POST "/company_profiles" for 127.0.0.1 at 2017-02-13 08:48:29 +0545
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CompanyProfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cazlzFjmO5pkPAkkarxoSqvV5XIoS/dyhRGFoEZFe7cSBoNiGvZk9FyRs2c9CSoqxRePlyPO2nafL3X4yQAq/g==", "company_profile"=>{"name"=>"Zeftware", "address"=>"Biratnagar", "vdc_mun"=>"MUN", "email"=>"zeftware@gmail.com", "website"=>"zeftware.com", "phone"=>"123123", "vat_pan_no"=>"123we", "district"=>"Morang", "zone"=>"Koshi", "logo"=>#<ActionDispatch::Http::UploadedFile:0x005582369fb100 @tempfile=#<Tempfile:/tmp/RackMultipart20170213-30277-1simw14.png>, @original_filename="logo.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"company_profile[logo]\"; filename=\"logo.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "company_profiles" ("name", "address", "vdc_mun", "phone", "vat_pan_no", "district", "zone", "email", "website", "userid", "created_at", "updated_at", "logo") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Zeftware"], ["address", "Biratnagar"], ["vdc_mun", "MUN"], ["phone", "123123"], ["vat_pan_no", "123we"], ["district", "Morang"], ["zone", "Koshi"], ["email", "zeftware@gmail.com"], ["website", "zeftware.com"], ["userid", 22], ["created_at", 2017-02-13 03:03:30 UTC], ["updated_at", 2017-02-13 03:03:30 UTC], ["logo", "logo.png"]]
+  [1m[35m (36.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "Zeftware company has been added."], ["user_id", 22], ["created_at", 2017-02-13 03:03:30 UTC], ["updated_at", 2017-02-13 03:03:30 UTC]]
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/company_profiles
+Completed 302 Found in 306ms (ActiveRecord: 65.3ms)
+
+
+Started GET "/company_profiles" for 127.0.0.1 at 2017-02-13 08:48:30 +0545
+Processing by CompanyProfilesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "company_profiles"."id" FROM "company_profiles" WHERE "company_profiles"."userid" = $1[0m  [["userid", 22]]
+  Rendering company_profiles/index.html.erb within layouts/dash
+  [1m[36mCompanyProfile Load (1.0ms)[0m  [1m[34mSELECT  "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = $1 LIMIT $2 OFFSET $3[0m  [["id", 12], ["LIMIT", 2], ["OFFSET", 0]]
+  Rendered company_profiles/index.html.erb within layouts/dash (17.6ms)
+  Rendered shared/_header.html.erb (352.2ms)
+  Rendered shared/_navigation.erb (2.2ms)
+  Rendered shared/_footer.erb (0.4ms)
+Completed 200 OK in 392ms (Views: 386.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/company_profiles" for 127.0.0.1 at 2017-02-13 08:49:27 +0545
+Processing by CompanyProfilesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "company_profiles"."id" FROM "company_profiles" WHERE "company_profiles"."userid" = $1[0m  [["userid", 22]]
+  Rendering company_profiles/index.html.erb within layouts/dash
+  [1m[36mCompanyProfile Load (0.3ms)[0m  [1m[34mSELECT  "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = $1 LIMIT $2 OFFSET $3[0m  [["id", 12], ["LIMIT", 2], ["OFFSET", 0]]
+  Rendered company_profiles/index.html.erb within layouts/dash (10.2ms)
+  Rendered shared/_header.html.erb (55.7ms)
+  Rendered shared/_navigation.erb (1.9ms)
+  Rendered shared/_footer.erb (0.3ms)
+Completed 200 OK in 101ms (Views: 71.6ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/company_profiles" for 127.0.0.1 at 2017-02-13 08:57:49 +0545
+Processing by CompanyProfilesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "company_profiles"."id" FROM "company_profiles" WHERE "company_profiles"."userid" = $1[0m  [["userid", 22]]
+  Rendering company_profiles/index.html.erb within layouts/dash
+  [1m[36mCompanyProfile Load (0.3ms)[0m  [1m[34mSELECT  "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = $1 LIMIT $2 OFFSET $3[0m  [["id", 12], ["LIMIT", 2], ["OFFSET", 0]]
+  Rendered company_profiles/index.html.erb within layouts/dash (3.0ms)
+  Rendered shared/_header.html.erb (29.7ms)
+  Rendered shared/_navigation.erb (3.6ms)
+  Rendered shared/_footer.erb (1.4ms)
+Completed 200 OK in 47ms (Views: 42.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/company_profiles/12/edit" for 127.0.0.1 at 2017-02-13 08:57:53 +0545
+Processing by CompanyProfilesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCompanyProfile Load (0.5ms)[0m  [1m[34mSELECT  "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering company_profiles/edit.html.erb within layouts/dash
+  Rendered company_profiles/_form.html.erb (19.0ms)
+  Rendered company_profiles/edit.html.erb within layouts/dash (19.9ms)
+  Rendered shared/_header.html.erb (44.1ms)
+  Rendered shared/_navigation.erb (3.9ms)
+  Rendered shared/_footer.erb (1.3ms)
+Completed 200 OK in 102ms (Views: 76.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/company_profiles/12/edit" for 127.0.0.1 at 2017-02-13 09:13:41 +0545
+Processing by CompanyProfilesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCompanyProfile Load (0.3ms)[0m  [1m[34mSELECT  "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering company_profiles/edit.html.erb within layouts/dash
+  Rendered company_profiles/_form.html.erb (3.9ms)
+  Rendered company_profiles/edit.html.erb within layouts/dash (5.5ms)
+  Rendered shared/_header.html.erb (391.9ms)
+  Rendered shared/_navigation.erb (3.4ms)
+  Rendered shared/_footer.erb (0.4ms)
+Completed 200 OK in 436ms (Views: 431.3ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-02-13 09:13:45 +0545
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uI3hKS8dEHwI1vWwJtr6BmQt6D5DasipQfNNsTRK80rqTR0qixPXRUuSPDs7jmLE5nZLWFnAYauQz1WPeWFi1w=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 134ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-13 09:13:46 +0545
+Processing by AdminController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-13 09:13:46 +0545
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/sessions/new.html.erb within layouts/login (27.0ms)
+  Rendered shared/_footer.erb (0.3ms)
+Completed 200 OK in 83ms (Views: 75.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bower_components/bootstrap/dist/js/bootstrap.min.js" for 127.0.0.1 at 2017-02-13 09:13:46 +0545
+Started GET "/bower_components/bootstrap/dist/js/loginjs.js" for 127.0.0.1 at 2017-02-13 09:13:46 +0545
+  
+ActionController::RoutingError (No route matches [GET] "/bower_components/bootstrap/dist/js/bootstrap.min.js"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  
+ActionController::RoutingError (No route matches [GET] "/bower_components/bootstrap/dist/js/loginjs.js"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendered collection of /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [44 times] (69.2ms)
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.2ms)
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered collection of /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [44 times] (10.4ms)
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (149.5ms)
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (58.5ms)
+Started GET "/bower_components/bootstrap/dist/js/bootstrap.min.js" for 127.0.0.1 at 2017-02-13 09:13:48 +0545
+  
+ActionController::RoutingError (No route matches [GET] "/bower_components/bootstrap/dist/js/bootstrap.min.js"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [44 times] (9.8ms)
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.9ms)
+Started GET "/bower_components/bootstrap/dist/js/loginjs.js" for 127.0.0.1 at 2017-02-13 09:13:48 +0545
+  
+ActionController::RoutingError (No route matches [GET] "/bower_components/bootstrap/dist/js/loginjs.js"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [44 times] (9.9ms)
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.3ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-02-13 09:13:53 +0545
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9LBqYLeWDJZgDoXrwAC7aNzgbLWwbhNa2+kQej7BNQTjEvJe1ldxCqOi80nAvSJacZIhmPBmu+4wbghbB8vIQg==", "user"=>{"email"=>"ctalluitel@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "ctalluitel@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (14.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-02-13 03:28:54 UTC], ["last_sign_in_at", 2017-02-12 02:03:18 UTC], ["sign_in_count", 20], ["updated_at", 2017-02-13 03:28:54 UTC], ["id", 22]]
+  [1m[35m (44.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1014ms (ActiveRecord: 60.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-13 09:13:54 +0545
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs"[0m
+  Rendering admin/index.html.erb within layouts/dash
+  Rendered admin/index.html.erb within layouts/dash (0.7ms)
+  Rendered shared/_header.html.erb (22.7ms)
+  Rendered shared/_navigation.erb (1.5ms)
+  Rendered shared/_footer.erb (0.2ms)
+Completed 200 OK in 83ms (Views: 29.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-02-13 09:13:58 +0545
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "logs"[0m
+  Rendering admin/index.html.erb within layouts/dash
+  Rendered admin/index.html.erb within layouts/dash (0.8ms)
+  Rendered shared/_header.html.erb (30.7ms)
+  Rendered shared/_navigation.erb (1.8ms)
+  Rendered shared/_footer.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 37.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/user" for 127.0.0.1 at 2017-02-13 09:13:59 +0545
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /home/shital/InventorySystem/app/controllers/users_controller.rb:2)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /home/shital/InventorySystem/app/controllers/users_controller.rb:3)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/dash
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE ("users"."id" != $1) ORDER BY first_name ASC LIMIT $2 OFFSET $3[0m  [["id", 22], ["LIMIT", 10], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE ("users"."id" != $1)[0m  [["id", 22]]
+  Rendered users/index.html.erb within layouts/dash (6.7ms)
+  Rendered shared/_header.html.erb (21.9ms)
+  Rendered shared/_navigation.erb (1.5ms)
+  Rendered shared/_footer.erb (0.3ms)
+Completed 200 OK in 52ms (Views: 33.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/logs" for 127.0.0.1 at 2017-02-13 09:14:00 +0545
+Processing by LogsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering logs/index.html.erb within layouts/dash
+  [1m[36mLog Load (0.3ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 50], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered logs/index.html.erb within layouts/dash (36.3ms)
+  Rendered shared/_header.html.erb (22.0ms)
+  Rendered shared/_navigation.erb (10.7ms)
+  Rendered shared/_footer.erb (0.3ms)
+Completed 200 OK in 85ms (Views: 69.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/admin/user" for 127.0.0.1 at 2017-02-13 09:14:01 +0545
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/dash
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE ("users"."id" != $1) ORDER BY first_name ASC LIMIT $2 OFFSET $3[0m  [["id", 22], ["LIMIT", 10], ["OFFSET", 0]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE ("users"."id" != $1)[0m  [["id", 22]]
+  Rendered users/index.html.erb within layouts/dash (12.5ms)
+  Rendered shared/_header.html.erb (41.1ms)
+  Rendered shared/_navigation.erb (1.9ms)
+  Rendered shared/_footer.erb (0.4ms)
+Completed 200 OK in 68ms (Views: 61.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/company_profiles" for 127.0.0.1 at 2017-02-13 09:14:04 +0545
+Processing by CompanyProfilesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "company_profiles"."id" FROM "company_profiles" WHERE "company_profiles"."userid" = $1[0m  [["userid", 22]]
+  Rendering company_profiles/index.html.erb within layouts/dash
+  [1m[36mCompanyProfile Load (0.4ms)[0m  [1m[34mSELECT  "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = $1 LIMIT $2 OFFSET $3[0m  [["id", 12], ["LIMIT", 2], ["OFFSET", 0]]
+  Rendered company_profiles/index.html.erb within layouts/dash (3.8ms)
+  Rendered shared/_header.html.erb (24.8ms)
+  Rendered shared/_navigation.erb (1.7ms)
+  Rendered shared/_footer.erb (0.3ms)
+Completed 200 OK in 39ms (Views: 34.5ms | ActiveRecord: 1.1ms)
+
+

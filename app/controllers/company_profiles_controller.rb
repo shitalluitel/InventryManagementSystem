@@ -7,12 +7,10 @@ class CompanyProfilesController < ApplicationController
     @company_profile = CompanyProfile.new(company_profile_params)
     @company_profile.userid = current_user.id
     if @company_profile.save then
-      @msg = @company_profile.name + " has been added."
+      @msg = @company_profile.name + " company has been added."
       create_logs(@msg)
-      printf "Data saved"
-      redirect_to :root
+      redirect_to :company_profiles
     else
-      prinf "data not saved"
       redirect_to @company_profile
     end
   end
@@ -23,10 +21,10 @@ class CompanyProfilesController < ApplicationController
 
   def update
     @company_profile = CompanyProfile.find(params[:id])
-    @msg = @company_profile.name + " has been added."
+    @msg = @company_profile.name + " company has been updated."
     if @company_profile.update(company_profile_params)
       create_logs(@msg)
-      redirect_to :root
+      redirect_to :company_profiles
     else
       redirect_to @company_profile
     end
@@ -50,6 +48,8 @@ class CompanyProfilesController < ApplicationController
   def destroy
     @company_profile = CompanyProfile.destroy(params[:id])
     if @company_profile.destroyed?
+      @msg = @company_profile.name + " company has been destroy."
+      create_logs(@msg)
       redirect_to :root
     end
   end

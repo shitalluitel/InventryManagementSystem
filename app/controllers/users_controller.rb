@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   def index
     @perpage = 10
     @users = User.where.not(id: current_user.id) #to discard current user and filter the pagination
-    @users = @users.paginate(:page => params[:page], :per_page => @perpage)
+    @users = @users.paginate(:page => params[:page], :per_page => @perpage).order('first_name ASC')
     @page = params[:page] || 1
   end
 
