@@ -1,0 +1,4 @@
+en:
+  devise:
+    failure:
+      deleted_account: "Your account is deleted. Thanks!"

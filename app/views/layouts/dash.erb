@@ -1,6 +1,8 @@
 <%= render "shared/header" %>
 <body>
 <%= render "shared/navigation" %>
+
+<%= render "shared/breadcrumb" %>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <div class="container-fluid">
   <% unless flash.empty? %>
@@ -13,8 +15,8 @@
   <% end %>
   <%= yield %>
 </div>
-<hr>
-<div class="container-fluid ">
+<br>
+<hr><div class="container-fluid">
   <%= render "shared/footer" %>
 </div>
 </body>

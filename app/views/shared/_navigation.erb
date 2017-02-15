@@ -12,54 +12,77 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <div class="container">
-        <ul class="nav navbar-nav">
-          <li><a href="<%= admin_path %>">Dashboard</a></li>
-          <li><a href="<%= users_view_path%>">Users</a></li>
-          <li><a href="<%= logs_path%>">Logs</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <span><i class="fa fa-user fa-fw">&nbsp;</i></span>
-              <% if user_signed_in? %>
-                  <%= current_user.first_name.slice(0, 1).capitalize + current_user.first_name.slice(1..-1) %>
-                  <% if current_user.middle_name.present? %>
-                      <%= current_user.middle_name.slice(0, 1).capitalize + current_user.middle_name.slice(1..-1) %>
-                  <% end %>
-                  <%= current_user.last_name.slice(0, 1).capitalize + current_user.last_name.slice(1..-1) %>
-              <% end %>
-              <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="<%= edit_user_registration_path %>">
+    <div class="navbar-space">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="container">
+          <ul class="nav navbar-nav">
+            <li><a href="<%= admin_path %>">Dashboard</a></li>
+            <li><a href="<%= users_view_path%>">Users</a></li>
+            <li><a href="<%= logs_path%>">Logs</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Fiscal Year<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="<%= new_fiscal_year_path %>">
+                  <span>
+                    <i class="fa fa-pencil-square fa-fw">&nbsp;</i>
+                  </span>
+                    Create Fiscal Year
+                  </a>
+                </li>
+                <li>
+                  <a href="<%= fiscal_years_path %>">
+                  <span>
+                    <i class="fa fa-eye fa-fw">&nbsp;</i>
+                  </span>
+                    Show Fiscal Years
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span><i class="fa fa-user fa-fw">&nbsp;</i></span>
+                <% if user_signed_in? %>
+                    <%= current_user.first_name.slice(0, 1).capitalize + current_user.first_name.slice(1..-1) %>
+                    <% if current_user.middle_name.present? %>
+                        <%= current_user.middle_name.slice(0, 1).capitalize + current_user.middle_name.slice(1..-1) %>
+                    <% end %>
+                    <%= current_user.last_name.slice(0, 1).capitalize + current_user.last_name.slice(1..-1) %>
+                <% end %>
+                <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="<%= edit_user_registration_path %>">
                   <span>
                     <i class="fa fa-edit fa-fw">&nbsp; </i>
                   </span>
-                  Change Password
-                </a>
-              </li>
-              <li>
-                <a href="<%= company_profiles_path %>">
+                    Change Password
+                  </a>
+                </li>
+                <li>
+                  <a href="<%= company_profiles_path %>">
                   <span>
                     <i class="fa fa-user-plus fa-fw">&nbsp; </i>
                   </span>
-                  Company Profile
-                </a>
-              </li>
-              <li>
-                <a href="<%= destroy_user_session_path %>" data-method="delete" rel="nofollow">
+                    Company Profile
+                  </a>
+                </li>
+                <li>
+                  <a href="<%= destroy_user_session_path %>" data-method="delete" rel="nofollow">
                   <span>
                     <i class="fa fa-sign-out fa-fw">&nbsp;</i>
                   </span>
-                  Logout
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div><!-- /.navbar-collapse -->
+                    Logout
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div><!-- /.navbar-collapse -->
+    </div>
   </div><!-- /.container-fluid -->
 </nav>

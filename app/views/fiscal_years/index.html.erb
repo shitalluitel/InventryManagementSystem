@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-md-12">
+
+    <div class="row">
+      <div class="col-md-12">
+        <a class="btn btn-primary pull-right" href="<%= new_fiscal_year_path %>"><span><i class="fa fa-plus fa-fw">&nbsp;</i></span>
+          Add New</a>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table table-hover">
+          <thead>
+          <tr class="bg-primary">
+            <th>S.N.</th>
+            <th>Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <% @fiscal_year.each_with_index do |f, i| %>
+              <tbody>
+              <tr>
+                <td><%= (@page.to_i - 1) * @perpage+ i+1 %></td>
+                <td>
+                  <%= f.name %>
+                </td>
+                <td>
+                  <%= f.start_date %>
+                </td>
+                <td>
+                  <%= f.end_date %>
+                </td>
+                <td>
+                  <a data-toggle="Add to current Fiscal Year">
+                    <span >
+                      <i class="fa fa-plus fa-trash-color fa-th-large fa-2x">&nbsp;</i>
+                    </span>
+                  </a>
+                  <a data-confirm="Are you sure to delete" rel="nofollow" data-toggle="Delete Fiscal Year" data-method="delete" href="<%= fiscal_year_path(f) %>">
+                    <span>
+                      <i class="fa fa-trash fa-trash-color fa-th-large fa-2x"></i>
+                    </span>
+                  </a>
+                </td>
+              </tr>
+              </tbody>
+          <% end %>
+        </table>
+      </div>
+    </div>
+    <%= will_paginate @fiscal_year, renderer: BootstrapPagination::Rails %>
+  </div>
+</div>
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>

@@ -12,6 +12,7 @@
  *
  *= require bootstrap
  *= require bootstrap.min
+ *= require bootstrap-datetimepicker
  *= require font-awesome.min
  *= require toastr
  *= require toastr-responsive

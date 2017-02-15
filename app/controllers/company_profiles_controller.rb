@@ -1,5 +1,9 @@
 class CompanyProfilesController < ApplicationController
+  add_breadcrumb "Home", :root_path
+  add_breadcrumb "CompanyProfile", :company_profiles_path
+
   def new
+    add_breadcrumb "New"
     @company_profile = CompanyProfile.new
   end
 
@@ -16,6 +20,7 @@ class CompanyProfilesController < ApplicationController
   end
 
   def edit
+    add_breadcrumb "Edit"
     @company_profile = CompanyProfile.find(params[:id])
   end
 

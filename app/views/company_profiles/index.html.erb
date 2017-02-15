@@ -1,7 +1,7 @@
 <% if @company_profile.nil? %>
     <div class="row">
       <div class="col-md-3 col-xs-6">
-        <a target="_blank" href="<%= companyprofile.logo.url %>"><%= image_tag assda.png, alt: "Image not uploaded.",:class => "img img-student img-responsive img-thumbnail" %></a>
+        <a target="_blank" href="<%= company_profiles_path %>"><img alt="Logo not found."></a>
         <br>
         <br>
         <a href="<%= new_company_profile_path %>" class="btn btn-primary">Create Company</a>
@@ -14,7 +14,7 @@
               Name:
             </th>
             <td class="text-doc">
-              <%= companyprofile.name %>
+              -
             </td>
           </tr>
           <tr>
@@ -22,7 +22,7 @@
               Vat/Pan Number:
             </th>
             <td class="text-doc">
-              <%= companyprofile.vat_pan_no %>
+              -
             </td>
           </tr>
           <tr>
@@ -30,7 +30,7 @@
               Address:
             </th>
             <td class="text-doc">
-              <%= companyprofile.address %>
+             -
             </td>
           </tr>
           <tr>
@@ -38,7 +38,7 @@
               VDC/MUN:
             </th>
             <td class="text-doc">
-              <%= companyprofile.vdc_mun %>
+              -
             </td>
           </tr>
           <tr>
@@ -46,7 +46,7 @@
               District:
             </th>
             <td class="text-doc">
-              <%= companyprofile.district %>
+              -
             </td>
           </tr>
           <tr>
@@ -54,7 +54,7 @@
               Zone:
             </th>
             <td class="text-doc">
-              <%= companyprofile.zone %>
+              -
             </td>
           </tr>
           <tr>
@@ -62,7 +62,7 @@
               Email:
             </th>
             <td class="text-doc">
-              <%= companyprofile.email%>
+              -
             </td>
           </tr>
           <tr>
@@ -70,7 +70,7 @@
               Website:
             </th>
             <td class="text-doc">
-              <a class="company-website" href="http://<%= companyprofile.website %>"><%= companyprofile.website %></a>
+              -
             </td>
           </tr>
 

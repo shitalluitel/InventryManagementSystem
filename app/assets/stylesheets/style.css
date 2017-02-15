@@ -16,6 +16,13 @@
     }
 }
 
+@media (min-width: 768px) {
+    .navbar-nav > li > a {
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+}
+
 .alert-error {
     background-color: #ee0007;
     border-color: #ee0007;
@@ -55,12 +62,12 @@ body {
 /*ends here*/
 
 /*for navigation bar*/
-.navbar-brand > img, .navbar-brand {
+.navbar-brand > img, .navbar-brand{
     max-height: 100%;
 }
 
-.navbar-login {
-    min-height: 76px;
+.navbar, .navbar-brand, .navbar-collapse {
+    min-height: 60px;
 }
 
 /*ende here*/
@@ -89,3 +96,10 @@ table>tbody>tr>.text-doc>a:hover{
 }
 
 /*!*ends here*!*/
+
+/*for breadcrumbs*/
+.breadcrumb{
+    background-color: transparent;
+}
+
+/*ends here*/

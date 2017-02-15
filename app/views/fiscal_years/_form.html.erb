@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="well tt-modal">
+      <%= form_for (@fiscal_year) do |f| %>
+          <div class="form-horizontal">
+            <div class="form-group">
+              <label class="col-md-3 control-label">Name</label>
+              <div class="col-md-9">
+                <%= f.text_field :name, :class => "form-control", :placeholder => "eg: 2016-1027" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label">Start Date</label>
+              <div class="col-md-9">
+                <div class='input-group date' id='datetimepicker1'>
+                  <%= f.text_field :start_date, :class => "form-control" %>
+                  <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label">End Date</label>
+              <div class="col-md-9">
+                <div class='input-group date' id='datetimepicker2'>
+                  <%= f.text_field :end_date, :class => "form-control" %>
+                  <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-md-offset-3 col-md-4">
+                <%= f.submit "Submit", :class => "btn btn-primary" %>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+    $('#datetimepicker1').datetimepicker({
+      viewMode: 'years',
+      format: 'YYYY/MM/DD'
+    });
+  });
+</script>
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+    $('#datetimepicker2').datetimepicker({
+      viewMode: 'years',
+      format: 'YYYY/MM/DD'
+    });
+  });
+</script>
