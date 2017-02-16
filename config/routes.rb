@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   resources :users
 
+  resources :current_fiscal_years
+
   resources :company_profiles do
     collection do
       get :manage_company_profiles

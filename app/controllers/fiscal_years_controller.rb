@@ -35,6 +35,11 @@ class FiscalYearsController < ApplicationController
 
   def index
     @perpage = 10
+    @current_fiscal_year = CurrentFiscalYear.where.not(fiscal_year_id: nil)
+    @current_fiscal_year.each do |f|
+      @fiscal_id = f.id
+      @fiscal_name = f.fiscal_year.name
+    end
     @fiscal_year = FiscalYear.paginate(:page => params[:page], :per_page => @perpage )
     @page = params[:page] || 1
   end

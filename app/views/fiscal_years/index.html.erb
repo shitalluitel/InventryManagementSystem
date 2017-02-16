@@ -2,14 +2,45 @@
   <div class="col-md-12">
 
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Current Fiscal Year: &nbsp;
+              <% if @fiscal_name.nil? %>
+                  -
+              <% else %>
+                  <%= @fiscal_name  %>
+              <% end %>
+            </h4>
+          </div>
+          <div class="col-md-4">
+            <% if @fiscal_name.nil? %>
+                <a href="<%= new_current_fiscal_year_path %>" class="btn btn-primary">
+                  <span>
+                    <i class="fa fa-plus fa-fw"> &nbsp;</i>
+                  </span>
+                  Add
+                </a>
+            <% else %>
+                <a href="<%= edit_current_fiscal_year_path(@fiscal_id) %>" class="btn btn-primary">
+                  Change
+                </a>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
         <a class="btn btn-primary pull-right" href="<%= new_fiscal_year_path %>"><span><i class="fa fa-plus fa-fw">&nbsp;</i></span>
           Add New</a>
       </div>
     </div>
+
     <br>
+
     <div class="row">
       <div class="col-md-12">
+
         <table class="table table-hover">
           <thead>
           <tr class="bg-primary">
@@ -20,6 +51,7 @@
             <th>Action</th>
           </tr>
           </thead>
+
           <% @fiscal_year.each_with_index do |f, i| %>
               <tbody>
               <tr>
@@ -27,33 +59,38 @@
                 <td>
                   <%= f.name %>
                 </td>
+
                 <td>
                   <%= f.start_date %>
                 </td>
+
                 <td>
                   <%= f.end_date %>
                 </td>
+
                 <td>
-                  <a data-toggle="Add to current Fiscal Year">
-                    <span >
-                      <i class="fa fa-plus fa-trash-color fa-th-large fa-2x">&nbsp;</i>
-                    </span>
-                  </a>
                   <a data-confirm="Are you sure to delete" rel="nofollow" data-toggle="Delete Fiscal Year" data-method="delete" href="<%= fiscal_year_path(f) %>">
                     <span>
                       <i class="fa fa-trash fa-trash-color fa-th-large fa-2x"></i>
                     </span>
                   </a>
                 </td>
+
               </tr>
               </tbody>
+
           <% end %>
+
         </table>
+
       </div>
     </div>
+
     <%= will_paginate @fiscal_year, renderer: BootstrapPagination::Rails %>
+
   </div>
 </div>
+
 <script type="text/javascript" charset="utf-8">
   $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();

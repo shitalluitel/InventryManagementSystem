@@ -23,8 +23,8 @@ class UsersController < ApplicationController
     if @user.deleted_at.nil?
       @user.deleted_at = Time.now.strftime("%d/%m/%Y %H:%M")
       if @user.save
-        @send = @user.email + " is destroyed."
-        create_logs( @send )
+        @send = "Destroyed " + @user.email
+            create_logs( @send )
         redirect_to :users_view
       end
     end
