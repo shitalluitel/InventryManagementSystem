@@ -11,8 +11,10 @@ class FiscalYearsController < ApplicationController
     if @fiscal_year.save
       @msg = "Fiscal Year " + @fiscal_year.name + " added."
       create_logs(@msg)
+      flash[:success] = "Fiscal Year added."
       redirect_to :root
     else
+      flash[:error] = "Couldn't add fiscal year."
       redirect_to @fiscal_year
     end
   end
@@ -27,8 +29,10 @@ class FiscalYearsController < ApplicationController
     @msg = "Fiscal Year " + @fiscal_year.name + " updated."
     if @fiscal_year.update(fiscal_params)
       create_logs(@msg)
+      flash[:success] = "Fiscal Year updated."
       redirect_to :fiscal_years
     else
+      flash[:error] = "Couldn't update fiscal year."
       redirect_to :admin
     end
   end

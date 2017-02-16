@@ -24,6 +24,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :units
+
   get 'admin/user' => 'users#index', as: :users_view, via: [:get, :post]
   get 'admin/user/new' => 'users#new', as: :users_new
   get 'admin' => 'admin#index', :as => :admin

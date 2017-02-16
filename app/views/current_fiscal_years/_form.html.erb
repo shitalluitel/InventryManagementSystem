@@ -5,8 +5,7 @@
           <div class="form-horizontal">
             <div class="form-group">
               <label class="col-md-3 control-label">Fiscal Years</label>
-              <div class="control-label col-md-9
-">
+              <div class="control-label col-md-9">
                 <%= f.collection_select :fiscal_year_id, FiscalYear.order(:name), :id, :name, {prompt: "Select Category"}, {class: "form-control"} %>
               </div>
             </div>

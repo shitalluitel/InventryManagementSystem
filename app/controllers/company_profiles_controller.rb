@@ -13,8 +13,10 @@ class CompanyProfilesController < ApplicationController
     if @company_profile.save then
       @msg ="Added " + @company_profile.name
       create_logs(@msg)
+      flash[:success] = @company_profile.name.capitalize + " company added."
       redirect_to :company_profiles
     else
+      flash[:error] = "Unable to add " + @company_profile.name.capitalize + " company."
       redirect_to @company_profile
     end
   end
@@ -29,8 +31,10 @@ class CompanyProfilesController < ApplicationController
     @msg ="Updated " + @company_profile.name
     if @company_profile.update(company_profile_params)
       create_logs(@msg)
+      flash[:success] = @company_profile.name.capitalize + " company updated."
       redirect_to :company_profiles
     else
+      flash[:error] = "Unable to update " + @company_profile.name.capitalize + " company."
       redirect_to @company_profile
     end
   end
@@ -55,6 +59,10 @@ class CompanyProfilesController < ApplicationController
     if @company_profile.destroyed?
       @msg ="Destroy " + @company_profile.name
       create_logs(@msg)
+      flash[:success] = "Company Profile Deleted."
+      redirect_to :company_profiles
+    else
+      flash[:error] = "Couldn't delete Company Profile."
       redirect_to :root
     end
   end
