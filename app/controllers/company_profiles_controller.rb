@@ -70,6 +70,6 @@ class CompanyProfilesController < ApplicationController
   private
 
   def company_profile_params
-    params.require(:company_profile).permit(:name, :address, :vdc_mun, :phone, :vat_pan_no, :logo, :district, :zone , :email, :website)
+    params.require(:company_profile).permit(:name,:ward_no, :address, :vdc_mun, :phone, :vat_pan_no, :logo, :district, :zone , :email, :website)
   end
 end

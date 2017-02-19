@@ -43,6 +43,14 @@
           </tr>
           <tr>
             <th class="col-xs-4 text-success">
+              Ward Number:
+            </th>
+            <td class="text-doc">
+              -
+            </td>
+          </tr>
+          <tr>
+            <th class="col-xs-4 text-success">
               District:
             </th>
             <td class="text-doc">
@@ -130,6 +138,14 @@
               </tr>
               <tr>
                 <th class="col-xs-4 text-success">
+                  Ward Number:
+                </th>
+                <td class="text-doc">
+                  <%= companyprofile.ward_no %>
+                </td>
+              </tr>
+              <tr>
+                <th class="col-xs-4 text-success">
                   District:
                 </th>
                 <td class="text-doc">
@@ -157,7 +173,7 @@
                   Website:
                 </th>
                 <td class="text-doc">
-                  <a class="company-website" href="http://<%= companyprofile.website %>"><%= companyprofile.website %></a>
+                  <a class="company-website" target="_blank" href="http://<%= companyprofile.website %>"><%= companyprofile.website %></a>
                 </td>
               </tr>
 

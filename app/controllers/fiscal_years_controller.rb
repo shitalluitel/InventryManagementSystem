@@ -48,6 +48,18 @@ class FiscalYearsController < ApplicationController
     @page = params[:page] || 1
   end
 
+  def destroy
+    @fiscal_year = FiscalYear.destroy(params[:id])
+    if @fiscal_year.destroyed?
+      @msg = "Fiscal Year deleted."
+      create_logs(@msg)
+      flash[:success] = @msg
+      redirect_to :fiscal_years
+    else
+      flash[:error] = "Couldn't delete fiscal year"
+      redirect_to :root
+    end
+  end
   private
 
   def fiscal_params

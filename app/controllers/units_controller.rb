@@ -40,8 +40,12 @@ class UnitsController < ApplicationController
   def destroy
     @unit = Unit.destroy(params[:id])
     if @unit.destroyed?
+      @msg = "Destroyed unit " + @unit.name
+      create_logs(@msg)
+      flash[:success] = "Unit destoyed successfully."
       redirect_to :units
     else
+      flash[:error] = "Couldn't delete unit."
       redirect_to :root
     end
   end

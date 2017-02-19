@@ -1,6 +1,8 @@
 <div class="container-fluid">
   <div class="page-header">
-    <h3><%= controller.controller_name.to_str.capitalize %> </h3>
+    <h3>
+      <%= controller.controller_name.to_s.titleize %>
+    </h3>
   </div>
   <ol class="breadcrumb">
     <%= render_breadcrumbs :tag => :li, :separator => "" %>
