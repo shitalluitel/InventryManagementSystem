@@ -1,0 +1,72 @@
+<div class="row">
+  <div class="col-md-6">
+    <table class="table table-profile">
+      <tbody>
+      <tr>
+        <th class="col-xs-4 text-success ">
+          Name:
+        </th>
+        <td class="text-doc">
+          <%= @item.name %>
+        </td>
+      </tr>
+      <tr>
+        <th class="col-xs-4 text-success">
+          Item Code:
+        </th>
+        <td class="text-doc">
+          <%= @item.item_code %>
+        </td>
+      </tr>
+      <tr>
+        <th class="col-xs-4 text-success">
+          Unit:
+        </th>
+        <td class="text-doc">
+          <%= @item.unit.name %>
+        </td>
+      </tr>
+      <tr>
+        <th class="col-xs-4 text-success">
+          Item Group:
+        </th>
+        <td class="text-doc">
+          <%= @item.item_group.name %>
+        </td>
+      </tr>
+      <tr>
+        <th class="col-xs-4 text-success">
+          Quantity:
+        </th>
+        <td class="text-doc">
+          <%= @item.stock.quantity %> <%= @item.unit.name %>
+        </td>
+      </tr>
+      <tr>
+        <th class="col-xs-4 text-success">
+          Unit Price:
+        </th>
+        <td class="text-doc">
+          <%= @item.stock.unit_price %>
+        </td>
+      </tr>
+      <tr>
+        <th class="col-xs-4 text-success">
+          Estimated Price:
+        </th>
+        <td class="text-doc">
+          <%= @item.stock.est_sell_price %>
+        </td>
+      </tr>
+      <tr>
+        <th class="col-xs-4 text-success">
+          Description:
+        </th>
+        <td class="text-doc">
+          <%= @item.description %>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

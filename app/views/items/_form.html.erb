@@ -1,0 +1,104 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+    <% if @item.errors.any? %>
+        <div class="alert alert-error">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          <ul>
+            <% @item.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="well">
+      <%= form_for (@item) do |f| %>
+
+          <div class="form-horizontal ">
+            <div class="form-group">
+              <label class="control-label col-md-3">Name *</label>
+              <div class="col-md-9">
+                <%= f.text_field :name, autofocus: true, :class => "form-control" %>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-md-3">Item Code *</label>
+              <div class="col-md-9">
+                <%= f.text_field :item_code, autofocus: true, :class => "form-control" %>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-md-3">Unit *</label>
+              <div class="col-md-9">
+                <%= f.collection_select :unit_id, Unit.order(:name), :id, :name, {prompt: "Select Unit"}, :class => "form-control" %>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-md-3">Item Group *</label>
+              <div class="col-md-9">
+                <%= f.collection_select :item_group_id, ItemGroup.order(:name), :id, :name, {prompt: "Select Unit"}, :class => "form-control" %>
+              </div>
+            </div>
+            <%= f.fields_for :stock do |g| %>
+
+                <div class="form-horizontal ">
+                  <div class="form-group">
+                    <label class="control-label col-md-3">Quantity *</label>
+                    <div class="col-md-9">
+                      <%= g.number_field :quantity, autofocus: true, :class => "form-control", :min => 1 %>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-horizontal ">
+                  <div class="form-group">
+                    <label class="control-label col-md-3">Unit Price *</label>
+                    <div class="col-md-9">
+                      <%= g.number_field :unit_price, autofocus: true, :class => "form-control", :min => 1 %>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-horizontal ">
+                  <div class="form-group">
+                    <label class="control-label col-md-3">Est. Sell Price *</label>
+                    <div class="col-md-9">
+                      <%= g.number_field :est_sell_price, autofocus: true, :class => "form-control", :min => 1 %>
+                    </div>
+                  </div>
+                </div>
+
+            <% end %>
+
+            <div class="form-group">
+              <label class="control-label col-md-3">Description *</label>
+              <div class="col-md-9">
+                <%= f.text_area :description, autofocus: true, :class => "form-control", :row => "2", :style => "resize: none" %>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-md-offset-3 col-md-2 actions">
+                <%= f.submit "Create", :class => "btn btn-primary" %>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function () {
+    $(".file").change(function (event) {
+      $(".upload-preview").append("<p>" + $(".file").val() + "</p>")
+    });
+  });
+
+  $(document).ready(function () {
+    $('#exampleModalLong').modal('show');
+  })
+</script>

@@ -101,5 +101,8 @@ table>tbody>tr>.text-doc>a:hover{
 .breadcrumb{
     background-color: transparent;
 }
+.page-header {
+    margin: 20px 0 20px;
+}
 
 /*ends here*/

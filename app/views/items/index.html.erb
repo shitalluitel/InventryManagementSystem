@@ -1,0 +1,100 @@
+<div class="row">
+  <div class="col-md-12">
+
+      <div class="row">
+        <div class="col-md-6 pull-right">
+          <a class="btn btn-primary pull-right" href="<%= new_item_path %>"><span><i class="fa fa-plus fa-fw">&nbsp;</i></span>
+            Add New</a>
+        </div>
+      </div>
+    <br/>
+    <div class="row">
+      <div class="col-md-12">
+
+        <table class="table table-hover">
+          <thead>
+          <tr class="bg-primary">
+            <th>S.N.</th>
+            <th>Name</th>
+            <th>Item Code</th>
+            <th>Item Group</th>
+            <th>Quantity</th>
+            <th>Unit</th>
+            <th>Unit Price</th>
+            <th>Estimated Sell Price</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+
+          <% @items.each_with_index do |f, i| %>
+              <tbody>
+              <tr>
+                <td><%= (@page.to_i - 1) * @perpage+ i+1 %></td>
+                <td>
+                  <%= f.name %>
+                </td>
+
+                <td>
+                  <%= f.item_code %>
+                </td>
+
+                <td>
+                  <%= f.item_group.name %>
+                </td>
+
+                <td>
+                  <%= f.stock.quantity %>
+                </td>
+
+                <td>
+                  <%= f.unit.name %>
+                </td>
+
+                <td>
+                  <%= f.stock.unit_price %>
+                </td>
+
+                <td>
+                  <%= f.stock.est_sell_price %>
+                </td>
+
+                <td>
+                  <a data-confirm="Are you sure to delete" rel="nofollow" data-toggle="Delete Fiscal Year" data-method="delete" href="<%= item_path(f) %>">
+                    <span>
+                      <i class="fa fa-trash text-danger fa-th-large fa-2x"></i>
+                    </span>
+                  </a>
+
+                  <a href="<%= item_path(f) %>">
+                    <span>
+                      <i class="fa fa-eye text-primary fa-2x"></i>
+                    </span>
+                  </a>
+
+                  <a href="<%= edit_item_path(f) %>">
+                    <span>
+                      <i class="fa fa-pencil-square text-primary fa-2x"></i>
+                    </span>
+                  </a>
+                </td>
+
+              </tr>
+              </tbody>
+
+          <% end %>
+
+        </table>
+
+      </div>
+    </div>
+
+    <%= will_paginate @items, renderer: BootstrapPagination::Rails %>
+
+  </div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>

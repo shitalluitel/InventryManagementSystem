@@ -1,3 +1,4 @@
+
 <div class="row">
   <div class="col-md-12">
     <div class="row">
@@ -8,7 +9,7 @@
                 <div class="form-group">
                   <label class="col-md-3 control-label">Name <strong class="text-danger"> * </strong></label>
                   <div class="control-label col-md-9">
-                    <%= f.text_field :name, :class => "form-control", :placeholder => "e.g. KiloGram" %>
+                    <%= f.text_field :name, :class => "form-control", :placeholder => "e.g. Snacks" %>
                   </div>
                 </div>
 
@@ -18,7 +19,7 @@
                     <select class="form-control" name="item_group[parent_id]" id="item_group_parent_id">
                       <option value="">Select course name</option>
                       <% @item_names.each do |item| %>
-                          <option value="<%= item.id %>"><%=  item.name %></option>
+                          <option value="<%= item.id %>"><%= item.name %></option>
                       <% end %>
                     </select>
                   </div>
@@ -27,7 +28,7 @@
                 <div class="form-group">
                   <label class="col-md-3 control-label">Description<strong class="text-danger"> *</strong></label>
                   <div class="control-label col-md-9">
-                    <%= f.text_field :description , :class => "form-control" %>
+                    <%= f.text_field :description, :class => "form-control" %>
                   </div>
                 </div>
 

@@ -28,6 +28,10 @@ Rails.application.routes.draw do
 
   resources :item_groups
 
+  resources :items
+
+  resources :stocks
+
   get 'admin/user' => 'users#index', as: :users_view, via: [:get, :post]
   get 'admin/user/new' => 'users#new', as: :users_new
   get 'admin' => 'admin#index', :as => :admin
