@@ -28,7 +28,7 @@
                 <div class="form-group">
                   <label class="col-md-3 control-label">Description<strong class="text-danger"> *</strong></label>
                   <div class="control-label col-md-9">
-                    <%= f.text_field :description, :class => "form-control" %>
+                    <%= f.text_area :description, autofocus: true, :class => "form-control", :row => "2", :style => "resize: none" %>
                   </div>
                 </div>
 

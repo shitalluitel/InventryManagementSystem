@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170221070934) do
+ActiveRecord::Schema.define(version: 20170222101506) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,6 +72,17 @@ ActiveRecord::Schema.define(version: 20170221070934) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "purchases", force: :cascade do |t|
+    t.integer  "vendor_id"
+    t.integer  "item_id"
+    t.decimal  "unit_cost_price", precision: 10, scale: 2
+    t.integer  "quantity"
+    t.decimal  "cash_credit",     precision: 10, scale: 2
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
+    t.decimal  "est_sell_price",  precision: 10, scale: 10
+  end
+
   create_table "stocks", force: :cascade do |t|
     t.integer  "item_id"
     t.integer  "quantity"
@@ -109,6 +120,15 @@ ActiveRecord::Schema.define(version: 20170221070934) do
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
     t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
+  end
+
+  create_table "vendors", force: :cascade do |t|
+    t.string   "name"
+    t.text     "address"
+    t.string   "phone_no"
+    t.string   "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
