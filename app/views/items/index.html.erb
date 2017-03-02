@@ -1,17 +1,17 @@
 <div class="row">
   <div class="col-md-12">
 
-      <div class="row">
-        <div class="col-md-6 pull-right">
-          <a class="btn btn-primary pull-right" href="<%= new_item_path %>"><span><i class="fa fa-plus fa-fw">&nbsp;</i></span>
-            Add New</a>
-        </div>
+    <div class="row">
+      <div class="col-md-6 pull-right">
+        <a class="btn btn-primary pull-right" href="<%= new_item_path %>"><span><i class="fa fa-plus fa-fw">&nbsp;</i></span>
+          Add New</a>
       </div>
+    </div>
     <br/>
     <div class="row">
       <div class="col-md-12">
 
-        <table class="table table-hover">
+        <table class="table table-hover table-striped">
           <thead>
           <tr class="bg-primary">
             <th>S.N.</th>
@@ -26,8 +26,8 @@
           </tr>
           </thead>
 
+          <tbody>
           <% @items.each_with_index do |f, i| %>
-              <tbody>
               <tr>
                 <td><%= (@page.to_i - 1) * @perpage+ i+1 %></td>
                 <td>
@@ -79,9 +79,8 @@
                 </td>
 
               </tr>
-              </tbody>
-
           <% end %>
+          </tbody>
 
         </table>
 

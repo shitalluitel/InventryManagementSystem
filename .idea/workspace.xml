@@ -2,38 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b545199c-1e2d-4123-96e0-eb835c926c53" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/sales/index.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/sales/new.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/vendors/_form.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/vendors/index.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/vendors/new.html.erb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/purchase.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20170222082006_create_purchases.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20170222101506_add_estsellprice_to_purchase.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/db6b4976-3368-48e1-b266-9cc074dcdb9a.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/db6b4976-3368-48e1-b266-9cc074dcdb9a.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/bootstrap.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/style.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/admin_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/purchases_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/purchases_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/vendors_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/vendors_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/item.rb" afterPath="$PROJECT_DIR$/app/models/item.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/vendor.rb" afterPath="$PROJECT_DIR$/app/models/vendor.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/index.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/fiscal_years_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/fiscal_years_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/units_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/units_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fiscal_years/index.html.erb" afterPath="$PROJECT_DIR$/app/views/fiscal_years/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/item_groups/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/item_groups/_form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/item_groups/index.html.erb" afterPath="$PROJECT_DIR$/app/views/item_groups/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/items/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/items/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/items/index.html.erb" afterPath="$PROJECT_DIR$/app/views/items/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/logs/index.html.erb" afterPath="$PROJECT_DIR$/app/views/logs/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/purchases/index.html.erb" afterPath="$PROJECT_DIR$/app/views/purchases/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/purchases/new.html.erb" afterPath="$PROJECT_DIR$/app/views/purchases/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_header.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_header.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_navigation.erb" afterPath="$PROJECT_DIR$/app/views/shared/_navigation.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/units/index.html.erb" afterPath="$PROJECT_DIR$/app/views/units/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/purchases.yml" afterPath="$PROJECT_DIR$/test/fixtures/purchases.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" />
     </list>
     <ignored path="zefinsys.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,48 +42,6 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="PostgreSQL - zefinsys_development@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="PostgreSQL - zefinsys_development@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="PostgreSQL - zefinsys_development@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="purchase_items" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -112,101 +49,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="purchase_item.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/purchase_item.rb">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/fiscal_years/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="787">
+              <caret line="85" column="12" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/logs/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/units/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/items/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+              <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stock.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/stock.rb">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/item_groups/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="unit.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/unit.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vendor.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/vendor.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="purchase.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/purchase.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="current_fiscal_year.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/current_fiscal_year.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customer.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/customer.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="item.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/item.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fiscal_year.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/fiscal_year.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="item_group.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/item_group.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -228,10 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/company_profiles/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/items/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/items/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/_form.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20170221070934_create_stocks.rb" />
         <option value="$PROJECT_DIR$/app/controllers/stocks_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/stocks/show.html.erb" />
@@ -241,15 +124,10 @@
         <option value="$PROJECT_DIR$/app/views/items/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/items_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20170222082006_create_purchases.rb" />
-        <option value="$PROJECT_DIR$/app/views/item_groups/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/login.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/dash.erb" />
-        <option value="$PROJECT_DIR$/app/views/items/_form.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20170222101506_add_estsellprice_to_purchase.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20170225132645_add_estsellprice_to_purchase.rb" />
-        <option value="$PROJECT_DIR$/app/views/item_groups/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/units/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/items/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/purchases/index.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20170225165026_create_sales.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/index.html.erb" />
@@ -263,7 +141,6 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-        <option value="$PROJECT_DIR$/app/views/logs/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_header.html.erb" />
         <option value="$PROJECT_DIR$/app/views/sales/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/stock.rb" />
@@ -277,8 +154,18 @@
         <option value="$PROJECT_DIR$/app/controllers/vendors_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/vendors/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/purchases/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/purchases_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/purchase_item.rb" />
+        <option value="$PROJECT_DIR$/app/views/users/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/items/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/fiscal_years_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/units_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/item_groups/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/purchases_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/fiscal_years/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/item_groups/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/items/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/logs/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/units/index.html.erb" />
       </list>
     </option>
   </component>
@@ -329,14 +216,81 @@
       <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InventorySystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InventorySystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InventorySystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InventorySystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InventorySystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InventorySystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InventorySystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InventorySystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InventorySystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/logs/index.html.erb&#10;admin&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/admin_controller.rb&#10;vendor&#9;FILE&#9;file:///home/shital/InventorySystem/app/models/vendor.rb&#10;new&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/purchases/new.html.erb&#10;purchas&#9;FILE&#9;file:///home/shital/InventorySystem/app/models/purchase.rb&#10;purchase&#9;FILE&#9;file:///home/shital/InventorySystem/app/models/purchase_item.rb&#10;it&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/items_controller.rb&#10;pur&#9;FILE&#9;file:///home/shital/InventorySystem/app/models/purchase.rb&#10;stock&#9;FILE&#9;file:///home/shital/InventorySystem/app/models/stock.rb&#10;header&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/shared/_header.html.erb&#10;style&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/stylesheets/style.css&#10;applicati&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/stylesheets/application.css&#10;heade&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/shared/_header.html.erb&#10;plicatio&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/javascripts/application.js&#10;purc&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/purchases_controller.rb&#10;applica&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/stylesheets/application.css&#10;na&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/shared/_navigation.erb&#10;sale&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/sales_controller.rb&#10;purchases_&#9;FILE&#9;file:///home/shital/InventorySystem/test/controllers/purchases_controller_test.rb&#10;item&#9;FILE&#9;file:///home/shital/InventorySystem/app/models/item.rb&#10;routes&#9;FILE&#9;file:///home/shital/InventorySystem/config/routes.rb&#10;migration/&#9;FILE&#9;file:///home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/migration&#10;admin_con&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/admin_controller.rb&#10;com&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/company_profiles_controller.rb&#10;user_&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/users_controller.rb&#10;appli&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/application_controller.rb&#10;form&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/items/_form.html.erb&#10;ve&#9;FILE&#9;file:///home/shital/InventorySystem/app/models/vendor.rb&#10;hea&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/shared/_header.html.erb&#10;dash&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/layouts/dash.erb&#10;login&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/layouts/login.erb&#10;cation&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/javascripts/application.js&#10;application.css&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/stylesheets/application.css&#10;application.js&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/javascripts/application.js&#10;endor&#9;null&#9;null&#10;items/&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/items&#10;purchase/&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/purchases&#10;tes&#9;FILE&#9;file:///home/shital/InventorySystem/config/routes.rb&#10;tyle&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/stylesheets/style.css&#10;navigation&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/shared/_navigation.erb&#10;items&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/items_controller.rb&#10;registration/&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/devise/registrations&#10;unit&#9;FILE&#9;file:///home/shital/InventorySystem/app/models/unit.rb&#10;i&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/company_profiles/index.html.erb&#10;naviga&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/shared/_navigation.erb&#10;route&#9;FILE&#9;file:///home/shital/InventorySystem/config/routes.rb&#10;das&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/layouts/dash.erb&#10;inde&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/company_profiles/index.html.erb&#10;company&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/company_profiles_controller.rb&#10;bre&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/shared/_breadcrumb.erb" />
+    <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/fiscal_years/index.html.erb&#10;unit_&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/units_controller.rb&#10;fiscal_year_con&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/fiscal_years_controller.rb&#10;user/&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/users&#10;admin&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/admin_controller.rb&#10;vendor&#9;FILE&#9;file:///home/shital/InventorySystem/app/models/vendor.rb&#10;new&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/purchases/new.html.erb&#10;purchas&#9;FILE&#9;file:///home/shital/InventorySystem/app/models/purchase.rb&#10;purchase&#9;FILE&#9;file:///home/shital/InventorySystem/app/models/purchase_item.rb&#10;it&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/items_controller.rb&#10;pur&#9;FILE&#9;file:///home/shital/InventorySystem/app/models/purchase.rb&#10;stock&#9;FILE&#9;file:///home/shital/InventorySystem/app/models/stock.rb&#10;header&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/shared/_header.html.erb&#10;style&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/stylesheets/style.css&#10;applicati&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/stylesheets/application.css&#10;heade&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/shared/_header.html.erb&#10;plicatio&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/javascripts/application.js&#10;purc&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/purchases_controller.rb&#10;applica&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/stylesheets/application.css&#10;na&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/shared/_navigation.erb&#10;sale&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/sales_controller.rb&#10;purchases_&#9;FILE&#9;file:///home/shital/InventorySystem/test/controllers/purchases_controller_test.rb&#10;item&#9;FILE&#9;file:///home/shital/InventorySystem/app/models/item.rb&#10;routes&#9;FILE&#9;file:///home/shital/InventorySystem/config/routes.rb&#10;migration/&#9;FILE&#9;file:///home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/migration&#10;admin_con&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/admin_controller.rb&#10;com&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/company_profiles_controller.rb&#10;user_&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/users_controller.rb&#10;appli&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/application_controller.rb&#10;form&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/items/_form.html.erb&#10;ve&#9;FILE&#9;file:///home/shital/InventorySystem/app/models/vendor.rb&#10;hea&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/shared/_header.html.erb&#10;dash&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/layouts/dash.erb&#10;login&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/layouts/login.erb&#10;cation&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/javascripts/application.js&#10;application.css&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/stylesheets/application.css&#10;application.js&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/javascripts/application.js&#10;endor&#9;null&#9;null&#10;items/&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/items&#10;purchase/&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/purchases&#10;tes&#9;FILE&#9;file:///home/shital/InventorySystem/config/routes.rb&#10;tyle&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/stylesheets/style.css&#10;navigation&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/shared/_navigation.erb&#10;items&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/items_controller.rb&#10;registration/&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/devise/registrations&#10;unit&#9;FILE&#9;file:///home/shital/InventorySystem/app/models/unit.rb&#10;i&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/company_profiles/index.html.erb&#10;naviga&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/shared/_navigation.erb&#10;route&#9;FILE&#9;file:///home/shital/InventorySystem/config/routes.rb&#10;das&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/layouts/dash.erb" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -579,21 +533,21 @@
       <workItem from="1488018885022" duration="2849000" />
       <workItem from="1488036333020" duration="25132000" />
       <workItem from="1488177925666" duration="5469000" />
-      <workItem from="1488434921433" duration="3755000" />
+      <workItem from="1488434921433" duration="7800000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="360969000" />
+    <option name="totallyTimeSpent" value="365014000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="683" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22727273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22727273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17727272" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17727272" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30393702" sideWeight="0.49707174" order="9" side_tool="false" content_ui="tabs" />
@@ -627,66 +581,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/stocks/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/units/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/items/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20170225165026_create_sales.rb" />
-    <entry file="file://$PROJECT_DIR$/db/migrate/20170222082006_create_purchases.rb" />
-    <entry file="file://$PROJECT_DIR$/app/models/sale.rb" />
-    <entry file="file://$PROJECT_DIR$/app/views/admin/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="70" column="33" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/purchases/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/controllers/purchases_controller_test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_navigation.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/sales_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -780,6 +674,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -818,6 +713,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
           <caret line="65" column="141" selection-start-line="65" selection-start-column="110" selection-end-line="65" selection-end-column="141" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -839,20 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-900">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/items/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/logs/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -882,13 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/item_groups/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="79" column="9" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/vendors_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4">
@@ -900,14 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/purchases_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="41" column="78" selection-start-line="41" selection-start-column="78" selection-end-line="41" selection-end-column="78" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -972,22 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/purchase.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/stock.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/unit.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1008,6 +859,147 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/purchase.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/stock.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/bf821488/db6b4976-3368-48e1-b266-9cc074dcdb9a/zefinsys_development.public.logs">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/items/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="79" column="100" selection-start-line="79" selection-start-column="100" selection-end-line="79" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/fiscal_years_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-668">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/units_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/item_groups/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="30" column="104" selection-start-line="30" selection-start-column="104" selection-end-line="30" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fiscal_years/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/purchases_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/item_groups/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/items/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/company_profiles/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fiscal_years/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="787">
+          <caret line="85" column="12" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/logs/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/units/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
           <folding />
         </state>
       </provider>

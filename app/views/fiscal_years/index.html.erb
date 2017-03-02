@@ -42,7 +42,7 @@
     <div class="row">
       <div class="col-md-12">
 
-        <table class="table table-hover">
+        <table class="table table-hover table-striped">
           <thead>
           <tr class="bg-primary">
             <th>S.N.</th>
@@ -52,9 +52,8 @@
             <th>Action</th>
           </tr>
           </thead>
-
+          <tbody>
           <% @fiscal_year.each_with_index do |f, i| %>
-              <tbody>
               <tr>
                 <td><%= (@page.to_i - 1) * @perpage+ i+1 %></td>
                 <td>
@@ -78,9 +77,9 @@
                 </td>
 
               </tr>
-              </tbody>
 
           <% end %>
+          </tbody>
 
         </table>
 

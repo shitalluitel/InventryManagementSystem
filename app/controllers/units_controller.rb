@@ -1,6 +1,6 @@
 class UnitsController < ApplicationController
   add_breadcrumb "Home", :root_path
-  add_breadcrumb "units", :units_path
+  add_breadcrumb "Units", :units_path
 
   def new
     add_breadcrumb "New"

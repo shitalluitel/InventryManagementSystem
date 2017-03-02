@@ -1,6 +1,6 @@
 class FiscalYearsController < ApplicationController
   add_breadcrumb "Home", :root_path
-  add_breadcrumb "FiscalYear", :fiscal_years_path
+  add_breadcrumb "Fiscal Year", :fiscal_years_path
   def new
     add_breadcrumb "New"
     @fiscal_year = FiscalYear.new
