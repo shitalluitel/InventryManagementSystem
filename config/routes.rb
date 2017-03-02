@@ -34,6 +34,16 @@ Rails.application.routes.draw do
 
   resources :purchases
 
+  resources :vendors
+
+  resources :sales do
+    member do
+      get :getprice
+    end
+  end
+
+  resources :customers
+
   get 'admin/user' => 'users#index', as: :users_view, via: [:get, :post]
   get 'admin/user/new' => 'users#new', as: :users_new
   get 'admin' => 'admin#index', :as => :admin

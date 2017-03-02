@@ -14,61 +14,74 @@
   </div>
 </div>
 
-
 <div class="row">
   <div class="col-md-12">
     <div class="ui-widget">
-      <table class="table table-hover">
-        <thead class="bg-primary">
-        <tr>
-          <th>S.N.</th>
-          <th>Particular/Item</th>
-          <th>unit</th>
-          <th>price</th>
-          <th>Est. Price</th>
-          <th>Total</th>
-          <th>Action</th>
-        </tr>
-        </thead>
-        <%= form_for (@purchase) do |f| %>
-            <tbody id="add-data">
-            <tr>
-              <td >1</td>
-              <td class="col-md-4">
-                <select name="purchase[item_id]" id="purchase_item_id">
-                  <option value="">Select one</option>
-                  <% @item.each do |f| %>
-                      <option value="<%= f.id %>"><%= f.name %></option>
-                  <% end %>
-                </select>
-              </td>
-              <td class="col-md-2">
-                <input autofocus="autofocus" class="form-control unit-data" type="text" name="purchase[quantity]" id="purchase_quantity1">
-              </td>
-              <td class="col-md-2">
-                <input autofocus="autofocus" class="form-control price-data" type="text" name="purchase[unit_cost_price]" id="purchase_quantity1">
-              </td>
-              <td class="col-md-2">
-                <input autofocus="autofocus" class="form-control price-data" type="text" name="purchase[est_sell_price]" id="purchase_quantity1">
-              </td>
-              <td class="col-md-2">
-                <input autofocus="autofocus" class="form-control total-cost" type="text" readonly="true" id="purchase_quantity">
-              </td>
-              <td "><a class="btn btn-primary add-new fa fa-plus">&nbsp; Add</a>
-              </td>
-            </tr>
-            <%= f.submit "create", :class => "btn btn-primary" %>
-            </tbody>
-        <% end %>
-      </table>
+      <%= form_for (@purchase) do |f| %>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="col-md-6 pull-right">
+                <div class="form-group">
+                  <label class="control-label col-md-5 text-right"> Supplier</label>
+                  <div class="col-md-7">
+                    <%= f.collection_select :vendor_id, Vendor.order(:name), :id, :name, {prompt: "Select Category"}, {class: "form-control"} %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <%= f.fields_for :purchase_items do |g| %>
+              <table class="table table-hover">
+                <thead class="bg-primary">
+                <tr>
+                  <th>S.N.</th>
+                  <th>Particular/Item</th>
+                  <th>unit</th>
+                  <th>price</th>
+                  <th>Est. Price</th>
+                  <th>Total</th>
+                  <th>Action</th>
+                </tr>
+                </thead>
+
+                <tbody id="add-data">
+                <tr>
+                  <td>1</td>
+                  <td class="col-md-4">
+                    <select class="form-control selection" name="purchase[0][item_id]" id="purchase_item_id">
+                      <option value="">Select one</option>
+                      <% @item.each do |f| %>
+                          <option value="<%= f.id %>"><%= f.name %></option>
+                      <% end %>
+                    </select>
+                  </td>
+                  <td class="col-md-2">
+                    <input autofocus="autofocus" class="form-control unit-data" type="text" name="purchase[0][quantity]" id="purchase_quantity1">
+                  </td>
+                  <td class="col-md-2">
+                    <input autofocus="autofocus" class="form-control price-data" type="text" name="purchase[0][unit_cost_price]" id="purchase_quantity1">
+                  </td>
+                  <td class="col-md-2">
+                    <input autofocus="autofocus" class="form-control price-data" type="text" name="purchase[0][est_sell_price]" id="purchase_quantity1">
+                  </td>
+                  <td class="col-md-2">
+                    <input autofocus="autofocus" class="form-control total-cost" type="text" readonly="true" id="purchase_quantity">
+                  </td>
+                  <td id="btn0"><a class="btn btn-primary add-new fa fa-plus" onclick="addform(0)">&nbsp; Add</a>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+          <% end %>
+          <%= f.submit "create", :class => "btn btn-primary" %>
+      <% end %>
     </div>
   </div>
 </div>
+
 <script type="text/javascript" charset="utf-8">
   $(function () {
-    addcombobox();
-  });
-  function addcombobox(){
     $.widget("custom.combobox", {
       _create: function () {
         this.wrapper = $("<span>")
@@ -165,24 +178,8 @@
         this.element.show();
       }
     });
-    $("#purchase_item_id").combobox();
-  };
-
-//  function addform(num) {
-//    var addform = ""
-//    addform = '<tr><td class="col-md-1">' + num+1 + '</td>';
-//    addform += '<td class="col-md-4"><select class="form-control" name="purchase[' + num + '][item_id]" id="purchase_item_id"><option value="">Select one</option>';
-    <!--<% @item.each do |f| %>-->
-//    addform += '<option value="<%= f.id %>"><%= f.name %></option>';
-    <!--<% end %>-->
-//    addform += '</select></td>';
-//    addform += '<td class="col-md-2"><input autofocus="autofocus" class="form-control unit-data" type="text" name="purchase[' + num + '][quantity]" id="purchase_quantity"></td>';
-//    addform += '<td class="col-md-2"><input autofocus="autofocus" class="form-control price-data" type="text" name="purchase[' + num + '][unit_cost_price]" id="purchase_quantity1"></td>';
-//    addform += '<td class="col-md-2"><input autofocus="autofocus" class="form-control total-cost" type="text" readonly="true" id="purchase_quantity"></td>';
-//    addform += ' <td class="col-md-1"><a class="btn btn-primary add-new fa fa-plus" onclick="addform(' + num + 1 + ')" >&nbsp; Add</a></td></tr>'
-//    $("#add-data").append(addform);
-//    addcombobox();
-//  };
+    $(".selection").combobox();
+  });
 
   $('.total-cost').focus(function () {
     var unit = $('.unit-data').val();
@@ -200,4 +197,19 @@
     var total = unit * price;
     $(".total-cost").val(total);
   });
+
+    function addform(num){
+      var number = parseInt(num) + 1;
+      var addformdata = "";
+      addformdata += '<tr><td>' + (parseInt(number)+1) + '</td>';
+      addformdata += '<td class="col-md-4"><select class="form-control selection" name="purchase[' + number + '][item_id]" id="purchase_item_id"><option value="">Select one</option>';
+      <% @item.each do |f| %>
+         addformdata += '<option value="<%= f.id %>"><%= f.name %></option>';
+      <% end %>
+      addformdata += '</select></td><td class="col-md-2"><input autofocus="autofocus" class="form-control unit-data" type="text" name="purchase[' + number + '][quantity]" id="purchase_quantity' + number + '"></td>';
+      addformdata += '<td class="col-md-2"><input autofocus="autofocus" class="form-control price-data" type="text" name="purchase[' + number + '][unit_cost_price]" id="purchase_price' + number + '"> </td>';
+      addformdata += '<td class="col-md-2"><input autofocus="autofocus" class="form-control price-data" type="text" name="purchase[' + number + '][est_sell_price]" id="purchase_sell' + number + '"></td>';
+      addformdata += '<td class="col-md-2"><input autofocus="autofocus" class="form-control total-cost" type="text" readonly="true" id="total' + number + '"></td><td id="btn' + number + '"><a class="btn btn-primary add-new fa fa-plus" onclick="addform(' + number + ')">&nbsp; Add</a></td></tr>';
+      $('#add-data').append(addformdata);
+    }
 </script>

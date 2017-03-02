@@ -1,15 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  vender_id: 1
-  item_id: 1
-  unit_cost_price: 9.99
-  quantity: 1
-  cash_credit: 9.99
+  total: 9.99
+  vendor_id: 1
 
 two:
-  vender_id: 1
-  item_id: 1
-  unit_cost_price: 9.99
-  quantity: 1
-  cash_credit: 9.99
+  total: 9.99
+  vendor_id: 1

@@ -11,19 +11,17 @@
     <br>
 
     <div class="row">
-      <div class="col-md-12">
-
         <table class="table table-hover">
           <thead>
-            <tr class="bg-primary">
-              <th>S.N.</th>
-              <th>Item Name</th>
-              <th>Unit Cost Price</th>
-              <th>Quantity</th>
-            </tr>
+          <tr class="bg-primary">
+            <th>S.N.</th>
+            <th>Item Name</th>
+            <th>Unit Cost Price</th>
+            <th>Quantity</th>
+          </tr>
           </thead>
 
-          <% @purchase.each_with_index do |f, i| %>
+          <% @sales.each_with_index do |f, i| %>
               <tbody>
               <tr>
                 <td><%= (@page.to_i - 1) * @perpage+ i+1 %></td>
@@ -49,9 +47,7 @@
       </div>
     </div>
 
-    <%= will_paginate @purchase, renderer: BootstrapPagination::Rails %>
-
-  </div>
+    <%= will_paginate @sales, renderer: BootstrapPagination::Rails %>
 </div>
 
 <script type="text/javascript" charset="utf-8">

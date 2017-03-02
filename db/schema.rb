@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170222101506) do
+ActiveRecord::Schema.define(version: 20170226074345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,14 @@ ActiveRecord::Schema.define(version: 20170222101506) do
     t.integer  "fiscal_year_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+  end
+
+  create_table "customers", force: :cascade do |t|
+    t.string   "customer_name"
+    t.text     "address"
+    t.string   "phone_number"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "fiscal_years", force: :cascade do |t|
@@ -72,15 +80,20 @@ ActiveRecord::Schema.define(version: 20170222101506) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "purchases", force: :cascade do |t|
-    t.integer  "vendor_id"
+  create_table "purchase_items", force: :cascade do |t|
+    t.integer  "purchase_id"
     t.integer  "item_id"
-    t.decimal  "unit_cost_price", precision: 10, scale: 2
     t.integer  "quantity"
-    t.decimal  "cash_credit",     precision: 10, scale: 2
-    t.datetime "created_at",                                null: false
-    t.datetime "updated_at",                                null: false
-    t.decimal  "est_sell_price",  precision: 10, scale: 10
+    t.decimal  "unit_price",  precision: 10, scale: 2
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+  end
+
+  create_table "purchases", force: :cascade do |t|
+    t.decimal  "total",      precision: 10, scale: 2
+    t.integer  "vendor_id"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   create_table "stocks", force: :cascade do |t|

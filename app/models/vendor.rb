@@ -1,3 +1,3 @@
 class Vendor < ApplicationRecord
-  # has_many :purchases
+  has_many :purchases
 end

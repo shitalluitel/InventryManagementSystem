@@ -1,33 +1,34 @@
 class PurchasesController < ApplicationController
   def new
     @purchase = Purchase.new
+    @purchase_item = @purchase.purchase_items.build
     @item = Item.order(:name)
   end
 
   def create
     @purchase = Purchase.new(purchase_params)
-    @stocks = Stock.where(item_id: @purchase.item_id)
-    @stocks.each do |f|
-      @stock = f
+    @purchase.purchase_items.each do |g|
+      @stocks = Stock.where(item_id: g.item_id)
+      @stocks.each do |f|
+        @stock = f
+      end
+        @stock.unit_price = ((@stock.unit_price * @stock.quantity) + (g.unit_cost_price * g.quantity)) / (@stock.quantity + g.quantity)
+        @stock.est_sell_price = ((@stock.est_sell_price * @stock.quantity) + (g.est_sell_price * g.quantity)) / (@stock.quantity + g.quantity)
+        @stock.quantity = @stock.quantity + g.quantity
+        @stock.save
     end
     if @purchase.save
-      @stock.unit_price = ((@stock.unit_price * @stock.quantity) + (@purchase.unit_cost_price * @purchase.quantity)) / (@stock.quantity + @purchase.quantity)
-      @stock.quantity = @stock.quantity + @purchase.quantity
-      @stock.est_sell_price = ((@stock.est_sell_price * @stock.quantity) + (@purchase.est_sell_price * @purchase.quantity)) / (@stock.quantity + @purchase.quantity)
-      @stock.save
-
-      @msg = "Item purchased."
-      create_logs(@msg)
-      flash[:success] = @msg
-      redirect_to :new_purchase
+      flash[:success] = "Items added."
     else
-      flash[:alert] = "Couldn't purchase item."
-      render "new"
+      flash[:error] = "Items not added."
     end
+    redirect_to :new_purchase
   end
 
   def index
-
+    @perpage = 20
+    @purchase = Purchase.paginate(:page => params[:page], :per_page => @perpage)
+    @page = params[:page] || 1
   end
 
   def item_select
@@ -38,6 +39,6 @@ class PurchasesController < ApplicationController
   private
 
   def purchase_params
-    params.require(:purchase).permit(:vendor_id, :item_id, :unit_cost_price, :est_sell_price, :quantity, :cash_credit)
+    params.require(:purchase).permit(:vendor_id, purchase_items_attributes: [ :purchase_id => [], :item_id => [], :quantity => [], :unit_price => [] ])
   end
 end

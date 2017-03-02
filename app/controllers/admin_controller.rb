@@ -1,14 +1,9 @@
 class AdminController < ApplicationController
   def index
     @count = 0
-    @user = User.all
-    @user.each do |f|
-      if f.deleted_at.nil?
-        @count += 1
-      else
-        next
-      end
-    end
+    @user = User.where(deleted_at: nil).count
     @log= Log.all.count
+    @purchase = Purchase.all.count
+    # @sale = Sale.all.count
   end
 end

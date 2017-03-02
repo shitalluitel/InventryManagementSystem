@@ -5,4 +5,7 @@ class Item < ApplicationRecord
 
   belongs_to :unit
   belongs_to :item_group
+
+  has_many :purchases
+  # has_many :sales
 end
