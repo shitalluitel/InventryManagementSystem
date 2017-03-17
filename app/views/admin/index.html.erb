@@ -1,79 +1,246 @@
+<br><br>
 <div class="row">
   <div class="col-md-12">
-    <div class="col-md-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title"><i class="fa fa-user fa-fw">&nbsp;</i> Users</h3>
-        </div>
-        <div class="panel-body">
-          <h3 class="text-center text-primary"><%= @user %></h3>
-        </div>
-        <div class="panel-footer">
-          <div class="row">
-            <div class="col-md-12">
-              <a href="<%= users_view_path %>" class="btn btn-primary">View Users</a>
-              <a href="<%= users_new_path %>" class="btn btn-success">Add Users</a>
-            </div>
+
+    <div class="dashboard">
+
+      <div class="col-md-6 ">
+
+        <div class="panel panel-primary">
+          <br>
+          <div class="text-center">
+            <span><i class="fa fa-shopping-basket"></i></span>
           </div>
+          <div class="container-fluid">
+            <h3 class="text-center text-primary">Purchases</h3>
+            <p class="text-center ">View all purchases and make some purchase here.</p>
+          </div>
+          <div class="text-center ">
+            <a href="<%= purchases_path %>" class="btn btn-primary">View</a>
+            <a href="<%= new_purchase_path %>" class="btn btn-success">Add</a>
+          </div>
+          <hr>
+          <table class="table table-responsive .center-table span">
+            <thead>
+            <tr>
+              <th class="text-center col-xs-3"></th>
+              <th class="text-center col-xs-3">Today</th>
+              <th class="text-center col-xs-3">Last Week</th>
+              <th class="text-center col-xs-3">Last Month</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="text-center col-xs-3 quantity">Quantity</td>
+              <td class="text-center col-xs-3"><%= @purchase_today_count %></td>
+              <td class="text-center col-xs-3"><%= @purchase_week_count %></td>
+              <td class="text-center col-xs-3"><%= @purchase_month_count %> <%= @purchase_sum %></td>
+            </tr>
+            <tr>
+              <td class="text-center col-xs-3 quantity">Amount</td>
+              <td class="text-center col-xs-3"><%= @purchase_today_amount %></td>
+              <td class="text-center col-xs-3"><%= @purchase_week_amount %></td>
+              <td class="text-center col-xs-3"><%= @purchase_month_amount %></td>
+            </tr>
+            </tbody>
+          </table>
+          <table class="table table-responsive">
+            <thead>
+            <tr>
+              <th class="text-center col-xs-4"><h4 class="text-primary ">Total Amount: </h4></th>
+              <th class=" col-xs-8"><h4><%= @total_purchase %></h4></th>
+            </tr>
+            </thead>
+          </table>
+          <br>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <br>
+          <div class="text-center">
+              <span>
+                <i class="fa fa-shopping-cart "></i>
+              </span>
+          </div>
+          <div class="container-fluid">
+            <h3 class="text-center text-primary">Sales</h3>
+            <p class="text-center">View all sales and sell some of the goods.</p>
+          </div>
+          <div class="text-center ">
+            <a href="<%= sales_path %>" class="btn btn-primary">View</a>
+            <a href="<%= new_sale_path %>" class="btn btn-success">Add</a>
+          </div>
+          <hr>
+          <table class="table table-responsive .center-table span">
+            <thead>
+            <tr>
+              <th class="text-center col-xs-3"></th>
+              <th class="text-center col-xs-3 ">Today</th>
+              <th class="text-center col-xs-3">Last Week</th>
+              <th class="text-center col-xs-3">Last Month</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="text-center col-xs-3 quantity">Quantity</td>
+              <td class="text-center col-xs-3"><%= @sale_today_count %></td>
+              <td class="text-center col-xs-3"><%= @sale_week_count %></td>
+              <td class="text-center col-xs-3"><%= @sale_month_count %> <%= @purchase_sum %></td>
+            </tr>
+            <tr>
+              <td class="text-center col-xs-3 quantity">Amount</td>
+              <td class="text-center col-xs-3"><%= @sale_today_amount %></td>
+              <td class="text-center col-xs-3"><%= @sale_week_amount %></td>
+              <td class="text-center col-xs-3"><%= @sale_month_amount %></td>
+            </tr>
+            </tbody>
+          </table>
+          <table class="table table-responsive">
+            <thead>
+            <tr>
+              <th class="text-center col-xs-4"><h4 class="text-primary ">Total Amount: </h4></th>
+              <th class=" col-xs-8"><h4><%= @total_purchase %></h4></th>
+            </tr>
+            </thead>
+          </table>
+          <br>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-primary">
+          <br>
+          <div class="text-center">
+            <span><i class="fa fa-list-alt"></i></span>
+          </div>
+          <div class="container-fluid">
+            <h3 class="text-center text-primary">Items</h3>
+            <p class="text-center">View all items, manage its stock and add new items.</p>
+          </div>
+          <div class="text-center">
+            <a href="<%= items_path %>" class="btn btn-primary ">View</a>
+            <a href="<%= new_item_path %>" class="btn btn-success ">Add</a>
+          </div>
+          <br>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <br>
+          <div class="text-center">
+            <span><i class="fa fa-arrow-circle-left"></i></span>
+          </div>
+          <div class="container-fluid">
+            <h3 class="text-center text-primary">Customers</h3>
+            <p class="text-center">View all customers and add new ones.</p>
+          </div>
+          <div class="text-center ">
+            <a href="<%= customers_path %>" class="btn btn-primary">View</a>
+            <a href="<%= new_customer_path %>" class="btn btn-success">Add</a>
+          </div>
+          <br>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <br>
+          <div class="text-center">
+              <span>
+                <i class="fa fa-arrow-circle-right "></i>
+              </span>
+          </div>
+          <div class="container-fluid">
+            <h3 class="text-center text-primary">Suppliers</h3>
+            <p class="text-center">View all suppliers and add new ones.</p>
+          </div>
+          <div class="text-center ">
+            <a href="<%= vendors_path %>" class="btn btn-primary">View</a>
+            <a href="<%= new_vendor_path %>" class="btn btn-success">Add</a>
+          </div>
+          <br>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="panel panel-primary">
+          <br>
+          <div class="text-center">
+            <span><i class="fa fa-user-circle"></i></span>
+          </div>
+          <div class="container-fluid">
+            <h3 class="text-center text-primary">User</h3>
+            <p class="text-center">View all working users and create new users.</p>
+          </div>
+          <div class="text-center">
+            <a href="<%= users_view_path %>" class="btn btn-primary ">View</a>
+            <a href="<%= users_new_path %>" class="btn btn-success ">Add</a>
+          </div>
+          <br>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="panel panel-primary">
+          <br>
+          <div class="text-center">
+            <span><i class="fa fa-history"></i></span>
+          </div>
+          <div class="container-fluid">
+            <h3 class="text-center text-primary">Logs</h3>
+            <p class="text-center">View all activities done by users.</p>
+          </div>
+          <div class="text-center ">
+            <a href="<%= logs_path %>" class="btn btn-primary">View </a>
+          </div>
+          <br>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="panel panel-primary">
+          <br>
+          <div class="text-center">
+            <span><i class="fa fa-cog"></i></span>
+          </div>
+          <div class="container-fluid">
+            <h3 class="text-center text-primary">Settings</h3>
+            <p class="text-center">Have control over this application.</p>
+          </div>
+          <div class="text-center ">
+            <a href="<%= logs_path %>" class="btn btn-primary">View </a>
+          </div>
+          <br>
         </div>
       </div>
     </div>
-
-    <div class="col-md-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title"><i class="fa fa-user fa-history fa-fw">&nbsp;</i>User Logs</h3>
-        </div>
-        <div class="panel-body">
-          <h3 class="text-center text-primary"><%= @log %></h3>
-        </div>
-        <div class="panel-footer">
-          <div class="row">
-            <div class="col-md-12">
-              <a href="<%= logs_path %>" class="btn btn-primary">View Logs</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title"><i class="fa fa-user fa-history fa-fw">&nbsp;</i>Purchases</h3>
-        </div>
-        <div class="panel-body">
-          <h3 class="text-center text-primary"><%= @purchase %></h3>
-        </div>
-        <div class="panel-footer">
-          <div class="row">
-            <div class="col-md-12">
-              <a href="<%= purchases_path %>" class="btn btn-primary">View all</a>
-              <a href="<%= new_purchase_path %>" class="btn btn-success">Buy Item</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title"><i class="fa fa-user fa-history fa-fw">&nbsp;</i>Sales</h3>
-        </div>
-        <div class="panel-body">
-          <h3 class="text-center text-primary"><%= @sale %></h3>
-        </div>
-        <div class="panel-footer">
-          <div class="row">
-            <div class="col-md-12">
-              <a href="<%= sales_path %>" class="btn btn-primary">View all</a>
-              <a href="<%= new_sale_path %>" class="btn btn-success">Sell Item</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
+
 </div>
+<a href="#" class="scrollToTop" title="Scroll To Top" data-toggle="tooltip">
+  <span><i class="fa fa-arrow-up " style="font-size: 50px;"></i></span>
+</a>
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function () {
+
+    //Check to see if the window is top if not then display button
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 400) {
+        $('.scrollToTop').fadeIn();
+      } else {
+        $('.scrollToTop').fadeOut();
+      }
+    });
+
+    //Click event to scroll to top
+    $('.scrollToTop').click(function () {
+      $('html, body').animate({scrollTop: 0}, 800);
+      return false;
+    });
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+
+</script>

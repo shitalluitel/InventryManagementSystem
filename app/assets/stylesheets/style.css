@@ -109,3 +109,92 @@ table>tbody>tr>.text-doc>a:hover{
 
 /*auto complete*/
 /*ends here*/
+
+/*Making dashboard icon to center*/
+.dashboard .panel .fa{
+    font-size: 65px;
+    color: #5cb85c;
+}
+
+.dashboard .btn{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.dashboard .panel h3{
+    font-weight: bold;
+}
+
+.dashboard .panel p{
+    font-size: large;
+}
+
+.dashboard .back-ground{
+    background-color: rgba(255, 255, 255, 0.78);
+}
+.dashboard .panel hr{
+    align-items: center;
+    max-width: 166px;
+    border-width: 3px;
+    border-color: #7e7e7e;
+}
+
+.dashboard .panel th{
+    font-size: 16px;
+    font-weight: Bold;
+    color: #337ab7;
+}
+
+.dashboard .panel {
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.73);
+    margin-bottom: 50px;
+}
+
+.dashboard .panel-primary{
+    border-color: rgb(255, 255, 255);
+}
+/*ends here*/
+
+/*for purchase index*/
+
+.purchase a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+/*ends here*/
+
+
+/*For to top function*/
+
+.scrollToTop{
+    text-align:center;
+    background: transparent;
+    font-weight: bold;
+    color: rgba(16, 34, 237, 0.46);
+    text-decoration: none;
+    position:fixed;
+    top:480px;
+    right:40px;
+    display:none;
+}
+.scrollToTop:hover{
+    text-decoration:none;
+    color: rgba(43, 208, 4, 0.26);
+}
+.section-two .fa {
+    font-size: 65px;
+}
+.section-two .benefit-icon {
+    padding-top: 20px;
+    font-size: 23px;
+}
+
+.multiform .fa-remove{
+    font-size: 30px;
+}
+
+.multiform  a:hover{
+    text-decoration: none;
+}
+/*ends here*/

@@ -1,5 +1,6 @@
 class VendorsController < ApplicationController
   def new
+    @title = "Add"
     @vendor = Vendor.new
   end
 
@@ -16,6 +17,7 @@ class VendorsController < ApplicationController
   end
 
   def edit
+    @title = "Edit"
 
   end
 
@@ -28,6 +30,7 @@ class VendorsController < ApplicationController
   end
 
   def index
+    @title = "List"
     @perpage = 10
     @vendors = Vendor.paginate(:page => params[:page], :per_page => @perpage)
     @page = params[:page] || 1

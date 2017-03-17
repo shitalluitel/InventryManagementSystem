@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   add_breadcrumb "Home", :root_path
   add_breadcrumb "Item", :items_path
   def new
+    @title = "Add"
     add_breadcrumb "New"
     @item = Item.new
     @stock = @item.build_stock
@@ -21,6 +22,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @title = "Edit"
     add_breadcrumb "Edit"
     @item = Item.find(params[:id])
   end
@@ -40,12 +42,14 @@ class ItemsController < ApplicationController
   end
 
   def index
+    @title ="List"
     @perpage = 20
     @items = Item.paginate(:page => params[:page], :per_page => @perpage)
     @page = params[:page] || 1
   end
 
   def show
+    @title = "View"
     add_breadcrumb "Show"
     @item = Item.find(params[:id])
   end

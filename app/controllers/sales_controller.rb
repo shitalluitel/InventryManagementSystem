@@ -1,5 +1,6 @@
 class SalesController < ApplicationController
   def new
+    @title = "Add"
     @sale = Sale.new
     @item = Item.order(:name)
   end
@@ -25,6 +26,7 @@ class SalesController < ApplicationController
   end
 
   def index
+    @title = "List"
     @perpage = 20
     @sales = Sale.paginate(:page => params[:page], :per_page => @perpage)
     @page = params[:page] || 1

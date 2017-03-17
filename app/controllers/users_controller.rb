@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   prepend_before_filter :authenticate_user!
 
   def new
+    @title = "Add"
     add_breadcrumb "New"
     @user = User.new
   end

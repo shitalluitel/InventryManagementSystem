@@ -10,11 +10,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 
+//= require select2
 //= require jquery.min
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap.min
 //= require moment
 //= require bootstrap-datetimepicker
+//= require purchase_type
 //= require toastr
+//= require turbolinks
 //= require_tree .

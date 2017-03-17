@@ -10,8 +10,8 @@
         <th>Action</th>
       </tr>
       </thead>
+      <tbody>
       <% @logs.each_with_index do |u, i| %>
-          <tbody>
           <tr>
             <td><%= (@page.to_i - 1) * @perpage + i+1 %></td>
             <td>
@@ -34,8 +34,8 @@
             <td><%= u.description %>
             </td>
           </tr>
-          </tbody>
       <% end %>
+      </tbody>
     </table>
   </div>
 </div>

@@ -3,6 +3,7 @@ class UnitsController < ApplicationController
   add_breadcrumb "Units", :units_path
 
   def new
+    @title = "Add"
     add_breadcrumb "New"
     @unit = Unit.new
   end
@@ -21,6 +22,7 @@ class UnitsController < ApplicationController
   end
 
   def edit
+    @title = "Edit"
     @unit = Unit.find(params[:id])
   end
 
@@ -51,6 +53,7 @@ class UnitsController < ApplicationController
   end
 
   def index
+    @title = "List"
     @perpage = 10
     @units = Unit.paginate( :page => params[:page], :per_page => @perpage).order("name ASC")
     @page = params[:page] || 1

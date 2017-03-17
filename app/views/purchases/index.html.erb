@@ -1,59 +1,59 @@
-<div class="row">
-  <div class="col-md-12">
+<div class="purchase">
+  <div class="row">
+    <div class="col-md-12">
 
-    <div class="row">
-      <div class="col-md-6 pull-right">
-        <a class="btn btn-primary pull-right" href="<%= new_purchase_path %>"><span><i class="fa fa-plus fa-fw">&nbsp;</i></span>
-          Add New</a>
+      <div class="row">
+        <div class="col-md-6 pull-right">
+          <a class="btn btn-primary pull-right" href="<%= new_purchase_path %>"><span><i class="fa fa-plus fa-fw">&nbsp;</i></span>
+            Add New</a>
+        </div>
       </div>
-    </div>
 
-    <br>
+      <br>
 
-    <div class="row">
-      <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
 
-        <table class="table table-hover">
-          <thead>
+          <table class="table table-hover">
+            <thead>
             <tr class="bg-primary">
               <th>S.N.</th>
-              <th>Item Name</th>
-              <th>Unit Cost Price</th>
-              <th>Quantity</th>
+              <th>Supplier</th>
+              <th>Total Cost</th>
+              <th>Date</th>
             </tr>
-          </thead>
+            </thead>
 
-          <% @purchase.each_with_index do |f, i| %>
-              <tbody>
-              <tr>
-                <td><%= (@page.to_i - 1) * @perpage+ i+1 %></td>
-                <td>
-                  <%= f.item.name %>
-                </td>
+            <% @purchase.each_with_index do |f, i| %>
+                <tbody>
+                <tr>
+                  <td><%= (@page.to_i - 1) * @perpage+ i+1 %></td>
+                  <td>
+                    <%= f.vendor.name %>
+                  </td>
+                  <td>
+                    <%= f.total %>
+                  </td>
+                  <td>
+                    <%= f.created_at %>
+                  </td>
 
-                <td>
-                  <%= f.unit_cost_price %>
-                </td>
+                </tr>
+                </tbody>
 
-                <td>
-                  <%= f.quantity %>
-                </td>
+            <% end %>
 
-              </tr>
-              </tbody>
+          </table>
 
-          <% end %>
-
-        </table>
-
+        </div>
       </div>
+
+      <%= will_paginate @purchase, renderer: BootstrapPagination::Rails %>
+
     </div>
-
-    <%= will_paginate @purchase, renderer: BootstrapPagination::Rails %>
-
   </div>
-</div>
 
+</div>
 <script type="text/javascript" charset="utf-8">
   $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
