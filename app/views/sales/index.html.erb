@@ -3,21 +3,21 @@
 
     <div class="row">
       <div class="col-md-6 pull-right">
-        <a class="btn btn-primary pull-right" href="<%= new_purchase_path %>"><span><i class="fa fa-plus fa-fw">&nbsp;</i></span>
+        <a class="btn btn-primary pull-right" href="<%= new_sale_path %>"><span><i class="fa fa-plus fa-fw">&nbsp;</i></span>
           Add New</a>
       </div>
     </div>
 
     <br>
 
-    <div class="row">
+
         <table class="table table-hover">
           <thead>
           <tr class="bg-primary">
             <th>S.N.</th>
-            <th>Item Name</th>
-            <th>Unit Cost Price</th>
-            <th>Quantity</th>
+            <th>Customer</th>
+            <th>Total</th>
+            <th>Date</th>
           </tr>
           </thead>
 
@@ -26,15 +26,15 @@
               <tr>
                 <td><%= (@page.to_i - 1) * @perpage+ i+1 %></td>
                 <td>
-                  <%= f.item.name %>
+                  <a href="<%= sale_item_path(f) %>"><%= f.customer.customer_name %></a>
                 </td>
 
                 <td>
-                  <%= f.unit_cost_price %>
+                  <%= f.total %>
                 </td>
 
                 <td>
-                  <%= f.quantity %>
+                  <%= f.date %>
                 </td>
 
               </tr>
@@ -44,7 +44,7 @@
 
         </table>
 
-      </div>
+
     </div>
 
     <%= will_paginate @sales, renderer: BootstrapPagination::Rails %>

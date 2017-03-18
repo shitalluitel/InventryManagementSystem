@@ -28,7 +28,11 @@ Rails.application.routes.draw do
 
   resources :item_groups
 
-  resources :items
+  resources :items do
+    collection do
+      get :show_lowest
+    end
+  end
 
   resources :stocks
 
@@ -44,6 +48,7 @@ Rails.application.routes.draw do
 
   resources :customers
 
+  resources :sale_items
   get 'admin/user' => 'users#index', as: :users_view, via: [:get, :post]
   get 'admin/user/new' => 'users#new', as: :users_new
   get 'admin' => 'admin#index', :as => :admin

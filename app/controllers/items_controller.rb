@@ -64,6 +64,15 @@ class ItemsController < ApplicationController
       flash[:alert] = "Couldn' delete item."
     end
   end
+
+  def show_lowest
+    @title = "list"
+    @perpage = 20
+    add_breadcrumb "List"
+    @stock = Stock.where("quantity <= ?", 5)
+    @show = @stock.paginate(:page => params[:page], :per_page => @perpage)
+    @page = params[:page] || 1
+  end
   private
 
   def item_params

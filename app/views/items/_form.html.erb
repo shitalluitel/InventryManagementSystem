@@ -49,7 +49,7 @@
                   <div class="form-group">
                     <label class="control-label col-md-3">Quantity *</label>
                     <div class="col-md-9">
-                      <%= g.number_field :quantity, autofocus: true, :class => "form-control", :min => 1, :placeholder => "10" %>
+                      <%= g.number_field :quantity, autofocus: true, :class => "form-control", :min => 0, :placeholder => "10" %>
                     </div>
                   </div>
                 </div>
@@ -58,7 +58,7 @@
                   <div class="form-group">
                     <label class="control-label col-md-3">Unit Price *</label>
                     <div class="col-md-9">
-                      <%= g.number_field :unit_price, autofocus: true, :class => "form-control", :min => 1, :placeholder => "Enter unit cost price" %>
+                      <%= g.number_field :unit_price, autofocus: true, :class => "form-control", :min => 0, :placeholder => "Enter unit cost price" %>
                     </div>
                   </div>
                 </div>
@@ -67,7 +67,7 @@
                   <div class="form-group">
                     <label class="control-label col-md-3">Est. Sell Price *</label>
                     <div class="col-md-9">
-                      <%= g.number_field :est_sell_price, autofocus: true, :class => "form-control", :min => 1, :placeholder => "Enter Estimated cost price " %>
+                      <%= g.number_field :est_sell_price, autofocus: true, :class => "form-control", :min => 0, :placeholder => "Enter Estimated cost price " %>
                     </div>
                   </div>
                 </div>

@@ -8,7 +8,7 @@ class Item < ApplicationRecord
   belongs_to :item_group
 
   has_many :purchase_items
-  # has_many :sales
+  has_many :sales
 
   validates :name, presence: true, length: { minimum: 3, maximum: 64}
   validates :unit_id, presence: true

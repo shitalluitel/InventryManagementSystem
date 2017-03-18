@@ -2,6 +2,7 @@ class FiscalYearsController < ApplicationController
   add_breadcrumb "Home", :root_path
   add_breadcrumb "Fiscal Year", :fiscal_years_path
   def new
+    @title = "Add"
     add_breadcrumb "New"
     @fiscal_year = FiscalYear.new
   end
@@ -20,6 +21,7 @@ class FiscalYearsController < ApplicationController
   end
 
   def edit
+    @title = "Edit"
     add_breadcrmb "Edit"
     @fiscal_year = FiscalYear.find(params[:id])
   end
@@ -38,6 +40,7 @@ class FiscalYearsController < ApplicationController
   end
 
   def index
+    @title = "List"
     @perpage = 10
     @current_fiscal_year = CurrentFiscalYear.where.not(fiscal_year_id: nil)
     @current_fiscal_year.each do |f|

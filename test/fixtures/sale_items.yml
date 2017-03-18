@@ -2,12 +2,6 @@
 
 one:
   sale_id: 1
-  item_id: 1
-  quantity: 1
-  unit_price: 9.99
 
 two:
   sale_id: 1
-  item_id: 1
-  quantity: 1
-  unit_price: 9.99

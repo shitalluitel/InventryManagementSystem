@@ -1,0 +1,67 @@
+<div class="row">
+  <div class="col-md-12">
+  <% @sale_items.each do |g|%>
+
+    <div class="row">
+      <h4 class="text-success col-md-4"><strong class="text-primary">Sold To:</strong> <%= g.sale.customer.customer_name %></h4>
+      <h4 class="text-success col-md-4"><strong class="text-primary">Date: </strong> <%=  g.sale.date %></h4>
+      <% break %>
+    <% end %>
+      <div class="col-md-4 pull-right">
+        <a class="btn btn-primary pull-right" href="<%= new_sale_path %>"><span><i class="fa fa-plus fa-fw">&nbsp;</i></span>
+          Add New</a>
+      </div>
+    </div>
+
+    <br>
+
+
+    <table class="table table-hover">
+      <thead>
+      <tr class="bg-primary">
+        <th>S.N.</th>
+        <th>Item Name</th>
+        <th>Item Code</th>
+        <th>Total</th>
+        <th>Date</th>
+      </tr>
+      </thead>
+
+      <% @sale_items.each_with_index do |f, i| %>
+          <tbody>
+          <tr>
+            <td><%= (@page.to_i - 1) * @perpage+ i+1 %></td>
+            <td>
+              <a href="<%= item_path(f.item.id) %>"><%= f.item.name %></a>
+            </td>
+
+            <td>
+              <%= f.item.item_code %>
+            </td>
+
+            <td>
+              <%= f.quantity%>
+            </td>
+
+            <td>
+              <%= f.unit_price %>
+            </td>
+
+          </tr>
+          </tbody>
+
+      <% end %>
+
+    </table>
+
+
+  </div>
+
+  <%= will_paginate @sale_items, renderer: BootstrapPagination::Rails %>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>

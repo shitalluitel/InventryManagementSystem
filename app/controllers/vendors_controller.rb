@@ -1,6 +1,9 @@
 class VendorsController < ApplicationController
+  add_breadcrumb "Home", :root_path
+  add_breadcrumb "Suppliers", :vendors_path
   def new
     @title = "Add"
+    add_breadcrumb "New"
     @vendor = Vendor.new
   end
 
@@ -17,12 +20,20 @@ class VendorsController < ApplicationController
   end
 
   def edit
+    add_breadcrumb "Edit"
     @title = "Edit"
-
+    @vendor = Vendor.find(params[:id])
   end
 
   def update
-
+    @vendor = Vendor.find(params[:id])
+    if @vendor.update(vendor_params)
+      @msg = "Vendor Updated"
+      create_logs(@msg)
+      redirect_to :vendors
+    else
+      render "edit"
+    end
   end
 
   def destroy

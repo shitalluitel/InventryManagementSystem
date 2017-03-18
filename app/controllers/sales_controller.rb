@@ -1,27 +1,48 @@
 class SalesController < ApplicationController
+  add_breadcrumb "Home", :root_path
+  add_breadcrumb "Sales", :sales_path
   def new
     @title = "Add"
+    add_breadcrumb "New"
     @sale = Sale.new
+    @sale_item = @sale.sale_items.build
     @item = Item.order(:name)
   end
 
   def create
-    @sale = Sale.new(purchase_params)
-    @stocks = Stock.where(item_id: @sale.item_id)
-    @stocks.each do |f|
-      @stock = f
+    @sale = Sale.new(sale_params)
+    @totalcost = 0
+    @sale.sale_items.each do |total|
+      if total.present?
+        @totalcost += total.unit_price * total.quantity
+      end
     end
+    @sale.total = @totalcost
+    @sale.date = Date.today()
+    @fiscal_year = FiscalYear.all
+    @fiscal_year.each do |f|
+      @fiscal = f.name
+    end
+    @sale.fiscal_year = @fiscal
     if @sale.save
-      @stock.quantity = @stock.quantity - @sale.quantity
-      @stock.save
-
-      @msg = "Item sold."
+      @sale.sale_items.each do |g|
+        if g.present?
+          @stocks = Stock.where(item_id: g.item_id)
+          @stocks.each do |f|
+            @stock = f
+          end
+          @stock.quantity = @stock.quantity + g.quantity
+          @stock.save
+        end
+      end
+      @msg = "Purchase made by " + current_user.email + " from " +@sale.customer.customer_name+ "."
       create_logs(@msg)
-      flash[:success] = @msg
-      redirect_to :new_sale
+      flash[:success] = "Items added."
+
+      redirect_to :sales
     else
-      flash[:alert] = "Couldn't sale item."
-      render "new"
+      @item = Item.order(:name)
+      render 'new'
     end
   end
 
@@ -32,20 +53,8 @@ class SalesController < ApplicationController
     @page = params[:page] || 1
   end
 
-  def item_select
-    @item = Item.select('name,id');
-    render json: @item
-  end
-
-  def getprice
-    @item = Item.find(params[:id])
-    @value = @item.stock.unit_price
-    render json: @value
-  end
-
   private
-
-  def purchase_params
-    params.require(:purchase).permit(:customer_id, :item_id, :unit_cost_price, :quantity, :cash_credit)
+  def sale_params
+    params.require(:sale).permit(:customer_id, sale_items_attributes: [ :sale_id , :item_id, :quantity, :unit_price, :_destroy ])
   end
 end

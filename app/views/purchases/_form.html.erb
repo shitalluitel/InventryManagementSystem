@@ -32,26 +32,58 @@
                 </div>
               </div>
             </div>
+
             <br>
+
             <table class="table table-hover">
+
               <thead class="bg-primary">
-              <tr>
-                <th>Particular/Item</th>
-                <th>unit</th>
-                <th>price</th>
-                <th>Action</th>
-              </tr>
+                <tr>
+                  <th>Particular/Item</th>
+                  <th>Unit</th>
+                  <th>Price</th>
+                  <th>Total</th>
+                  <th>Action</th>
+                </tr>
               </thead>
+
               <tbody id="add-data">
-              <%= f.fields_for :purchase_items do |builder| %>
-                  <%= render 'field_fields', f: builder %>
-              <% end %>
+                <%= f.fields_for :purchase_items do |builder| %>
+                    <%= render 'field_fields', f: builder %>
+                <% end %>
               </tbody>
             </table>
-            <div class="col-xs-6">
-              <%= link_to_add_fields "Add a task", f, :purchase_items %>
+
+            <div class="col-xs-8">
+              <%= link_to_add_fields "Add", f, :purchase_items %>
             </div>
-            <div class="col-xs-6">
+
+            <div class="col-md-4">
+
+              <div class="col-md-12">
+                <h4 class="text-right text-primary col-xs-5">Total Cost:</h4>
+                <div class="col-md-7">
+                  <input type="text" class="total-cost form-control" value="0">
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <h4 class="text-right text-primary col-xs-5">Discount:</h4>
+                <div class="col-md-7">
+                  <%= f.text_field :discount, :class =>"form-control discount" %>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <h4 class="text-right text-primary col-xs-5">Grand Total:</h4>
+                <div class="col-md-7">
+                  <input type="text" class=" grand-total form-control">
+                </div>
+              </div>
+
+            </div>
+            <div class="col-xs-12 pull-right">
+              <br>
               <%= f.submit "Create", :class => "btn btn-primary pull-right" %>
             </div>
         <% end %>
@@ -61,14 +93,48 @@
 </div>
 
 <script type="text/javascript" charset="utf-8">
+  var count = 1;
   $(document).ready(function(){
-    $('.selectbox').select2();
     $('[data-toggle="tooltip"]').tooltip();
   });
 
-  $(document).keypress("b",function (e) {
-    if(e.ctrlKey){
+  $('body').on('blur', '.quantity, .unit-price', function(e) {
+    var row = $(this).closest('tr');
+    var pr = $('.unit-price', row),
+        qu = $('.quantity', row),
+        total = $('.total', row);
 
+    buy_pr = parseFloat(pr.val());
+    sell_pr = parseFloat(qu.val());
+
+    if( ! isNaN(buy_pr) && !isNaN(sell_pr) ) {
+      total.val( ( sell_pr * buy_pr ).toFixed(2) );
     }
-  })
+  });
+
+  $('.total-cost').on('blur', function(e) {
+    var sum = 0;
+    var addto = $('.total-cost');
+    $(".total").each(function() {
+      var value = parseFloat($(this).val());
+      sum += value;
+    });
+    $.val(sum.toFixed(4));
+  });
+
+
+  $('body').on('blur', '.total-cost, .discount', function(e) {
+    var total = $('.total-cost'),
+        discount = $('.discount'),
+        grand = $('.grand-total');
+
+    total_cost = parseFloat(total.val());
+    discount_cost = parseFloat(discount.val());
+    grand_total = parseFloat(grand.val());
+
+    if( ! isNaN(total_cost) && !isNaN(discount_cost) ) {
+      grand.val( ( total_cost - discount_cost).toFixed(4));
+    }
+  });
+
 </script>

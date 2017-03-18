@@ -2,35 +2,13 @@
   <div class="col-md-12">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <% if @vendor.errors.any? %>
-            <div class="alert alert-error">
-              <button type="button" class="close" data-dismiss="alert">×</button>
-              <ul>
-                <% @vendor.errors.full_messages.each do |message| %>
-                    <li><%= message %></li>
-                <% end %>
-              </ul>
-            </div>
-        <% end %>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
         <div class="well tt-modal">
-          <%= form_for (@vendor) do |f| %>
+          <%= form_for (@customer) do |f| %>
               <div class="form-horizontal">
                 <div class="form-group">
                   <label class="col-md-3 control-label">Name <strong class="text-danger"> * </strong></label>
                   <div class="control-label col-md-9">
-                    <%= f.text_field :name, :class => "form-control", :placeholder => "Company Name or Person Name" %>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-md-3 control-label">Email <strong class="text-danger">*</strong></label>
-                  <div class="control-label col-md-9">
-                    <%= f.text_field :email, :class => "form-control", :placeholder => "e.g. xyz@abc.com" %>
+                    <%= f.text_field :customer_name, :class => "form-control", :placeholder => "Company Name or Person Name" %>
                   </div>
                 </div>
 
@@ -44,7 +22,7 @@
                 <div class="form-group">
                   <label class="col-md-3 control-label">Phone Number <strong class="text-danger">*</strong></label>
                   <div class="control-label col-md-9">
-                    <%= f.text_field :phone_no, :class => "form-control"%>
+                    <%= f.text_field :phone_number, :class => "form-control"%>
                   </div>
                 </div>
 

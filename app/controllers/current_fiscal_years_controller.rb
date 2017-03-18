@@ -1,8 +1,9 @@
 class CurrentFiscalYearsController < ApplicationController
   add_breadcrumb "Home", :root_path
-  add_breadcrumb "Current Fiscal Year"
+  add_breadcrumb "Fiscal Year", :fiscal_years_path
   def new
-    add_breadcrumb "New"
+    @title = "Add"
+    add_breadcrumb "Current Fiscal Year / New"
     @current_fiscal_year = CurrentFiscalYear.new
   end
 
@@ -20,7 +21,8 @@ class CurrentFiscalYearsController < ApplicationController
   end
 
   def edit
-    add_breadcrumb "Edit"
+    @title = "Edit"
+    add_breadcrumb "Current Fiscal Year / Edit"
     @current_fiscal_year = CurrentFiscalYear.find(params[:id])
   end
 

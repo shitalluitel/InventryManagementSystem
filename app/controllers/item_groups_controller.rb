@@ -3,6 +3,7 @@ class ItemGroupsController < ApplicationController
   add_breadcrumb "Item Group", :item_groups_path
 
   def new
+    @title = "Add"
     add_breadcrumb "New"
     @item_group = ItemGroup.new
     @item_names = ItemGroup.order(:name)
@@ -25,6 +26,7 @@ class ItemGroupsController < ApplicationController
   end
 
   def edit
+    @title = "Edit"
     add_breadcrumb "Edit"
     @item_group = ItemGroup.find(params[:id])
     @item_names = ItemGroup.order(:name)
@@ -44,6 +46,7 @@ class ItemGroupsController < ApplicationController
   end
 
   def index
+    @title ="List"
     @perpage = 20
     @item_groups = ItemGroup.paginate(:page => params[:page], :per_page => @perpage).order("name ASC")
     @page = params[:page] || 1

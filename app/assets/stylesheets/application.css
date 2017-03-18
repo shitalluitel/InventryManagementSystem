@@ -14,9 +14,7 @@
  *= require bootstrap-datetimepicker
  *= require font-awesome.min
  *= require toastr
- *= require select2
  *= require toastr-responsive
- *= require select2-bootstrap
  *= require style
  *= require_self
  */

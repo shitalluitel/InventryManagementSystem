@@ -1,8 +1,17 @@
+<% @data = controller.controller_name.to_s.titleize %>
 <% if controller.controller_name.to_s.titleize != "Admin" %>
+    <% if controller.controller_name.to_s.titleize === "Sale Items" %>
+        <% @data = "Sale" %>
+    <% end %>
+
+    <% if controller.controller_name.to_s.titleize === "Vendors" %>
+        <% @data = "Suppliers" %>
+    <% end %>
+
     <div class="container-fluid">
       <div class="page-header">
         <h3>
-          <%= controller.controller_name.to_s.titleize %> <small> | <%=  @title %></small></h4>
+          <%= @data %> <small> | <%=  @title %></small></h4>
         </h3>
 
       </div>
