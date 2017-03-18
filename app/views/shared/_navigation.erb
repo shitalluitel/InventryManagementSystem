@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
+  <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -8,97 +8,175 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand logo" href="<%= root_path %>"><%= image_tag("zeftware_logo.png", :alt => "ZefIn") %></a>
+      <a class="navbar-brand logo" href="<%= root_path %>"><span class="text-success">Zef</span><span class="text-primary">In</span></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="navbar-space">
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <div class="container">
-          <ul class="nav navbar-nav">
-            <li><a href="<%= admin_path %>">Dashboard</a></li>
 
-            <li><a href="<%= users_view_path %>">Users</a></li>
+        <ul class="nav navbar-nav">
 
-            <li><a href="<%= logs_path %>">Logs</a></li>
-            <li><a href="<%= items_path %>">Items</a></li>
-            <li><a href="<%= purchases_path %>">Purchase</a></li>
-            <li><a href="<%= sales_path %>">Sell</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-th-list">&nbsp;</i>Item<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="<%= items_path %>">
+                    <span>
+                      <i class="fa fa-list-alt fa-fw">&nbsp;</i>
+                    </span>
+                  View Items
+                </a>
+              </li>
+              <li>
+                <a href="<%= new_item_path %>">
+                    <span>
+                      <i class="fa fa-plus-square fa-fw">&nbsp;</i>
+                    </span>
+                  Add Item
+                </a>
+              </li>
+            </ul>
+          </li>
 
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                Setting<span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="<%= units_path %>">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-users">&nbsp;</i>Parties<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+
+              <li>
+                <a href="<%= customers_path %>">
+                    <span>
+                      <i class="fa fa-arrow-circle-up fa-fw">&nbsp;</i>
+                    </span>
+                  Customer
+                </a>
+              </li>
+
+              <li>
+                <a href="<%= vendors_path %>">
+                    <span>
+                      <i class="fa fa-arrow-circle-down fa-fw">&nbsp;</i>
+                    </span>
+                  Suppliers
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-money">&nbsp;</i>Transactions<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+
+              <li>
+                <a href="<%= sales_path %>">
+                    <span>
+                      <i class="fa fa-shopping-cart fa-fw">&nbsp;</i>
+                    </span>
+                  Sales
+                </a>
+              </li>
+
+              <li>
+                <a href="<%= purchases_path %>">
+                    <span>
+                      <i class="fa fa-shopping-basket fa-fw">&nbsp;</i>
+                    </span>
+                  Purchases
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-cog">&nbsp;</i>Setting<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+
+              <li>
+                <a href="<%= logs_path %>">
+                    <span>
+                      <i class="fa fa-history fa-fw">&nbsp;</i>
+                    </span>
+                  Logs
+                </a>
+              </li>
+
+              <li>
+                <a href="<%= units_path %>">
                     <span>
                       <i class="fa fa-balance-scale fa-fw">&nbsp;</i>
                     </span>
-                    Units
-                  </a>
-                </li>
-                <li>
-                  <a href="<%= fiscal_years_path %>">
+                  Units
+                </a>
+              </li>
+
+              <li>
+                <a href="<%= fiscal_years_path %>">
                     <span>
                       <i class="fa fa-calendar fa-fw">&nbsp;</i>
                     </span>
-                    Fiscal Years
-                  </a>
-                </li>
-                <li>
-                  <a href="<%= item_groups_path %>">
+                  Fiscal Years
+                </a>
+              </li>
+              <li>
+                <a href="<%= item_groups_path %>">
                     <span>
                       <i class="fa fa-object-group fa-fw">&nbsp;</i>
                     </span>
-                    Item Group
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+                  Item Group
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
 
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <span><i class="fa fa-user fa-fw">&nbsp;</i></span>
-                <% if user_signed_in? %>
-                    <%= current_user.first_name.slice(0, 1).capitalize + current_user.first_name.slice(1..-1) %>
-                    <% if current_user.middle_name.present? %>
-                        <%= current_user.middle_name.slice(0, 1).capitalize + current_user.middle_name.slice(1..-1) %>
-                    <% end %>
-                    <%= current_user.last_name.slice(0, 1).capitalize + current_user.last_name.slice(1..-1) %>
-                <% end %>
-                <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="<%= edit_user_registration_path %>">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <span><i class="fa fa-user fa-fw">&nbsp;</i></span>
+              <% if user_signed_in? %>
+                  <%= current_user.first_name.slice(0, 1).capitalize + current_user.first_name.slice(1..-1) %>
+                  <% if current_user.middle_name.present? %>
+                      <%= current_user.middle_name.slice(0, 1).capitalize + current_user.middle_name.slice(1..-1) %>
+                  <% end %>
+                  <%= current_user.last_name.slice(0, 1).capitalize + current_user.last_name.slice(1..-1) %>
+              <% end %>
+              <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="<%= edit_user_registration_path %>">
                   <span>
                     <i class="fa fa-edit fa-fw">&nbsp; </i>
                   </span>
-                    Change Password
-                  </a>
-                </li>
-                <li>
-                  <a href="<%= company_profiles_path %>">
+                  Change Password
+                </a>
+              </li>
+              <li>
+                <a href="<%= company_profiles_path %>">
                   <span>
                     <i class="fa fa-user-plus fa-fw">&nbsp; </i>
                   </span>
-                    Company Profile
-                  </a>
-                </li>
-                <li>
-                  <a href="<%= destroy_user_session_path %>" data-method="delete" rel="nofollow">
+                  Company Profile
+                </a>
+              </li>
+              <li>
+                <a href="<%= destroy_user_session_path %>" data-method="delete" rel="nofollow">
                   <span>
                     <i class="fa fa-sign-out fa-fw">&nbsp;</i>
                   </span>
-                    Logout
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div><!-- /.navbar-collapse -->
     </div>
   </div><!-- /.container-fluid -->

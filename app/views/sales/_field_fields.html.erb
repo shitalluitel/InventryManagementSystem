@@ -1,16 +1,17 @@
 <tr>
-  <td>
-    <%= f.collection_select :item_id, Item.order(:name), :id, :name, {prompt: "Select Catefory"}, {class: "form-control"} %>
+  <td class="col-md-5">
+    <%= f.collection_select :item_id, @item, :id, :name, {prompt: "Select Catefory"}, {class: "select-item form-control"} %>
   </td>
   <td class="col-md-2">
-    <%=  f.text_field :quantity, :class=>"form-control"%>
+    <%=  f.text_field :quantity, :class=>"form-control quantity", :value => "0"%>
   </td>
   <td class="col-md-2">
-    <%=  f.text_field :unit_price, :class=>"form-control"%>
+    <%=  f.text_field :unit_price, :class=>"form-control unit-price", :value => "0"%>
   </td>
-  <td class="total-price">
+  <td class="col-md-2">
+    <input type="text" class="form-control total" value="0" disabled>
   </td>
-  <td>
+  <td class="col-md-1">
     <a class="remove_fields " href="#"  data-toggle="toggle" title="Remove"><i class="fa fa-remove text-danger"></i></a>
   </td>
 </tr>

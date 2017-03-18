@@ -1,0 +1,108 @@
+<br><br>
+<div class="row">
+  <div class="col-md-12">
+    <div class="setting">
+
+      <div class="col-md-12">
+        <div class="panel panel-primary">
+          <br>
+          <div class="text-center">
+            <span><i class="fa fa-calendar-check-o"></i></span>
+          </div>
+          <div class="container-fluid">
+            <h3 class="text-center text-primary">Fiscal Year</h3>
+            <p class="text-center">Create fiscal year and manage them and also change current fiscal year.</p>
+          </div>
+          <div class="text-center">
+            <a href="<%= fiscal_years_path %>" class="btn btn-primary ">View</a>
+            <a href="<%= new_fiscal_year_path %>" class="btn btn-success ">Add</a>
+          </div>
+          <hr>
+          <div class="text-center">
+            <h4>Current Fiscal Year: <small><%= @name %></small></h4>
+          </div>
+          <br>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="panel panel-primary">
+          <br>
+          <div class="text-center">
+            <span><i class="fa fa-user-circle"></i></span>
+          </div>
+          <div class="container-fluid">
+            <h3 class="text-center text-primary">Item Groups</h3>
+            <p class="text-center">Create parennt group for items.</p>
+          </div>
+          <div class="text-center">
+            <a href="<%= item_groups_path %>" class="btn btn-primary ">View</a>
+            <a href="<%= new_item_group_path %>" class="btn btn-success ">Add</a>
+          </div>
+          <br>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="panel panel-primary">
+          <br>
+          <div class="text-center">
+            <span><i class="fa fa-user-circle"></i></span>
+          </div>
+          <div class="container-fluid">
+            <h3 class="text-center text-primary">Unit</h3>
+            <p class="text-center">Create both print unit as well as working unit for application.</p>
+          </div>
+          <div class="text-center">
+            <a href="<%= units_path %>" class="btn btn-primary ">View</a>
+            <a href="<%= new_unit_path %>" class="btn btn-success ">Add</a>
+          </div>
+          <br>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="panel panel-primary">
+          <br>
+          <div class="text-center">
+            <span><i class="fa fa-user-circle"></i></span>
+          </div>
+          <div class="container-fluid">
+            <h3 class="text-center text-primary">User</h3>
+            <p class="text-center">View all working users and create new users.</p>
+          </div>
+          <div class="text-center">
+            <a href="<%= users_view_path %>" class="btn btn-primary ">View</a>
+            <a href="<%= users_new_path %>" class="btn btn-success ">Add</a>
+          </div>
+          <br>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<a href="#" class="scrollToTop" title="Scroll To Top" data-toggle="tooltip">
+  <span><i class="fa fa-arrow-up " style="font-size: 50px;"></i></span>
+</a>
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function () {
+
+    //Check to see if the window is top if not then display button
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 400) {
+        $('.scrollToTop').fadeIn();
+      } else {
+        $('.scrollToTop').fadeOut();
+      }
+    });
+
+    //Click event to scroll to top
+    $('.scrollToTop').click(function () {
+      $('html, body').animate({scrollTop: 0}, 800);
+      return false;
+    });
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+
+</script>

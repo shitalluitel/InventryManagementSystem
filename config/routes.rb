@@ -30,7 +30,7 @@ Rails.application.routes.draw do
 
   resources :items do
     collection do
-      get :show_lowest
+      get '/stock' => :show_lowest
     end
   end
 
@@ -42,14 +42,21 @@ Rails.application.routes.draw do
 
   resources :sales do
     member do
-      get :getprice
+      get '/get/unit/price' => :get_unit_price
     end
   end
 
   resources :customers
 
   resources :sale_items
+
+  resources :purchase_items
+
   get 'admin/user' => 'users#index', as: :users_view, via: [:get, :post]
   get 'admin/user/new' => 'users#new', as: :users_new
   get 'admin' => 'admin#index', :as => :admin
-end
+  get '/sale/:id(.:format)' => 'sale_items#show', as: :get_sale
+  get '.purchase/:id(.:format)' => 'purchase_items#show', as: :get_purchase
+  get 'setting' => 'admin#show', as: :setting
+
+  end

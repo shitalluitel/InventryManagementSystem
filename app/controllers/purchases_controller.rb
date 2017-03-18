@@ -6,9 +6,11 @@ class PurchasesController < ApplicationController
     add_breadcrumb "New"
     @purchase = Purchase.new
     @purchase_item = @purchase.purchase_items.build
-    @item = Item.order(:name)
-  end
+    @stock =  Stock.where("quantity >= ?", 0)
 
+    @item = Item.order(:name)
+    @date = Purchase.limit(1).reverse
+  end
   def create
     @purchase = Purchase.new(purchase_params)
     @totalcost = 0
@@ -18,7 +20,6 @@ class PurchasesController < ApplicationController
       end
     end
     @purchase.total = @totalcost
-    @purchase.date = Date.today()
     @fiscal_year = FiscalYear.all
     @fiscal_year.each do |f|
       @fiscal = f.name
@@ -57,6 +58,6 @@ class PurchasesController < ApplicationController
   private
 
   def purchase_params
-    params.require(:purchase).permit(:vendor_id, purchase_items_attributes: [ :purchase_id , :item_id, :quantity, :unit_price, :_destroy ])
+    params.require(:purchase).permit(:vendor_id, :date, :bill_number, :discount, purchase_items_attributes: [:purchase_id , :item_id, :quantity, :unit_price, :_destroy ])
   end
 end

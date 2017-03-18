@@ -124,8 +124,8 @@
             <a href="<%= new_item_path %>" class="btn btn-success ">Add</a>
           </div>
           <hr>
-          <div class="text-center">
-            <a href="<%= show_lowest_items_path %>"><h3 class="text-primary">View Lowest Stock Item</h3></a>
+          <div class="text-center show-stock">
+            <a href="<%= stock_items_path %>"> <h4>View Items With Lowest Stock</h4></a>
           </div>
           <br>
         </div>
@@ -169,25 +169,7 @@
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="panel panel-primary">
-          <br>
-          <div class="text-center">
-            <span><i class="fa fa-user-circle"></i></span>
-          </div>
-          <div class="container-fluid">
-            <h3 class="text-center text-primary">User</h3>
-            <p class="text-center">View all working users and create new users.</p>
-          </div>
-          <div class="text-center">
-            <a href="<%= users_view_path %>" class="btn btn-primary ">View</a>
-            <a href="<%= users_new_path %>" class="btn btn-success ">Add</a>
-          </div>
-          <br>
-        </div>
-      </div>
-
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div class="panel panel-primary">
           <br>
           <div class="text-center">
@@ -204,7 +186,7 @@
         </div>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div class="panel panel-primary">
           <br>
           <div class="text-center">
@@ -215,7 +197,7 @@
             <p class="text-center">Have control over this application.</p>
           </div>
           <div class="text-center ">
-            <a href="<%= logs_path %>" class="btn btn-primary">View </a>
+            <a href="<%= setting_path %>" class="btn btn-primary">View </a>
           </div>
           <br>
         </div>

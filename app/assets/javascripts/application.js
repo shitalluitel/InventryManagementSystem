@@ -17,5 +17,7 @@
 //= require bootstrap-datetimepicker
 //= require purchase_type
 //= require toastr
+//= require select2.min
+//= require select2
 //= require turbolinks
 //= require_tree .

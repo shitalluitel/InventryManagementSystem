@@ -1,55 +1,68 @@
-<div class="row">
-  <div class="col-md-12">
+<div class="purchase">
+  <div class="row">
+    <div class="col-md-12">
 
-    <div class="row">
-      <div class="col-md-6 pull-right">
-        <a class="btn btn-primary pull-right" href="<%= new_sale_path %>"><span><i class="fa fa-plus fa-fw">&nbsp;</i></span>
-          Add New</a>
+      <div class="row">
+        <div class="col-md-6 pull-right">
+          <a class="btn btn-primary pull-right" href="<%= new_sale_path %>"><span><i class="fa fa-plus fa-fw">&nbsp;</i></span>
+            Add New</a>
+        </div>
       </div>
+      <br>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <table class="table table-hover">
+            <thead>
+            <tr class="bg-primary">
+              <th>S.N.</th>
+              <th>Bill Number</th>
+              <th>Supplier</th>
+              <th>Total Cost</th>
+              <th>Net Discount</th>
+              <th>Date</th>
+              <th>Fiscal Year</th>
+            </tr>
+            </thead>
+
+            <% @sales.each_with_index do |f, i| %>
+                <tbody>
+                <tr>
+                  <td><%= (@page.to_i - 1) * @perpage+ i+1 %></td>
+                  <td><a href="<%= get_sale_path(f) %>"><%= f.bill_number %></a></td>
+                  <td>
+                    <%= f.customer.customer_name %>
+                  </td>
+                  <td>
+                    <%= f.total %>
+                  </td>
+                  <td>
+                    <%= f.discount %>
+                  </td>
+                  <td>
+                    <%= f.date %>
+                  </td>
+                  <td>
+                    <%= f.fiscal_year %>
+                  </td>
+
+                </tr>
+                </tbody>
+
+            <% end %>
+
+          </table>
+
+        </div>
+      </div>
+
+      <%= will_paginate @sales, renderer: BootstrapPagination::Rails %>
+
     </div>
+  </div>
 
-    <br>
-
-
-        <table class="table table-hover">
-          <thead>
-          <tr class="bg-primary">
-            <th>S.N.</th>
-            <th>Customer</th>
-            <th>Total</th>
-            <th>Date</th>
-          </tr>
-          </thead>
-
-          <% @sales.each_with_index do |f, i| %>
-              <tbody>
-              <tr>
-                <td><%= (@page.to_i - 1) * @perpage+ i+1 %></td>
-                <td>
-                  <a href="<%= sale_item_path(f) %>"><%= f.customer.customer_name %></a>
-                </td>
-
-                <td>
-                  <%= f.total %>
-                </td>
-
-                <td>
-                  <%= f.date %>
-                </td>
-
-              </tr>
-              </tbody>
-
-          <% end %>
-
-        </table>
-
-
-    </div>
-
-    <%= will_paginate @sales, renderer: BootstrapPagination::Rails %>
 </div>
-
 <script type="text/javascript" charset="utf-8">
   $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();

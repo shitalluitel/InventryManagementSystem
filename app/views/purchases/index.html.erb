@@ -17,9 +17,12 @@
             <thead>
             <tr class="bg-primary">
               <th>S.N.</th>
+              <th>Bill Number</th>
               <th>Supplier</th>
               <th>Total Cost</th>
+              <th>Net Discount</th>
               <th>Date</th>
+              <th>Fiscal Year</th>
             </tr>
             </thead>
 
@@ -27,6 +30,7 @@
                 <tbody>
                 <tr>
                   <td><%= (@page.to_i - 1) * @perpage+ i+1 %></td>
+                  <td><a href="<%= get_purchase_path(f) %>"><%= f.bill_number %></a></td>
                   <td>
                     <%= f.vendor.name %>
                   </td>
@@ -34,7 +38,13 @@
                     <%= f.total %>
                   </td>
                   <td>
-                    <%= f.created_at %>
+                    <%= f.discount %>
+                  </td>
+                  <td>
+                    <%= f.date %>
+                  </td>
+                  <td>
+                    <%= f.fiscal_year %>
                   </td>
 
                 </tr>

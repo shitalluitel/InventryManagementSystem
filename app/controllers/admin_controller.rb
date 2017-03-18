@@ -28,4 +28,11 @@ class AdminController < ApplicationController
     @total_sale = Purchase.all.sum(:total)
   end
 
+  def show
+    @current_fiscal = CurrentFiscalYear.all
+    @current_fiscal.each do |f|
+      @name = f.fiscal_year.name
+      break
+    end
+  end
 end

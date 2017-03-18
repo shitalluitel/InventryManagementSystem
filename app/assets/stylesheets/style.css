@@ -21,7 +21,17 @@
         padding-top: 20px;
         padding-bottom: 15px;
     }
-}
+
+    .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+        margin-left: -15px;
+        padding-top: 19px;
+    }
+
+    .navbar-default .navbar-brand {
+        color: #777;
+        font-size: 25px;
+        font-weight: bold;
+    }}
 
 .alert-error {
     background-color: #ee0007;
@@ -62,14 +72,10 @@ body {
 /*ends here*/
 
 /*for navigation bar*/
-.navbar-brand > img, .navbar-brand{
-    max-height: 100%;
-}
 
-.navbar, .navbar-brand, .navbar-collapse {
-    min-height: 60px;
+.navbar .navbar-space a{
+    font-size: 17px;
 }
-
 /*ende here*/
 
 /*For company profile */
@@ -111,48 +117,57 @@ table>tbody>tr>.text-doc>a:hover{
 /*ends here*/
 
 /*Making dashboard icon to center*/
-.dashboard .panel .fa{
+.dashboard .panel .fa, .setting .panel .fa{
     font-size: 65px;
     color: #5cb85c;
 }
 
-.dashboard .btn{
+.dashboard .btn, .setting .btn{
     font-size: 17px;
     font-weight: 600;
 }
 
-.dashboard .panel h3{
+.dashboard .panel h3, .setting .panel h3{
     font-weight: bold;
 }
 
-.dashboard .panel p{
+.dashboard .panel p, .setting .panel p{
     font-size: large;
 }
 
-.dashboard .back-ground{
+.dashboard .back-ground, .setting .back-ground{
     background-color: rgba(255, 255, 255, 0.78);
 }
-.dashboard .panel hr{
+.dashboard .panel hr, .setting .panel hr{
     align-items: center;
     max-width: 166px;
     border-width: 3px;
     border-color: #7e7e7e;
 }
 
-.dashboard .panel th{
+.dashboard .panel th, .setting .panel th{
     font-size: 16px;
     font-weight: Bold;
     color: #337ab7;
 }
 
-.dashboard .panel {
+.dashboard .panel, .setting .panel{
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.73);
     margin-bottom: 50px;
 }
 
-.dashboard .panel-primary{
+.dashboard .panel-primary, .setting .panel-primary{
     border-color: rgb(255, 255, 255);
 }
+
+.dashboard .panel .show-stock a, .setting .panel .show-stock a{
+    text-decoration: none;
+}
+
+.dashboard .panel .show-stock a:hover, .setting .panel .show-stock a:hover{
+    color: green;
+}
+
 /*ends here*/
 
 /*for purchase index*/
@@ -196,5 +211,14 @@ table>tbody>tr>.text-doc>a:hover{
 
 .multiform  a:hover{
     text-decoration: none;
+}
+
+.multiform p{
+    font-size: 18px;
+    font-weight: 400;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
 }
 /*ends here*/

@@ -18,7 +18,6 @@ class SalesController < ApplicationController
       end
     end
     @sale.total = @totalcost
-    @sale.date = Date.today()
     @fiscal_year = FiscalYear.all
     @fiscal_year.each do |f|
       @fiscal = f.name
@@ -53,8 +52,16 @@ class SalesController < ApplicationController
     @page = params[:page] || 1
   end
 
+  def get_unit_price
+    @item = Stock.where(item_id: params[:id])
+    @item.each do |f|
+      @data = f.unit_price
+      break
+    end
+    render json: @data
+  end
   private
   def sale_params
-    params.require(:sale).permit(:customer_id, sale_items_attributes: [ :sale_id , :item_id, :quantity, :unit_price, :_destroy ])
+    params.require(:sale).permit(:customer_id, :date, :discount, :bill_number, sale_items_attributes: [:sale_id , :item_id, :quantity, :unit_price, :_destroy ])
   end
 end

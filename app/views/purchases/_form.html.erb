@@ -19,25 +19,54 @@
       <div class="ui-widget">
         <% @count = 0 %>
         <%= form_for @purchase do |f| %>
-            <% @count = f %>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="col-md-6 pull-right">
-                  <div class="form-group">
-                    <label class="control-label col-md-5 text-right"> Supplier</label>
-                    <div class="col-md-7">
-                      <%= f.collection_select :vendor_id, Vendor.order(:name), :id, :name, {prompt: "Select Category"}, {class: "form-control selectbox"} %>
+            <div class="form-horizontal">
+              <div class="row">
+                <div class="col-md-12">
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label col-md-5"> <p class="text-right">Supplier</p></label>
+                      <div class="col-md-7">
+                        <%= f.collection_select :vendor_id, Vendor.order(:name), :id, :name, {prompt: "Select Category"}, {class: "form-control selectbox"} %>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 ">
+                    <div class="form-group">
+                      <label class="control-label col-md-5"><p class="text-right"> Bill Number:</p></label>
+                      <div class="col-md-7">
+                        <% if @data.present? %>
+                          <% @data = @date.bill_no.to_f + 1 %>
+                        <% else %>
+                          <% @data = "" %>
+                        <% end %>
+                        <%= f.text_field :bill_number, :class => "form-control", :value => "#{@data}" %>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 ">
+                    <div class="form-group">
+                      <label class="control-label col-md-5"><p class="text-right">Date</p></label>
+                      <div class="col-md-7">
+                        <div class='input-group date' id='datetimepicker1'>
+                          <%= f.text_field :date, :class => "form-control" %>
+                          <span class="input-group-addon">
+                          <span class="fa fa-calendar"></span>
+                        </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <br>
+              <hr>
+              <br>
+              <table class="table table-hover">
 
-            <table class="table table-hover">
-
-              <thead class="bg-primary">
+                <thead class="bg-primary">
                 <tr>
                   <th>Particular/Item</th>
                   <th>Unit</th>
@@ -45,46 +74,51 @@
                   <th>Total</th>
                   <th>Action</th>
                 </tr>
-              </thead>
+                </thead>
 
-              <tbody id="add-data">
+                <tbody id="add-data">
                 <%= f.fields_for :purchase_items do |builder| %>
                     <%= render 'field_fields', f: builder %>
                 <% end %>
-              </tbody>
-            </table>
+                </tbody>
+              </table>
 
-            <div class="col-xs-8">
-              <%= link_to_add_fields "Add", f, :purchase_items %>
-            </div>
+              <hr>
 
-            <div class="col-md-4">
-
-              <div class="col-md-12">
-                <h4 class="text-right text-primary col-xs-5">Total Cost:</h4>
-                <div class="col-md-7">
-                  <input type="text" class="total-cost form-control" value="0">
-                </div>
+              <div class="col-md-8">
+                <%= link_to_add_fields "Add", f, :purchase_items %>
               </div>
 
-              <div class="col-md-12">
-                <h4 class="text-right text-primary col-xs-5">Discount:</h4>
-                <div class="col-md-7">
-                  <%= f.text_field :discount, :class =>"form-control discount" %>
+
+              <div class="col-md-4 form-group">
+
+                <div class="col-md-12">
+                  <h4 class="text-right text-primary col-md-5">Total Cost:</h4>
+                  <div class="col-md-7">
+                    <input type="text" class="total-cost form-control" value="0" readonly>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <label class="control-label col-md-5"> <h4 class="text-right text-primary">Discount:</h4></label>
+                  <div class="col-md-7">
+                    <%= f.text_field :discount, :class =>"form-control discount", :value => "0" %>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <label class="control-label col-md-5"><h4 class="text-right text-primary ">Grand Total:</h4></label>
+                  <div class="col-md-7">
+                    <input type="text" class=" grand-total form-control" disabled>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="col-md-offset-5 col-md-7">
+                    <%= f.submit "Create", :class => "btn btn-primary btn-block" %>
+                  </div>
                 </div>
               </div>
-
-              <div class="col-md-12">
-                <h4 class="text-right text-primary col-xs-5">Grand Total:</h4>
-                <div class="col-md-7">
-                  <input type="text" class=" grand-total form-control">
-                </div>
-              </div>
-
-            </div>
-            <div class="col-xs-12 pull-right">
-              <br>
-              <%= f.submit "Create", :class => "btn btn-primary pull-right" %>
             </div>
         <% end %>
       </div>
@@ -103,38 +137,40 @@
     var pr = $('.unit-price', row),
         qu = $('.quantity', row),
         total = $('.total', row);
-
+    var grand = $('.total-cost');
+    temp = parseFloat(total.val());
     buy_pr = parseFloat(pr.val());
     sell_pr = parseFloat(qu.val());
 
     if( ! isNaN(buy_pr) && !isNaN(sell_pr) ) {
       total.val( ( sell_pr * buy_pr ).toFixed(2) );
+      grand.val(( parseFloat(grand.val()) + (parseFloat(total.val() )- temp)).toFixed(4));
     }
   });
 
-  $('.total-cost').on('blur', function(e) {
-    var sum = 0;
-    var addto = $('.total-cost');
-    $(".total").each(function() {
-      var value = parseFloat($(this).val());
-      sum += value;
-    });
-    $.val(sum.toFixed(4));
-  });
 
 
   $('body').on('blur', '.total-cost, .discount', function(e) {
     var total = $('.total-cost'),
         discount = $('.discount'),
-        grand = $('.grand-total');
+        grand_cost = $('.grand-total');
 
     total_cost = parseFloat(total.val());
     discount_cost = parseFloat(discount.val());
-    grand_total = parseFloat(grand.val());
+    grand_total = parseFloat(grand_cost.val());
 
     if( ! isNaN(total_cost) && !isNaN(discount_cost) ) {
-      grand.val( ( total_cost - discount_cost).toFixed(4));
+      grand_cost.val( ( total_cost - discount_cost).toFixed(4));
     }
+  });
+
+  $(function () {
+    $('#datetimepicker1').datetimepicker({
+      viewMode: 'years',
+      format: 'YYYY/MM/DD'
+    });
+    $('.selectbox').select2();
+    $('.select-item').select2();
   });
 
 </script>

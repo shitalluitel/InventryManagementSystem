@@ -15,6 +15,8 @@
  *= require font-awesome.min
  *= require toastr
  *= require toastr-responsive
+ *= require select2
+ *= require select2.min
  *= require style
  *= require_self
  */
