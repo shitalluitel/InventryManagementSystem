@@ -6,25 +6,46 @@ class PurchasesController < ApplicationController
     add_breadcrumb "New"
     @purchase = Purchase.new
     @purchase_item = @purchase.purchase_items.build
-    @stock =  Stock.where("quantity >= ?", 0)
+    @company = CompanyProfile.all
+    @company.each do |f|
+      @tax = f.tax
+      break
+    end
 
     @item = Item.order(:name)
-    @date = Purchase.limit(1).reverse
   end
+
   def create
     @purchase = Purchase.new(purchase_params)
-    @totalcost = 0
+    @partial_total = 0
+
     @purchase.purchase_items.each do |total|
-      if total.present?
-        @totalcost += total.unit_price * total.quantity
+      if total.unit_price.present? && total.quantity.present?
+        @partial_total += total.unit_price * total.quantity
       end
     end
-    @purchase.total = @totalcost
+
+    @company = CompanyProfile.all
+    @company.each do |f|
+      @tax = f.tax
+      break
+    end
+
+
+    @taxable = @partial_total - @purchase.discount
+    @tax_amount = ( @tax.to_f / 100 ) * @taxable
+    @total_amount = @taxable + @tax_amount
+
     @fiscal_year = FiscalYear.all
     @fiscal_year.each do |f|
       @fiscal = f.name
     end
+
+    @purchase.partial_total = @partial_total
+    @purchase.tax_amount = @tax_amount
+    @purchase.total = @total_amount
     @purchase.fiscal_year = @fiscal
+
     if @purchase.save
       @purchase.purchase_items.each do |g|
        if g.present?
@@ -58,6 +79,6 @@ class PurchasesController < ApplicationController
   private
 
   def purchase_params
-    params.require(:purchase).permit(:vendor_id, :date, :bill_number, :discount, purchase_items_attributes: [:purchase_id , :item_id, :quantity, :unit_price, :_destroy ])
+    params.require(:purchase).permit(:vendor_id, :date, :bill_number, :discount,:credit_limit, purchase_items_attributes: [:purchase_id , :item_id, :quantity, :unit_price, :_destroy ])
   end
 end

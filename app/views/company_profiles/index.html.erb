@@ -94,12 +94,6 @@
             <br>
             <br>
             <a href="<%= edit_company_profile_path(companyprofile) %>" class="btn btn-success"><i class="fa fa-edit fa-fw">&nbsp;</i>Edit company</a>
-            <br>
-            <br>
-            <a title="Delete Record" data-toggle="tooltip" data-confirm="Are you sure to delete" rel="nofollow" data-method="delete" href="<%= company_profile_path(companyprofile) %> " class="btn btn-danger" >
-              <i class="fa fa-trash fa-th-large">&nbsp;</i>
-              Delete Company
-            </a>
           </div>
           <div class="col-md-4 col-xs-3">
             <table class="table table-profile">
@@ -112,6 +106,7 @@
                   <%= companyprofile.name %>
                 </td>
               </tr>
+
               <tr>
                 <th class="col-xs-4 text-success">
                   Vat/Pan Number:
@@ -120,6 +115,16 @@
                   <%= companyprofile.vat_pan_no %>
                 </td>
               </tr>
+
+              <tr>
+                <th class="col-xs-4 text-success">
+                  Vat %:
+                </th>
+                <td class="text-doc">
+                  <%= companyprofile.tax %>
+                </td>
+              </tr>
+
               <tr>
                 <th class="col-xs-4 text-success">
                   Address:
@@ -128,6 +133,7 @@
                   <%= companyprofile.address %>
                 </td>
               </tr>
+
               <tr>
                 <th class="col-xs-4 text-success">
                   VDC/MUN:
@@ -136,6 +142,7 @@
                   <%= companyprofile.vdc_mun %>
                 </td>
               </tr>
+
               <tr>
                 <th class="col-xs-4 text-success">
                   Ward Number:
@@ -144,6 +151,7 @@
                   <%= companyprofile.ward_no %>
                 </td>
               </tr>
+
               <tr>
                 <th class="col-xs-4 text-success">
                   District:
@@ -152,6 +160,7 @@
                   <%= companyprofile.district %>
                 </td>
               </tr>
+
               <tr>
                 <th class="col-xs-4 text-success">
                   Zone:
@@ -160,6 +169,7 @@
                   <%= companyprofile.zone %>
                 </td>
               </tr>
+
               <tr>
                 <th class="col-xs-4 text-success">
                   Email:
@@ -168,12 +178,22 @@
                   <%= companyprofile.email%>
                 </td>
               </tr>
+
               <tr>
                 <th class="col-xs-4 text-success">
                   Website:
                 </th>
                 <td class="text-doc">
                   <a class="company-website" target="_blank" href="http://<%= companyprofile.website %>"><%= companyprofile.website %></a>
+                </td>
+              </tr>
+
+              <tr>
+                <th class="col-xs-4 text-success">
+                  Phone Number:
+                </th>
+                <td class="text-doc">
+                  <%= companyprofile.phone %>
                 </td>
               </tr>
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170318120444) do
+ActiveRecord::Schema.define(version: 20170319101907) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20170318120444) do
     t.datetime "updated_at", null: false
     t.string   "logo"
     t.string   "ward_no"
+    t.integer  "tax"
   end
 
   create_table "current_fiscal_years", force: :cascade do |t|
@@ -90,14 +91,17 @@ ActiveRecord::Schema.define(version: 20170318120444) do
   end
 
   create_table "purchases", force: :cascade do |t|
-    t.decimal  "total",       precision: 10, scale: 2
+    t.decimal  "total",         precision: 10, scale: 2
     t.integer  "vendor_id"
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.string   "fiscal_year"
     t.date     "date"
-    t.decimal  "discount",    precision: 10, scale: 2
-    t.string   "bill_no"
+    t.decimal  "discount",      precision: 10, scale: 2
+    t.string   "bill_number"
+    t.integer  "credit_limit"
+    t.decimal  "tax_amount",    precision: 10, scale: 2
+    t.decimal  "partial_total", precision: 10, scale: 2
   end
 
   create_table "sale_items", force: :cascade do |t|
@@ -111,13 +115,16 @@ ActiveRecord::Schema.define(version: 20170318120444) do
 
   create_table "sales", force: :cascade do |t|
     t.integer  "customer_id"
-    t.decimal  "total",       precision: 10, scale: 2
+    t.decimal  "total",         precision: 10, scale: 2
     t.string   "fiscal_year"
     t.date     "date"
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
-    t.string   "bill_no"
-    t.decimal  "discount",    precision: 10, scale: 2
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.string   "bill_number"
+    t.decimal  "discount",      precision: 10, scale: 2
+    t.integer  "credit_limit"
+    t.decimal  "tax_amount",    precision: 10, scale: 2
+    t.decimal  "partial_total", precision: 10, scale: 2
   end
 
   create_table "stocks", force: :cascade do |t|

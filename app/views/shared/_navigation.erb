@@ -12,7 +12,8 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="navbar-space">
+    <% if user_signed_in? %>
+      <div class="navbar-space">
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
         <ul class="nav navbar-nav">
@@ -179,5 +180,6 @@
         </ul>
       </div><!-- /.navbar-collapse -->
     </div>
+    <% end %>
   </div><!-- /.container-fluid -->
 </nav>

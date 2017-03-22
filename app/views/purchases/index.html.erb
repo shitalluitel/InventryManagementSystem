@@ -14,44 +14,68 @@
         <div class="col-md-12">
 
           <table class="table table-hover">
-            <thead>
+            <thead >
             <tr class="bg-primary">
               <th>S.N.</th>
               <th>Bill Number</th>
               <th>Supplier</th>
               <th>Total Cost</th>
-              <th>Net Discount</th>
+              <th>Discount</th>
+              <th>Tax</th>
               <th>Date</th>
               <th>Fiscal Year</th>
+              <th>Remaining Day</th>
             </tr>
             </thead>
-
+            <tbody>
             <% @purchase.each_with_index do |f, i| %>
-                <tbody>
-                <tr>
-                  <td><%= (@page.to_i - 1) * @perpage+ i+1 %></td>
-                  <td><a href="<%= get_purchase_path(f) %>"><%= f.bill_number %></a></td>
-                  <td>
-                    <%= f.vendor.name %>
-                  </td>
-                  <td>
-                    <%= f.total %>
-                  </td>
-                  <td>
-                    <%= f.discount %>
-                  </td>
-                  <td>
-                    <%= f.date %>
-                  </td>
-                  <td>
-                    <%= f.fiscal_year %>
-                  </td>
+                <% if f.vendor.name === "Cash" %>
+                    <tr title="Credit Limit None" data-toggle="tooltip" class="bg-success">
+                <% else %>
+                    <% if ((f.date + f.credit_limit) - Date.today).to_f < 5 && ((f.date + f.credit_limit) - Date.today).to_f > 0%>
+                        <tr title="Payment Date: <%= f.date + f.credit_limit  %>" data-toggle="tooltip" style="background-color: rgb(255, 198, 193);">
+                    <% elsif ((f.date + f.credit_limit) - Date.today).to_f <= 0 %>
+                        <tr title="Payment Date: <%= f.date + f.credit_limit  %>" data-toggle="tooltip" style="background-color: #ffa594;">
+                    <% elsif ((f.date + f.credit_limit) - Date.today).to_f >5  %>
+                        <tr title="Payment Date: <%= f.date + f.credit_limit  %>" data-toggle="tooltip">
+                    <% end %>
+                <% end %>
+                <td><%= (@page.to_i - 1) * @perpage+ i+1 %></td>
+                <td><a href="<%= get_purchase_path(f) %>"><%= f.bill_number %></a></td>
+                <td>
+                  <a href="<%= vendor_path(f.vendor_id) %>"><%= f.vendor.name %></a>
+                </td>
+                <td>
+                  <%= f.total %>
+                </td>
+                <td>
+                  <%= f.discount %>
+                </td>
+                <td>
+                  <%= f.tax_amount %>
+                </td>
+                <td>
+                  <%= f.date %>
+                </td>
+                <td>
+                  <%= f.fiscal_year %>
+                </td>
+                <td class="col-md-2">
+                  <%@date = ((f.date + f.credit_limit) - Date.today ).to_f%>
+                  <% if f.vendor.name === "Cash" %>
+                      -
+                  <% else %>
+                      <% if @date > 0  %>
+                          <%= @date %>
+                      <% else %>
+                          Credit Limit Crossed (<%= @date.abs %> <%= @date > 1 ? "Days" : "Day" %> )
+                      <% end %>
+                  <% end %>
+                </td>
 
                 </tr>
-                </tbody>
-
             <% end %>
-
+            </tbody>
           </table>
 
         </div>

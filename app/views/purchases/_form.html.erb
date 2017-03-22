@@ -25,9 +25,9 @@
 
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label class="control-label col-md-5"> <p class="text-right">Supplier</p></label>
+                      <label class="control-label col-md-5"><p class="text-right">Suppliers</p></label>
                       <div class="col-md-7">
-                        <%= f.collection_select :vendor_id, Vendor.order(:name), :id, :name, {prompt: "Select Category"}, {class: "form-control selectbox"} %>
+                        <%= f.collection_select :vendor_id, Vendor.order(:name), :id, :name, {prompt: "Select Supplier"}, {class: "form-control selectbox"} %>
                       </div>
                     </div>
                   </div>
@@ -36,12 +36,7 @@
                     <div class="form-group">
                       <label class="control-label col-md-5"><p class="text-right"> Bill Number:</p></label>
                       <div class="col-md-7">
-                        <% if @data.present? %>
-                          <% @data = @date.bill_no.to_f + 1 %>
-                        <% else %>
-                          <% @data = "" %>
-                        <% end %>
-                        <%= f.text_field :bill_number, :class => "form-control", :value => "#{@data}" %>
+                        <%= f.text_field :bill_number, :class => "form-control", :value => "#{@data}", :placeholder => "123" %>
                       </div>
                     </div>
                   </div>
@@ -51,10 +46,25 @@
                       <label class="control-label col-md-5"><p class="text-right">Date</p></label>
                       <div class="col-md-7">
                         <div class='input-group date' id='datetimepicker1'>
-                          <%= f.text_field :date, :class => "form-control" %>
+                          <%= f.text_field :date, :class => "form-control", :placeholder => "#{Date.today}" %>
                           <span class="input-group-addon">
                           <span class="fa fa-calendar"></span>
                         </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 ">
+                    <div class="form-group">
+                      <label class="control-label col-md-5"><p class="text-right"> Credit Limit</p></label>
+
+                      <div class="col-md-7 ">
+                        <div class="input-group">
+                          <%= f.number_field :credit_limit, :class => "form-control credit-limit", :placeholder => "12" %>
+                          <span class="input-group-btn">
+                              <button class="btn btn-default" disabled>Days</button>
+                            </span>
                         </div>
                       </div>
                     </div>
@@ -72,7 +82,7 @@
                   <th>Unit</th>
                   <th>Price</th>
                   <th>Total</th>
-                  <th>Action</th>
+                  <th></th>
                 </tr>
                 </thead>
 
@@ -100,9 +110,28 @@
                 </div>
 
                 <div class="col-md-12">
-                  <label class="control-label col-md-5"> <h4 class="text-right text-primary">Discount:</h4></label>
+                  <label class="control-label col-md-5"><h4 class="text-right text-primary">Discount:</h4></label>
                   <div class="col-md-7">
-                    <%= f.text_field :discount, :class =>"form-control discount", :value => "0" %>
+                    <%= f.text_field :discount, :class => "form-control discount", :value => "0" %>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <label class="control-label col-md-5"><h4 class="text-right text-primary" >Tax %:</h4></label>
+                  <div class="col-md-7">
+                    <div class="input-group">
+                      <input type="text" class="form-control tax-percent" value="<%= @tax %>" disabled readonly>
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" disabled>%</button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <label class="control-label col-md-5"><h4 class="text-right text-primary">Tax Amount:</h4></label>
+                  <div class="col-md-7">
+                    <input type="text" class="form-control tax" value="0">
                   </div>
                 </div>
 
@@ -127,12 +156,12 @@
 </div>
 
 <script type="text/javascript" charset="utf-8">
-  var count = 1;
-  $(document).ready(function(){
+  var count = <%= @tax %>;
+  $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
   });
 
-  $('body').on('blur', '.quantity, .unit-price', function(e) {
+  $('body').on('blur', '.quantity, .unit-price', function (e) {
     var row = $(this).closest('tr');
     var pr = $('.unit-price', row),
         qu = $('.quantity', row),
@@ -142,15 +171,25 @@
     buy_pr = parseFloat(pr.val());
     sell_pr = parseFloat(qu.val());
 
-    if( ! isNaN(buy_pr) && !isNaN(sell_pr) ) {
-      total.val( ( sell_pr * buy_pr ).toFixed(2) );
-      grand.val(( parseFloat(grand.val()) + (parseFloat(total.val() )- temp)).toFixed(4));
+    if (!isNaN(buy_pr) && !isNaN(sell_pr)) {
+      total.val(( sell_pr * buy_pr ).toFixed(2));
+      grand.val(( parseFloat(grand.val()) + (parseFloat(total.val()) - temp)).toFixed(2));
+      $('.grand-total').val(total.val());
     }
   });
 
+  $('body').on('focus', '.tax', function (e) {
+    var taxper = <%= @tax %>;
+    var total = $('.total-cost'),
+        discount = $('.discount'),
+        tax = $('.tax');
+    var taxable = parseFloat(total.val()) - parseFloat(discount.val());
+    var amount = ( parseFloat(taxper) / 100 ) * (taxable);
+    tax.val(amount.toFixed(2));
+    $('.grand-total').val((taxable + amount));
+  });
 
-
-  $('body').on('blur', '.total-cost, .discount', function(e) {
+  $('body').on('blur', '.total-cost, .discount', function (e) {
     var total = $('.total-cost'),
         discount = $('.discount'),
         grand_cost = $('.grand-total');
@@ -159,10 +198,11 @@
     discount_cost = parseFloat(discount.val());
     grand_total = parseFloat(grand_cost.val());
 
-    if( ! isNaN(total_cost) && !isNaN(discount_cost) ) {
-      grand_cost.val( ( total_cost - discount_cost).toFixed(4));
+    if (!isNaN(total_cost) && !isNaN(discount_cost)) {
+      grand_cost.val(( total_cost - discount_cost).toFixed(2));
     }
   });
+
 
   $(function () {
     $('#datetimepicker1').datetimepicker({

@@ -40,6 +40,12 @@ class VendorsController < ApplicationController
 
   end
 
+  def show
+    @title = "View"
+    add_breadcrumb "Show Details"
+    @vendor = Vendor.find(params[:id])
+  end
+
   def index
     @title = "List"
     @perpage = 10

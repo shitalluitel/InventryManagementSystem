@@ -7,74 +7,82 @@
             <div class="form-group">
               <label class="control-label col-md-3">Name*</label>
               <div class="col-md-9">
-                <%= f.text_field :name, autofocus: true, :class => "form-control" %>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="control-label col-md-3">Address</label>
-              <div class="col-md-9">
-                <%= f.text_field :address, autofocus: true, :class => "form-control" %>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="control-label col-md-3">VDC_MUN*</label>
-              <div class="col-md-9">
-                <%= f.text_field :vdc_mun, :class => "form-control" %>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="control-label col-md-3">Ward Number*</label>
-              <div class="col-md-9">
-                <%= f.text_field :ward_no, :class => "form-control" %>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="control-label col-md-3">Email*</label>
-              <div class="col-md-9">
-                <%= f.email_field :email, autofocus: true, :class => "form-control" %>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="control-label col-md-3">Website*</label>
-              <div class="col-md-9">
-                <%= f.text_field :website, autocomplete: "off", :class => "form-control" %>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="control-label col-md-3">Phone*</label>
-              <div class="col-md-9">
-                <%= f.text_field :phone, autocomplete: "off", :class => "form-control" %>
+                <%= f.text_field :name, autofocus: true, :class => "form-control", :placeholder => "Zeftware Technology" %>
               </div>
             </div>
 
             <div class="form-group">
               <label class="control-label col-md-3">Vat pan number*</label>
               <div class="col-md-9">
-                <%= f.text_field :vat_pan_no, autocomplete: "off", :class => "form-control" %>
+                <%= f.text_field :vat_pan_no, autocomplete: "off", :class => "form-control", :placeholder => "12qas234" %>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="control-label col-md-3">District*</label>
+              <label class="control-label col-md-3">Vat % *</label>
               <div class="col-md-9">
-                <%= f.text_field :district, autocomplete: "off", :class => "form-control" %>
+                <%= f.number_field :tax, autocomplete: "off", :class => "form-control", :placeholder => "13" %>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-md-3">Address</label>
+              <div class="col-md-9">
+                <%= f.text_field :address, autofocus: true, :class => "form-control", :placeholder => "Biratnagar, RamLaxman Marg" %>
               </div>
             </div>
 
             <div class="form-group">
               <label class="control-label col-md-3">Zone*</label>
               <div class="col-md-9">
-                <%= f.text_field :zone, autocomplete: "off", :class => "form-control" %>
+                <%= f.text_field :zone, autocomplete: "off", :class => "form-control", :placeholder => "Koshi" %>
               </div>
             </div>
 
             <div class="form-group">
+              <label class="control-label col-md-3">District*</label>
+              <div class="col-md-9">
+                <%= f.text_field :district, autocomplete: "off", :class => "form-control", :placeholder => "Morang" %>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="control-label col-md-3">VDC_MUN*</label>
+              <div class="col-md-9">
+                <%= f.text_field :vdc_mun, :class => "form-control", :placeholder => "Municipality" %>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-md-3">Ward Number*</label>
+              <div class="col-md-9">
+                <%= f.text_field :ward_no, :class => "form-control", :placeholder => "04" %>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-md-3">Email*</label>
+              <div class="col-md-9">
+                <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => "info@zeftware.com or zeftware@gmail.com" %>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-md-3">Website*</label>
+              <div class="col-md-9">
+                <%= f.text_field :website, autocomplete: "off", :class => "form-control", :placeholder => "http://www.zeftware.com" %>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-md-3">Phone*</label>
+              <div class="col-md-9">
+                <%= f.text_field :phone, autocomplete: "off", :class => "form-control", :placeholder => "021-460567" %>
+              </div>
+            </div>
+
+             <div class="form-group">
               <label class="control-label col-md-3">Logo*</label>
               <div class="col-md-4">
                 <%= image_tag @company_profile.logo.thumb.url if @company_profile.logo? %>

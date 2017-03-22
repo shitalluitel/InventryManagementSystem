@@ -8,6 +8,7 @@ $(document).on 'click', 'form .remove_fields', (event) ->
 
   grandtotal = $('.total-cost')
   grand_value = parseFloat(grandtotal.val())
+  taxamount = ( parseFloat(count) / 100 ) * (grand_value - data)
   if (( grand_value - data) < 0)
     grandtotal.val('0')
   else
@@ -18,7 +19,7 @@ $(document).on 'click', 'form .remove_fields', (event) ->
   event.preventDefault()
 
 $(document).on 'click', 'form .add_fields', (event) ->
-  count += 1
+#  count += 1
   time = new Date().getTime()
   regexp = new RegExp($(this).data('id'),'g')
   $('#add-data').append($(this).data('fields').replace(regexp, time))

@@ -10,7 +10,7 @@ class CompanyProfile < ApplicationRecord
   validates :email, presence: true
   validates :ward_no, presence: true
   validates :vdc_mun, presence: true
-
+  validates :tax, presence: true
   #line below is used to validate te size of the logo that wil be uploaded
   validates_processing_of :logo
   validate :photo_size_validation

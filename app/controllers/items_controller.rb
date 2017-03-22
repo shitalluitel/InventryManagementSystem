@@ -66,7 +66,7 @@ class ItemsController < ApplicationController
   end
 
   def show_lowest
-    @title = "list"
+    @title = "List"
     @perpage = 20
     add_breadcrumb "List"
     @stock = Stock.where("quantity <= ?", 5)

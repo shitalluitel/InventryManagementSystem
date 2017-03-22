@@ -43,6 +43,10 @@ class CustomersController < ApplicationController
     @page = params[:page] || 1
   end
 
+  def show
+    @customer = Customer.find(params[:id])
+  end
+
   private
 
   def customer_params

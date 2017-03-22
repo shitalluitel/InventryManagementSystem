@@ -8,20 +8,7 @@
 
 </head>
 <body>
-<nav class="navbar navbar-default navbar-login">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header responsive-logo">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="<%= root_path %>"><%= image_tag("zeftware_logo.png", :alt => "ZefIn") %></a>
-    </div>
-  </div><!-- /.container-fluid -->
-</nav>
+<%= render "shared/navigation" %>
 
   <div class="container-fluid">
     <%= yield %>

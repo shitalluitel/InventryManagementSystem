@@ -33,14 +33,14 @@
             <div class="form-group">
               <label class="control-label col-md-3">Unit *</label>
               <div class="col-md-9">
-                <%= f.collection_select :unit_id, Unit.order(:name), :id, :name, {prompt: "Select Unit"}, :class => "form-control unit" %>
+                <%= f.collection_select :unit_id, Unit.order(:name), :id, :name, {prompt: "Select Unit"}, :class => "form-control unit select" %>
               </div>
             </div>
 
             <div class="form-group">
               <label class="control-label col-md-3">Item Group *</label>
               <div class="col-md-9">
-                <%= f.collection_select :item_group_id, ItemGroup.order(:name), :id, :name, {prompt: "Select Unit"}, :class => "form-control" %>
+                <%= f.collection_select :item_group_id, ItemGroup.order(:name), :id, :name, {prompt: "Select Item Group"}, :class => "form-control select" %>
               </div>
             </div>
             <%= f.fields_for :stock do |g| %>
@@ -91,3 +91,9 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function () {
+  $('.select').select2();
+});
+</script>

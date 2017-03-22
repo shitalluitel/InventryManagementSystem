@@ -1,4 +1,4 @@
-<div class="purchase">
+<div class="sale">
   <div class="row">
     <div class="col-md-12">
 
@@ -18,46 +18,70 @@
             <tr class="bg-primary">
               <th>S.N.</th>
               <th>Bill Number</th>
-              <th>Supplier</th>
+              <th>Customer</th>
               <th>Total Cost</th>
-              <th>Net Discount</th>
+              <th>Discount</th>
+              <th>Tax</th>
               <th>Date</th>
               <th>Fiscal Year</th>
+              <th>Remaining Day</th>
             </tr>
             </thead>
-
+            <tbody>
             <% @sales.each_with_index do |f, i| %>
-                <tbody>
-                <tr>
-                  <td><%= (@page.to_i - 1) * @perpage+ i+1 %></td>
-                  <td><a href="<%= get_sale_path(f) %>"><%= f.bill_number %></a></td>
-                  <td>
-                    <%= f.customer.customer_name %>
-                  </td>
-                  <td>
-                    <%= f.total %>
-                  </td>
-                  <td>
-                    <%= f.discount %>
-                  </td>
-                  <td>
-                    <%= f.date %>
-                  </td>
-                  <td>
-                    <%= f.fiscal_year %>
-                  </td>
+                <% if f.customer.customer_name === "Cash" %>
+                    <tr title="Credit Limit None" data-toggle="toggle" class="bg-success">
+                <% else %>
+                    <% if ((f.date + f.credit_limit) - Date.today).to_f < 5 && ((f.date + f.credit_limit) - Date.today).to_f > 0%>
+                        <tr title="Payment Date: <%= f.date + f.credit_limit  %>" data-toggle="toggle" style="background-color: #ffccb2;">
+                    <% elsif ((f.date + f.credit_limit) - Date.today).to_f <= 0 %>
+                        <tr title="Payment Date: <%= f.date + f.credit_limit  %>" data-toggle="toggle" style="background-color: #ff8568;">
+                    <% elsif ((f.date + f.credit_limit) - Date.today).to_f >5  %>
+                        <tr title="Payment Date: <%= f.date + f.credit_limit  %>" data-toggle="toggle">
+                    <% end %>
+                <% end %>
+                <td><%= (@page.to_i - 1) * @perpage+ i+1 %></td>
+                <td><a href="<%= get_sale_path(f) %>"><%= f.bill_number %></a></td>
+                <td>
+                  <a href="<%= customer_path(f.customer_id) %>"><%= f.customer.customer_name %></a>
+                </td>
+                <td>
+                  <%= f.total %>
+                </td>
+                <td>
+                  <%= f.discount %>
+                </td>
+                <td>
+                  <%= f.tax_amount %>
+                </td>
+                <td>
+                  <%= f.date %>
+                </td>
+                <td>
+                  <%= f.fiscal_year %>
+                </td>
+                <td class="col-md-2">
+                  <%@date = ((f.date + f.credit_limit) - Date.today ).to_f%>
+                  <% if f.customer.customer_name === "Cash" %>
+                    -
+                  <% else %>
+                    <% if @date > 0  %>
+                        <%= @date %>
+                    <% else %>
+                        Credit Limit Crossed (<%= @date.abs %> <%= @date > 1 ? "Days" : "Day" %> )
+                    <% end %>
+                  <% end %>
+                </td>
 
                 </tr>
-                </tbody>
-
             <% end %>
-
+            </tbody>
           </table>
 
         </div>
       </div>
 
-      <%= will_paginate @sales, renderer: BootstrapPagination::Rails %>
+      <%= will_paginate @sale, renderer: BootstrapPagination::Rails %>
 
     </div>
   </div>

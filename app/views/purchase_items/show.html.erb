@@ -1,17 +1,29 @@
 <div class="row">
   <div class="col-md-12">
     <% @purchase_items.each do |g|%>
-
+        <div class="col-md-12 pull-right">
+          <a class="btn btn-primary pull-right" href="<%= new_purchase_path %>"><span><i class="fa fa-plus fa-fw">&nbsp;</i></span>
+            Add New</a>
+        </div>
+        <br>
         <div class="row">
-          <h4 class="text-success col-md-3"><strong class="text-primary">Purchased From:</strong> <%= g.purchase.vendor.name %></h4>
-          <h4 class="text-success col-md-3"><strong class="text-primary">Date: </strong> <%=  g.purchase.date %></h4>
-          <h4 class="text-success col-md-3"><strong class="text-primary">Sale Amount: </strong> <%=  g.purchase.total %></h4>
+          <h4 class="col-md-3 text-primary">Purchased From: <span class="text-success "><%= g.purchase.vendor.name %></span></h4>
+          <h4 class="text-primary col-md-2">Date: <span class="text-success"><%=  g.purchase.date %></span></h4>
+          <h4 class="text-primary col-md-3">Purchase Amount: <span class="text-success"><%=  g.purchase.total %> </span> </h4>
+          <h4 class=" col-md-4 text-primary">Remaining Time:
+            <span class="text-success">
+               <%@date = ((g.purchase.date + g.purchase.credit_limit) - Date.today ).to_f%>
+              <% if @date > 0 || g.purchase.vendor.name === "Cash" %>
+                  <%= @date.abs %> <%= @date.abs > 1 ? "Days" : "Day" %> ( <%= g.purchase.date + g.purchase.credit_limit  %> )
+              <% else %>
+                  <span style="color: #a94442; " title="Credit Limit Crossed"> <%= @date.abs %> <%= @date.abs > 1 ? "Days" : "Day" %> ( <%= g.purchase.date + g.purchase.credit_limit  %> )</span>
+              <% end %>
+
+            </span>
+          </h4>
+
           <% break %>
     <% end %>
-    <div class="col-md-3 pull-right">
-      <a class="btn btn-primary pull-right" href="<%= new_purchase_path %>"><span><i class="fa fa-plus fa-fw">&nbsp;</i></span>
-        Add New</a>
-    </div>
     </div>
 
     <br>

@@ -8,21 +8,21 @@
                 <div class="form-group">
                   <label class="col-md-3 control-label">Name <strong class="text-danger"> * </strong></label>
                   <div class="control-label col-md-9">
-                    <%= f.text_field :customer_name, :class => "form-control", :placeholder => "Company Name or Person Name" %>
+                    <%= f.text_field :customer_name, :class => "form-control", :placeholder => "Company Name" %>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-md-3 control-label">Address <strong class="text-danger">*</strong></label>
                   <div class="control-label col-md-9">
-                    <%= f.text_area :address, :class => "form-control", :row => 2, :style => " resize: none " %>
+                    <%= f.text_area :address, :class => "form-control", :row => 2, :style => " resize: none ", :placeholder => "RamLaxman Marg, Biratnagar" %>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-md-3 control-label">Phone Number <strong class="text-danger">*</strong></label>
                   <div class="control-label col-md-9">
-                    <%= f.text_field :phone_number, :class => "form-control"%>
+                    <%= f.text_field :phone_number, :class => "form-control", :placeholder => "021-460567 or 9842512345"%>
                   </div>
                 </div>
 

@@ -1,6 +1,6 @@
 <tr>
   <td class="col-md-5">
-    <%= f.collection_select :item_id, @item, :id, :name, {prompt: "Select Catefory"}, {class: "select-item form-control"} %>
+    <%= f.collection_select :item_id, @item, :id, :name, {prompt: "Select Item"}, {class: "select-item form-control"} %>
   </td>
   <td class="col-md-2">
     <%=  f.text_field :quantity, :class=>"form-control quantity"%>

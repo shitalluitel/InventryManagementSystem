@@ -1,17 +1,29 @@
 <div class="row">
   <div class="col-md-12">
-  <% @sale_items.each do |g|%>
+    <% @sale_items.each do |g|%>
+        <div class="col-md-12 pull-right">
+          <a class="btn btn-primary pull-right" href="<%= new_sale_path %>"><span><i class="fa fa-plus fa-fw">&nbsp;</i></span>
+            Add New</a>
+        </div>
+        <br>
+        <div class="row">
+          <h4 class="col-md-3 text-primary">Sold To: <span class="text-success "><%= g.sale.customer.customer_name %></span></h4>
+          <h4 class="text-primary col-md-2">Date: <span class="text-success"><%=  g.sale.date %></span></h4>
+          <h4 class="text-primary col-md-3">Sale Amount: <span class="text-success"><%=  g.sale.total %> </span> </h4>
+          <h4 class=" col-md-4 text-primary">Remaining Time:
+            <span class="text-success">
+               <%@date = ((g.sale.date + g.sale.credit_limit) - Date.today ).to_f%>
+              <% if @date > 0 || g.sale.vendor.name === "Cash" %>
+                  <%= @date.abs %> <%= @date.abs > 1 ? "Days" : "Day" %> ( <%= g.sale.date + g.sale.credit_limit  %> )
+              <% else %>
+                  <span style="color: #a94442; " title="Credit Limit Crossed"> <%= @date.abs %> <%= @date.abs > 1 ? "Days" : "Day" %> ( <%= g.sale.date + g.sale.credit_limit  %> )</span>
+              <% end %>
 
-    <div class="row">
-      <h4 class="text-success col-md-3"><strong class="text-primary">Sold To:</strong> <%= g.sale.customer.customer_name %></h4>
-      <h4 class="text-success col-md-3"><strong class="text-primary">Date: </strong> <%=  g.sale.date %></h4>
-      <h4 class="text-success col-md-3"><strong class="text-primary">Sale Amount: </strong> <%=  g.sale.total %></h4>
-      <% break %>
+            </span>
+          </h4>
+
+          <% break %>
     <% end %>
-      <div class="col-md-3 pull-right">
-        <a class="btn btn-primary pull-right" href="<%= new_sale_path %>"><span><i class="fa fa-plus fa-fw">&nbsp;</i></span>
-          Add New</a>
-      </div>
     </div>
 
     <br>

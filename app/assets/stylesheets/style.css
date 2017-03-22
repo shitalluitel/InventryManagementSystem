@@ -222,3 +222,27 @@ table>tbody>tr>.text-doc>a:hover{
     opacity: 1;
 }
 /*ends here*/
+
+/*for indexing*/
+.table>tbody>tr>td, .table>tbody>tr>th{
+    font-size: 15px;
+}
+.table>thead>tr>td, .table>thead>tr>th {
+    font-size: 16px;
+}
+.table .fa{
+    font-size: 20px;
+}
+/*ends here*/
+
+/*for sale and purchase index*/
+
+.purchase .table tr a, .sale .table tr a {
+    color: black;
+}
+
+.purchase .table tr a:hover, .sale .table tr a:hover {
+    color: #337ab7;
+text-decoration: none;
+}
+/*ends here*/
