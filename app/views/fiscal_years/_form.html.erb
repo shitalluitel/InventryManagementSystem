@@ -1,5 +1,21 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
+
+    <div class="row">
+      <div class="col-md-12">
+        <% if @fiscal_year.errors.any? %>
+            <div class="alert alert-error">
+              <button type="button" class="close" data-dismiss="alert">×</button>
+              <ul>
+                <% @fiscal_year.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+      </div>
+    </div>
+
     <div class="well tt-modal">
       <%= form_for (@fiscal_year) do |f| %>
           <div class="form-horizontal">
@@ -13,7 +29,7 @@
               <label class="col-md-3 control-label">Start Date</label>
               <div class="col-md-9">
                 <div class='input-group date' id='datetimepicker1'>
-                  <%= f.text_field :start_date, :class => "form-control" %>
+                  <%= f.text_field :start_date, :class => "form-control ", :id => "start-date" %>
                   <span class="input-group-addon">
                         <span class="fa fa-calendar"></span>
                     </span>
@@ -24,7 +40,7 @@
               <label class="col-md-3 control-label">End Date</label>
               <div class="col-md-9">
                 <div class='input-group date' id='datetimepicker2'>
-                  <%= f.text_field :end_date, :class => "form-control" %>
+                  <%= f.text_field :end_date, :class => "form-control", :id => "end-date" %>
                   <span class="input-group-addon">
                         <span class="fa fa-calendar"></span>
                     </span>
@@ -49,12 +65,26 @@
       format: 'YYYY/MM/DD'
     });
   });
-</script>
-<script type="text/javascript" charset="utf-8">
+
   $(function () {
     $('#datetimepicker2').datetimepicker({
       viewMode: 'years',
       format: 'YYYY/MM/DD'
     });
   });
+
+  $('body').on('.blur','#start-date, #end-date', function (e) {
+    var startdate = $('#start-date'),
+        enddate = $('#end-date');
+     startdata = startdate.val();
+    enddata = enddate.val();
+    if (!isNaN(startdate) && !isNaN(enddate)){
+      if ( startdate > enddate){
+        console.log("My name is khan.");
+      }
+    }
+  });
+
+
+
 </script>

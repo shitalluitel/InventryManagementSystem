@@ -12,7 +12,7 @@ class CurrentFiscalYearsController < ApplicationController
     if @current_fiscal_year.save
       @msg = "Added current fiscal year " + @current_fiscal_year.fiscal_year.name
       create_logs(@msg)
-      flash[:success] = "Current Fiscal Year " + @current_fiscal_year + " added."
+      flash[:success] = @msg
       redirect_to :fiscal_years
     else
       flash[:error] = "Went something wrong. Couldn't add current fiscal year."

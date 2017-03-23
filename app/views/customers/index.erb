@@ -33,7 +33,7 @@
               <%= u.phone_number%>
             </td>
             <td>
-              <a data-toggle="Edit" href="<%= edit_customer_path(u) %>" title="Edit Record">
+              <a data-toggle="toggle" href="<%= edit_customer_path(u) %>" title="Edit Record">
                 <span>
                   <i class="fa fa-pencil-square text-primary"></i>
                 </span>
@@ -54,6 +54,6 @@
 <%= will_paginate @customers, renderer: BootstrapPagination::Rails %>
 <script type="text/javascript" charset="utf-8">
   $(document).ready(function () {
-    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="toggle"]').tooltip();
   });
 </script>

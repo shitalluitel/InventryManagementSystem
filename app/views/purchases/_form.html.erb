@@ -138,7 +138,7 @@
                 <div class="col-md-12">
                   <label class="control-label col-md-5"><h4 class="text-right text-primary ">Grand Total:</h4></label>
                   <div class="col-md-7">
-                    <input type="text" class=" grand-total form-control" disabled>
+                    <input type="text" class=" grand-total form-control" value="0" disabled>
                   </div>
                 </div>
 
@@ -170,11 +170,12 @@
     temp = parseFloat(total.val());
     buy_pr = parseFloat(pr.val());
     sell_pr = parseFloat(qu.val());
+    grand_value = parseFloat($('.grand-total').val());
 
     if (!isNaN(buy_pr) && !isNaN(sell_pr)) {
       total.val(( sell_pr * buy_pr ).toFixed(2));
-      grand.val(( parseFloat(grand.val()) + (parseFloat(total.val()) - temp)).toFixed(2));
-      $('.grand-total').val(total.val());
+      grand.val(( parseFloat(grand.val()) + (parseFloat(total.val()) - temp) ).toFixed(2));
+      $('.grand-total').val((parseFloat(total.val()) + grand_value).toFixed(2));
     }
   });
 

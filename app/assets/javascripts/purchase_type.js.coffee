@@ -10,10 +10,11 @@ $(document).on 'click', 'form .remove_fields', (event) ->
   grand_value = parseFloat(grandtotal.val())
   taxamount = ( parseFloat(count) / 100 ) * (grand_value - data)
   if (( grand_value - data) < 0)
-    grandtotal.val('0')
+    grandtotal.val('0');
   else
-    grandtotal.val(( (grand_value - data)).toFixed(4))
-    $('.grand-total').val(( grand_value - data ).toFixed(4))
+    grandtotal.val(( (grand_value - data)).toFixed(4));
+    $('.tax').val(taxamount);
+    $('.grand-total').val(( grand_value - data + taxamount ).toFixed(4))
 
   row.remove()
   event.preventDefault()

@@ -21,7 +21,7 @@ class ItemGroupsController < ApplicationController
       redirect_to :item_groups
     else
       flash[:error] = "Couldn't add item group"
-      redirect_to :root
+      render :new
     end
   end
 

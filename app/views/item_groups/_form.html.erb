@@ -3,6 +3,22 @@
   <div class="col-md-12">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
+        <% if @item_group.errors.any? %>
+            <div class="alert alert-error">
+              <button type="button" class="close" data-dismiss="alert">×</button>
+              <ul>
+                <% @item_group.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
         <div class="well tt-modal">
           <%= form_for (@item_group) do |f| %>
               <div class="form-horizontal">
@@ -16,12 +32,7 @@
                 <div class="form-group">
                   <label class="col-md-3 control-label">Parent Name <strong class="text-danger"> *</strong></label>
                   <div class="control-label col-md-9">
-                    <select class="form-control" name="item_group[parent_id]" id="item_group_parent_id">
-                      <option value="">Select Parent Item</option>
-                      <% @item_names.each do |item| %>
-                          <option value="<%= item.id %>"><%= item.name %></option>
-                      <% end %>
-                    </select>
+                    <%= f.collection_select :parent_id, ItemGroup.order(:name), :id, :name, {prompt: "Select Item Group"}, {class: "form-control selectbox"} %>
                   </div>
                 </div>
 
@@ -45,5 +56,5 @@
   </div>
 </div>
 <script type="text/javascript" charset="utf-8">
-  $("#item_group_parent_id").val("<%= @item_group.parent_id %>").change();
+
 </script>

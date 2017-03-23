@@ -3,7 +3,7 @@
     <%= f.collection_select :item_id, @item, :id, :name, {prompt: "Select Item"}, {class: "select-item form-control"} %>
   </td>
   <td class="col-md-2">
-    <%=  f.text_field :quantity, :class=>"form-control quantity", :title => "Available Quantity: ", "data-toggle "=>"toggle" %>
+    <%=  f.text_field :quantity, :class=>"form-control quantity" %>
   </td>
   <td class="col-md-2">
     <%=  f.text_field :unit_price, :class=>"form-control unit-price", :value => "0"%>

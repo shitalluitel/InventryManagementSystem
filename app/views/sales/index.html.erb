@@ -33,11 +33,11 @@
                     <tr title="Credit Limit None" data-toggle="toggle" class="bg-success">
                 <% else %>
                     <% if ((f.date + f.credit_limit) - Date.today).to_f < 5 && ((f.date + f.credit_limit) - Date.today).to_f > 0%>
-                        <tr title="Payment Date: <%= f.date + f.credit_limit  %>" data-toggle="toggle" style="background-color: #ffccb2;">
+                        <tr style="background-color: #ffccb2;">
                     <% elsif ((f.date + f.credit_limit) - Date.today).to_f <= 0 %>
-                        <tr title="Payment Date: <%= f.date + f.credit_limit  %>" data-toggle="toggle" style="background-color: #ff8568;">
+                        <tr data-toggle="toggle" style="background-color: #ff8568;">
                     <% elsif ((f.date + f.credit_limit) - Date.today).to_f >5  %>
-                        <tr title="Payment Date: <%= f.date + f.credit_limit  %>" data-toggle="toggle">
+                        <tr >
                     <% end %>
                 <% end %>
                 <td><%= (@page.to_i - 1) * @perpage+ i+1 %></td>
@@ -60,10 +60,14 @@
                 <td>
                   <%= f.fiscal_year %>
                 </td>
-                <td class="col-md-2">
+                <% if f.customer.customer_name === "Cash" %>
+                    <td title="Transaction In cash" data-toggle="toggle" class="col-md-2">
+                <% else %>
+                    <td title="Payment Day: <%= f.date + f.credit_limit %>" data-toggle="toggle">
+                <% end %>
                   <%@date = ((f.date + f.credit_limit) - Date.today ).to_f%>
                   <% if f.customer.customer_name === "Cash" %>
-                    -
+                    In Cash
                   <% else %>
                     <% if @date > 0  %>
                         <%= @date %>
@@ -89,6 +93,6 @@
 </div>
 <script type="text/javascript" charset="utf-8">
   $(document).ready(function () {
-    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="toggle"]').tooltip();
   });
 </script>

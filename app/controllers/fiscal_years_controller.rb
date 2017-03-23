@@ -9,14 +9,15 @@ class FiscalYearsController < ApplicationController
 
   def create
     @fiscal_year = FiscalYear.new(fiscal_params)
+    # printf "#{(@fiscal_year.end_date - @fiscal_year.start_date).to_f}"
     if @fiscal_year.save
       @msg = "Fiscal Year " + @fiscal_year.name + " added."
       create_logs(@msg)
       flash[:success] = "Fiscal Year added."
-      redirect_to :root
+      redirect_to :fiscal_years
     else
       flash[:error] = "Couldn't add fiscal year."
-      redirect_to @fiscal_year
+      render :new
     end
   end
 

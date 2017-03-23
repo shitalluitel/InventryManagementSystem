@@ -117,6 +117,18 @@
                 </div>
 
                 <div class="col-md-12">
+                  <label class="control-label col-md-5"><h4 class="text-right text-primary" >Tax %:</h4></label>
+                  <div class="col-md-7">
+                    <div class="input-group">
+                      <input type="text" class="form-control tax-percent" value="<%= @tax %>" disabled readonly>
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" disabled>%</button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
                   <label class="control-label col-md-5"><h4 class="text-right text-primary">Tax Amount:</h4></label>
                   <div class="col-md-7">
                     <input type="text" class="form-control tax" value="0">
@@ -126,7 +138,7 @@
                 <div class="col-md-12">
                   <label class="control-label col-md-5"><h4 class="text-right text-primary ">Grand Total:</h4></label>
                   <div class="col-md-7">
-                    <input type="text" class=" grand-total form-control" disabled>
+                    <input type="text" class=" grand-total form-control" value="0" disabled>
                   </div>
                 </div>
 
@@ -158,11 +170,12 @@
     temp = parseFloat(total.val());
     buy_pr = parseFloat(pr.val());
     sell_pr = parseFloat(qu.val());
+    grand_value = parseFloat($('.grand-total').val());
 
     if (!isNaN(buy_pr) && !isNaN(sell_pr)) {
       total.val(( sell_pr * buy_pr ).toFixed(2));
-      grand.val(( parseFloat(grand.val()) + (parseFloat(total.val()) - temp)).toFixed(2));
-      $('.grand-total').val(total.val());
+      grand.val(( parseFloat(grand.val()) + (parseFloat(total.val()) - temp) ).toFixed(2));
+      $('.grand-total').val((parseFloat(total.val()) + grand_value).toFixed(2));
     }
   });
 
@@ -191,7 +204,6 @@
     }
   });
 
-
   $(function () {
     $('#datetimepicker1').datetimepicker({
       viewMode: 'years',
@@ -215,8 +227,6 @@
         console.log(data);
         if (unit_price.val() < parseFloat(data.unit_cost)){
           unit_price.val(data.est_sell_price);
-          unit_price.attr('title','Cost Price: ' + data.unit_price);
-          unit_price.attr('data-toggle','toggle');
           if (parseFloat(data.est_sell_price) < parseFloat(data.unit_price)){
             unit_price.css("border-color","red");
             console.log("Estimated price is less then cost price.")
@@ -224,6 +234,10 @@
             unit_price.css("border-color","#ccc");
           }
         }
+
+        unit_price.attr('title','Cost Price: ' + data.unit_price);
+        unit_price.attr('data-toggle','toggle');
+
         quantity.attr('title','Available Quantity: ' + data.quantity);
         quantity.attr('data-toggle','toggle');
         if((quantity.val() > data.quantity) || (data.quantity < 1)){
@@ -235,6 +249,7 @@
       },
       type: 'GET'
     });
+    $('[data-toggle="toggle"]').tooltip();
   });
 
   $('body').on('blur','.unit-price', function (e) {
@@ -248,8 +263,6 @@
       },
       success: function (data) {
         console.log(data);
-        unit_price.attr('title','Cost Price: ' + data.unit_price);
-        unit_price.attr('data-toggle','toggle');
         if (unit_price.val() < parseFloat(data.unit_price)){
           unit_price.css("border-color","red");
         }else{
@@ -259,4 +272,5 @@
       type: 'GET'
     });
   });
+
 </script>

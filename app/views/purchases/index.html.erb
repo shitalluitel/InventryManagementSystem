@@ -63,7 +63,7 @@
                 <td class="col-md-2">
                   <%@date = ((f.date + f.credit_limit) - Date.today ).to_f%>
                   <% if f.vendor.name === "Cash" %>
-                      -
+                      In Cash
                   <% else %>
                       <% if @date > 0  %>
                           <%= @date %>
