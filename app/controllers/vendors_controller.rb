@@ -9,6 +9,9 @@ class VendorsController < ApplicationController
 
   def create
     @vendor = Vendor.new(vendor_params)
+    if @vendor.name.capitalize === "CASh"
+      @vendor.name = @vendor.name.capitalize
+    end
     if @vendor.save
       @msg = "Vendor created."
       create_logs(@msg)
@@ -37,7 +40,14 @@ class VendorsController < ApplicationController
   end
 
   def destroy
-
+    @vendor = Vendor.destroy(params[:id])
+    @msg = "Vendor #{@vendor.name} destroyed."
+    if @vendor.destroyed?
+      create_logs(@msg)
+      flash[:success] = "Item deleted successfully."
+    else
+      flash[:alert] = "Couldn' delete item."
+    end
   end
 
   def show

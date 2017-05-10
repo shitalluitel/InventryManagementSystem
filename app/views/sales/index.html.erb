@@ -30,7 +30,7 @@
             <tbody>
             <% @sales.each_with_index do |f, i| %>
                 <% if f.customer.customer_name === "Cash" %>
-                    <tr title="Credit Limit None" data-toggle="toggle" class="bg-success">
+                    <tr data-toggle="toggle" class="bg-success">
                 <% else %>
                     <% if ((f.date + f.credit_limit) - Date.today).to_f < 5 && ((f.date + f.credit_limit) - Date.today).to_f > 0%>
                         <tr style="background-color: #ffccb2;">
@@ -65,7 +65,9 @@
                 <% else %>
                     <td title="Payment Day: <%= f.date + f.credit_limit %>" data-toggle="toggle">
                 <% end %>
-                  <%@date = ((f.date + f.credit_limit) - Date.today ).to_f%>
+                  <% if (f.credit_limit.present?) %>
+                    <% @date = ((f.date + f.credit_limit) - Date.today ).to_f %>
+                  <%  end %>
                   <% if f.customer.customer_name === "Cash" %>
                     In Cash
                   <% else %>

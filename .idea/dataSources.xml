@@ -13,5 +13,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/LinkStore_development</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="PostgreSQL - TestProject_development@localhost" uuid="a0729da2-ee81-4ef9-bd84-c59fa0cf31cc">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/TestProject_development</jdbc-url>
+    </data-source>
   </component>
 </project>

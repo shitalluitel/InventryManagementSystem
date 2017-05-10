@@ -246,3 +246,22 @@ table>tbody>tr>.text-doc>a:hover{
 text-decoration: none;
 }
 /*ends here*/
+
+/*for pdf*/
+    @media print{
+        body {
+            background: transparent;
+        }
+
+        #contianer{
+            width: auto;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .hide-pdf{
+            display: none;
+        }
+    }
+/**/

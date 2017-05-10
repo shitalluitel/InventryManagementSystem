@@ -46,6 +46,9 @@ class ItemsController < ApplicationController
     @perpage = 20
     @items = Item.paginate(:page => params[:page], :per_page => @perpage)
     @page = params[:page] || 1
+    respond_to do |format|
+      format.html
+    end
   end
 
   def show
@@ -73,6 +76,7 @@ class ItemsController < ApplicationController
     @show = @stock.paginate(:page => params[:page], :per_page => @perpage)
     @page = params[:page] || 1
   end
+
   private
 
   def item_params

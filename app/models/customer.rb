@@ -1,5 +1,5 @@
 class Customer < ApplicationRecord
-  validates :customer_name, presence: true, length: { maximum: 32}
-  validates :address, presence: true, length: { minimum: 1, maximum: 128}
+  validates :customer_name, presence: true, length: { maximum: 32}, :uniqueness => {case_sensitive: false}
+  validates :address, presence: true, length: { maximum: 128}
   validates :phone_number, length: {minimum: 6, maximum:14}
 end

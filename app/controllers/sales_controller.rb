@@ -7,13 +7,7 @@ class SalesController < ApplicationController
     @sale = Sale.new
     @sale_item = @sale.sale_items.build
     @item = Item.joins(:stock).where("quantity > ?", 0)
-
-    @company = CompanyProfile.all
-    @company.each do |f|
-      @tax = f.tax
-      break
-    end
-
+    @tax = CompanyProfile.first.tax
   end
 
   def create

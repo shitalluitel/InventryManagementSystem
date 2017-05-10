@@ -13,7 +13,7 @@ class CustomersController < ApplicationController
       @msg = "Customer created."
       create_logs(@msg)
       flash[:success] = @msg
-      redirect_to :new_customer
+      redirect_to :customers
     else
       render "new"
     end
@@ -29,11 +29,24 @@ class CustomersController < ApplicationController
     @customer = Customer.find(params[:id])
     if @customer.update(customer_params)
       @msg = "Customer has been updated "
+      create_logs(@msg)
+      flash[:success] = @msg
+      redirect_to :customers
+    else
+      render :edit
     end
   end
 
   def destroy
-
+    @customer = Customer.destroy(params[:id])
+    @msg = "Customer #{@customer.customer_name} destroyed."
+    if @customer.destroyed?
+      create_logs(@msg)
+      flash[:success] = @msg
+    else
+      flash[:alert] = "Couldn' delete customer."
+    end
+    redirect_to :customers
   end
 
   def index

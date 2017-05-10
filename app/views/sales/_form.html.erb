@@ -170,12 +170,12 @@
     temp = parseFloat(total.val());
     buy_pr = parseFloat(pr.val());
     sell_pr = parseFloat(qu.val());
-    grand_value = parseFloat($('.grand-total').val());
+//    grand_value = parseFloat($('.grand-total').val());
 
     if (!isNaN(buy_pr) && !isNaN(sell_pr)) {
       total.val(( sell_pr * buy_pr ).toFixed(2));
       grand.val(( parseFloat(grand.val()) + (parseFloat(total.val()) - temp) ).toFixed(2));
-      $('.grand-total').val((parseFloat(total.val()) + grand_value).toFixed(2));
+//      $('.grand-total').val((parseFloat(total.val()) + grand_value).toFixed(2));
     }
   });
 
@@ -241,15 +241,16 @@
         quantity.attr('title','Available Quantity: ' + data.quantity);
         quantity.attr('data-toggle','toggle');
         if((quantity.val() > data.quantity) || (data.quantity < 1)){
-          alert("Invalid selection made .\n You only have " + data.quantity +" items in your stock.");
+          //alert("Invalid selection made .\n You only have " + data.quantity +" items in your stock.");
           quantity.css("border-color","red");
         }else{
           quantity.css("border-color","#ccc");
         }
+        $('[data-toggle="toggle"]').tooltip();
       },
       type: 'GET'
     });
-    $('[data-toggle="toggle"]').tooltip();
+
   });
 
   $('body').on('blur','.unit-price', function (e) {

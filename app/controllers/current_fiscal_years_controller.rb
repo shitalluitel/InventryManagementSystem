@@ -15,8 +15,7 @@ class CurrentFiscalYearsController < ApplicationController
       flash[:success] = @msg
       redirect_to :fiscal_years
     else
-      flash[:error] = "Went something wrong. Couldn't add current fiscal year."
-      redirect_to :root
+      render :new
     end
   end
 
@@ -35,8 +34,7 @@ class CurrentFiscalYearsController < ApplicationController
       flash[:success] = "Current Fiscal Year updated."
       redirect_to :fiscal_years
     else
-      flash[:error] = "Couldn't Update. Went something wrong."
-      redirect_to :root
+      render :edit
     end
   end
 

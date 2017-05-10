@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   resources :items do
     collection do
       get '/stock' => :show_lowest
+      get '/print' => :print_button
     end
   end
 

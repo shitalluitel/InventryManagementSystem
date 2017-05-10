@@ -36,7 +36,7 @@
                     <div class="form-group">
                       <label class="control-label col-md-5"><p class="text-right"> Bill Number:</p></label>
                       <div class="col-md-7">
-                        <%= f.text_field :bill_number, :class => "form-control", :value => "#{@data}", :placeholder => "123" %>
+                        <%= f.text_field :bill_number, :class => "form-control", :placeholder => "123" %>
                       </div>
                     </div>
                   </div>
@@ -46,7 +46,7 @@
                       <label class="control-label col-md-5"><p class="text-right">Date</p></label>
                       <div class="col-md-7">
                         <div class='input-group date' id='datetimepicker1'>
-                          <%= f.text_field :date, :class => "form-control", :placeholder => "#{Date.today}" %>
+                          <%= f.text_field :date, :class => "form-control", :value=> "#{Date.today}" %>
                           <span class="input-group-addon">
                           <span class="fa fa-calendar"></span>
                         </span>
@@ -155,7 +155,7 @@
   </div>
 </div>
 
-<script type="text/javascript" charset="utf-8">
+<script>
   var count = <%= @tax %>;
   $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
@@ -170,12 +170,12 @@
     temp = parseFloat(total.val());
     buy_pr = parseFloat(pr.val());
     sell_pr = parseFloat(qu.val());
-    grand_value = parseFloat($('.grand-total').val());
+//    grand_value = parseFloat($('.grand-total').val());
 
     if (!isNaN(buy_pr) && !isNaN(sell_pr)) {
       total.val(( sell_pr * buy_pr ).toFixed(2));
       grand.val(( parseFloat(grand.val()) + (parseFloat(total.val()) - temp) ).toFixed(2));
-      $('.grand-total').val((parseFloat(total.val()) + grand_value).toFixed(2));
+//      $('.grand-total').val((parseFloat(total.val()) + grand_value).toFixed(2));
     }
   });
 

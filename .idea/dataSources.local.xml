@@ -21,5 +21,15 @@
       <introspection-scope>LinkStore_development:pg_catalog,public,shital</introspection-scope>
       <resolve-scope>LinkStore_development:public,shital</resolve-scope>
     </data-source>
+    <data-source name="PostgreSQL - TestProject_development@localhost" uuid="a0729da2-ee81-4ef9-bd84-c59fa0cf31cc">
+      <database-info product="PostgreSQL" version="9.5.4" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>shital</user-name>
+      <introspection-scope>TestProject_development:pg_catalog,public,shital</introspection-scope>
+      <resolve-scope>TestProject_development:public,shital</resolve-scope>
+    </data-source>
   </component>
 </project>

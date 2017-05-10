@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$USER_HOME$/LinkStore/.idea/LinkStore.iml" filepath="$USER_HOME$/LinkStore/.idea/LinkStore.iml" />
+      <module fileurl="file://$USER_HOME$/TestProject/.idea/TestProject.iml" filepath="$USER_HOME$/TestProject/.idea/TestProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/zefinsys.iml" filepath="$PROJECT_DIR$/.idea/zefinsys.iml" />
     </modules>
   </component>

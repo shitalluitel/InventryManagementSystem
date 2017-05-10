@@ -1,0 +1,4 @@
+<% @sum.each do |f| %>
+    <% @item=Item.find(f[0]) %>
+    <%= @item.name %>
+<% end %>

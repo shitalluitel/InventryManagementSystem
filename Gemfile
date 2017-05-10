@@ -52,7 +52,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'devise'
+gem 'devise','~> 4.2.1'
 gem 'font-awesome-rails'
 gem 'toastr-rails', '~> 1.0.3'
 gem 'breadcrumbs_on_rails'
@@ -64,3 +64,5 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.17.43'
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'select2-rails', '~> 4.0.3'
 gem 'nested_form'
+gem 'pdfkit'
+gem 'wkhtmltopdf-binary'
