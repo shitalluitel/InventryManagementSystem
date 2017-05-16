@@ -14,4 +14,11 @@ class Item < ApplicationRecord
   validates :item_code, presence: true, length: {minimum: 1, maximum: 16}
   validates :description, presence: true, length: {maximum: 256}
 
+  def self.search(search)
+    if search
+      where("lower(name) like ? ","%#{search.downcase}%").order("name ASC")
+    else
+      all.order("name ASC")
+    end
+  end
 end

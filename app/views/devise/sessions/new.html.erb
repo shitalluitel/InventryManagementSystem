@@ -11,19 +11,21 @@
               <% end %>
             </script>
         <% end %>
-
       </div>
-      <div class="login-form well tt-modal">
+      <div class="login-form well">
         <div class="row ">
           <div class="inventory-title">
             <div class="col-md-12">
-              <h3 class="text-center">Inventory Management</h3>
+              <h2 class="text-center title-size">Inventory Management</h2>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-offset-3 col-md-6">
-            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="col-md-5 ">
+            <%= image_tag CompanyProfile.first().logo.thumb.url, :class => "img img-student img-responsive img-thumbnail pull-right" %>
+          </div>
+          <div class="col-md-6 form-login">
+            <%= form_for(resource,class: "form-horizontal", as: resource_name, url: session_path(resource_name)) do |f| %>
                 <div class="col-md-12">
                   <div class="form-group">
                     <%= f.text_field :email, autofocus: true, :class => 'form-control ', :placeholder => 'Username or Email Address' %>
@@ -36,7 +38,9 @@
                 </div>
 
                 <div class="col-md-12">
-                  <%= f.submit "Log in", :class => 'btn btn-primary btn-block' %>
+                  <div class="form-group">
+                    <%= f.submit "Log in", :class => 'btn btn-primary btn-block' %>
+                  </div>
                 </div>
 
                 <div class="col-xs-6 col-sm-6 col-md-6">

@@ -1,0 +1,125 @@
+<div id="purchase">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row hide-pdf">
+        <div class="col-md-11">
+          <%= form_tag purchases_report_pdfs_path, method: 'get', class: "form-inline" do %>
+              <a class="hide-pdf" style="margin-left: 15px;" href="?utf8=✓&start_date=<%= Date.today - (30 * 3 + 1) %>&end_date=<%= Date.today %>">Last 3 Months</a>
+              <a class="hide-pdf" style="margin-left:15px; margin-right:15px;" href="?utf8=✓&start_date=<%= Date.today - (30 * 6 + 2) %>&end_date=<%= Date.today %>">Last 6 Months</a>
+                <a class="hide-pdf" style="margin-right: 15px;" href="?utf8=✓&start_date=<%= Date.today - (30 * 12 + 5) %>&end_date=<%= Date.today %>">Last 12 Months</a>
+
+              <div class="form-group" style="border-left: 1px solid #cfcfcf; padding-left: 20px;">
+                <div id='datetimepicker1'>
+                  <%= text_field_tag :start_date,params[:start_date],  :class => "form-control datepicker",:value =>
+                              if params[:start_date].present?
+                                params[:start_date]
+                              else
+                                Date.today - 30
+                              end,
+                                     :placeholder => "Start Date" %>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label > To </label>
+                <%= text_field_tag :end_date, params[:end_date], :class => "datepicker form-control ", :value =>
+                              if params[:end_date].present?
+                                params[:end_date]
+                              else
+                                Date.today
+                              end ,
+                                             :placeholder => "Items Name" %>
+              </div>
+
+              <div class="form-group">
+                <%= submit_tag "View Report", :name => nil, :class => "btn btn-default" %>&nbsp;
+              </div>
+              <a href="<%= purchases_report_pdfs_path %>"><i class="fa fa-refresh" style="color: rgba(0, 0, 0, 0.6); font-size: x-large;"></i></a>
+          <% end %>
+        </div>
+        <div class="col-md-1">
+          <div class="pull-right">
+            <span class="margin-left"><a class="hide-pdf" href="javascript:window.print()"><i class="fa fa-print" style="font-size: x-large;"></i></a></span>
+          </div>
+        </div>
+      </div>
+      <br>
+     <% @company = CompanyProfile.first %>
+
+      <div class="col-md-6 col-md-offset-3 show-pdf">
+        <div class="col-md-12 text-center">
+          <h2><%= @company.name %></h2>
+          <h4>
+            <%= @company.address %>
+            <% if @company.ward_no.present? %>
+              - <%= @company.ward_no %>
+            <% end %>
+            , <%= @company.country %>
+          </h4>
+        </div>
+        <br>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <table class="table table-hover table-bordered">
+            <thead >
+              <tr>
+                <th>S.N.</th>
+                <th>Bill Number</th>
+                <th>Supplier</th>
+                <th>Total Cost</th>
+                <th>Discount</th>
+                <th>Tax</th>
+                <th>Date</th>
+                <th>Fiscal Year</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if @purchase.present? %>
+                <% @purchase.each_with_index do |f, i| %>
+                    <tr>
+                      <td><%= i+1%></td>
+                      <td><%= f.bill_number %></td>
+                      <td>
+                        <%= f.vendor.name %>
+                      </td>
+                      <td>
+                        <%= f.total %>
+                      </td>
+                      <td>
+                        <%= f.discount %>
+                      </td>
+                      <td>
+                        <%= f.tax_amount %>
+                      </td>
+                      <td>
+                        <%= f.date %>
+                      </td>
+                      <td>
+                        <%= f.fiscal_year %>
+                      </td>
+                    </tr>
+                <% end %>
+              <% else %>
+                <tr style="background-color: red;">
+                  <td style="color: white;" class="text-center" colspan="8">No data to display.</td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(function () {
+    $('.datepicker').datetimepicker({
+      viewMode: 'years',
+      format: 'YYYY-MM-DD'
+    });
+  });
+</script>

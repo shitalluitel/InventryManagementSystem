@@ -2,12 +2,21 @@
   <div class="col-md-12">
 
     <div class="row">
+      <div class="col-md-6">
+        <%= form_tag items_path,class: "form-inline", method: 'get' do %>
+          <%= text_field_tag :search, params[:search], :class => "form-control", :placeholder => "Items Name" %>
+          <%= submit_tag "Search", :name => nil, :class => "btn btn-default" %>&nbsp;
+          <a href="<%= items_path %>"><i class="fa fa-refresh" style="color: rgba(0, 0, 0, 0.6);font-size: x-large;"></i></a>
+        <% end %>
+      </div>
       <div class="col-md-6 pull-right">
         <a class="btn btn-primary pull-right hide-pdf" href="<%= new_item_path %>"><span><i class="fa fa-plus fa-fw">&nbsp;</i></span>
           Add New</a>
       </div>
     </div>
-    <br/>
+
+    <br>
+
     <div class="row">
       <div class="col-md-12">
 
@@ -86,7 +95,6 @@
 
       </div>
     </div>
-    <a class="btn btn-primary" href="<%= print_items_path %>"> print</a>
     <%= will_paginate @items, renderer: BootstrapPagination::Rails, :class => "hide-pdf" %>
 
   </div>

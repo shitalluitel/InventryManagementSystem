@@ -1,12 +1,15 @@
 <% @data = controller.controller_name.to_s.titleize %>
 <% if controller.controller_name.to_s.titleize != "Admin" %>
-    <% if controller.controller_name.to_s.titleize === "Sale Items" %>
-        <% @data = "Sale" %>
-    <% end %>
-
-    <% if controller.controller_name.to_s.titleize === "Vendors" %>
-        <% @data = "Suppliers" %>
-    <% end %>
+       <%
+         case controller.controller_name.to_s.titleize
+            when "Sale Items"
+              @data = "Sale"
+            when "Vendors"
+              @data = "Suppliers"
+            when "Pdfs"
+              @data = "Report"
+          end
+       %>
 
     <div class="container-fluid hide-pdf">
       <div class="page-header">

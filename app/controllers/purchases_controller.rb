@@ -72,7 +72,8 @@ class PurchasesController < ApplicationController
   def index
     @title = "List"
     @perpage = 20
-    @purchase = Purchase.paginate(:page => params[:page], :per_page => @perpage)
+    @purchase_temp = Purchase.search(params[:about], params[:start_date], params[:end_date],params[:name])
+    @purchase = @purchase_temp.paginate(:page => params[:page], :per_page => @perpage)
     @page = params[:page] || 1
   end
 

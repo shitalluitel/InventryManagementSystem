@@ -20,7 +20,7 @@
             <a href="<%= new_purchase_path %>" class="btn btn-success">Add</a>
           </div>
           <hr>
-          <table class="table table-responsive .center-table span">
+          <table class="table table-responsive table-company .center-table span">
             <thead>
             <tr>
               <th class="text-center col-xs-3"></th>
@@ -47,8 +47,9 @@
           <table class="table table-responsive">
             <thead>
             <tr>
-              <th class="text-center col-xs-4"><h4 class="text-primary ">Total Amount: </h4></th>
-              <th class=" col-xs-8"><h4><%= @total_purchase %></h4></th>
+              <td class="text-center col-xs-4"><h4 class="text-primary ">Total Amount: </h4></td>
+              <td class=" col-xs-4"><h4 class="text-primary"><%= @total_purchase %></h4></td>
+              <td class="col-xs-4"><a href="<%= purchases_report_pdfs_path %>" class="btn btn-primary">Generate Report</a></td>
             </tr>
             </thead>
           </table>
@@ -73,7 +74,7 @@
             <a href="<%= new_sale_path %>" class="btn btn-success">Add</a>
           </div>
           <hr>
-          <table class="table table-responsive .center-table span">
+          <table class="table table-responsive table-company .center-table span">
             <thead>
             <tr>
               <th class="text-center col-xs-3"></th>
@@ -100,8 +101,9 @@
           <table class="table table-responsive">
             <thead>
             <tr>
-              <th class="text-center col-xs-4"><h4 class="text-primary ">Total Amount: </h4></th>
-              <th class=" col-xs-8"><h4><%= @total_sale %></h4></th>
+              <td class="text-center col-xs-4"><h4 class="text-primary ">Total Amount: </h4></td>
+              <td class="col-xs-4"><h4 class="text-primary"><%= @total_sale %></h4></td>
+              <td class="col-xs-4"><a href="#" class="btn btn-primary">Generate Report</a></td>
             </tr>
             </thead>
           </table>

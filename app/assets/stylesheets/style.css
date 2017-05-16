@@ -66,7 +66,7 @@ body {
 }
 
 .login-form {
-    margin-top: 80px;
+    margin-top: 150px;
 }
 
 /*ends here*/
@@ -79,11 +79,11 @@ body {
 /*ende here*/
 
 /*For company profile */
-.table {
+.table-company {
     border-bottom: 0px !important;
 }
 
-.table th, .table td {
+.table-company th, .table-company td {
     border: 1px !important;
 }
 
@@ -247,6 +247,27 @@ text-decoration: none;
 }
 /*ends here*/
 
+/*other here*/
+.show-pdf{
+    display: none;
+}
+.margin-left{
+    margin-left: 20px;
+}
+
+.form-login{
+    border-left: 1px solid #aeaeae;
+}
+
+fieldset .well{
+    background-color: white;
+    box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.37);
+}
+
+.title-size{
+
+}
+/*ends here*/
 /*for pdf*/
     @media print{
         body {
@@ -263,5 +284,15 @@ text-decoration: none;
         .hide-pdf{
             display: none;
         }
+
+        @page{
+            size: auto;
+            margin:0;
+        }
+
+        .show-pdf{
+            display: block;
+        }
     }
+
 /**/

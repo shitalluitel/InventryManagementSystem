@@ -41,6 +41,12 @@ class SalesController < ApplicationController
     @sale.fiscal_year = @fiscal
 
     @sale.fiscal_year = @fiscal
+
+    @customer = Customer.where("customer_name = ?", "Cash").select(:id)
+    if @sale.customer_id === @customer
+      @sale.credit_limit = 0
+    end
+
     if @sale.save
       @sale.sale_items.each do |g|
         if g.present?

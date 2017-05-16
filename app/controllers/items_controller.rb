@@ -44,7 +44,8 @@ class ItemsController < ApplicationController
   def index
     @title ="List"
     @perpage = 20
-    @items = Item.paginate(:page => params[:page], :per_page => @perpage)
+    @item = Item.search(params[:search])
+    @items = @item.paginate(:page => params[:page], :per_page => @perpage)
     @page = params[:page] || 1
     respond_to do |format|
       format.html

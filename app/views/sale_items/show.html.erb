@@ -12,9 +12,11 @@
           <h4 class="text-primary col-md-3">Sale Amount: <span class="text-success"><%=  g.sale.total %> </span> </h4>
           <h4 class=" col-md-4 text-primary">Remaining Time:
             <span class="text-success">
-               <%@date = ((g.sale.date + g.sale.credit_limit) - Date.today ).to_f%>
-              <% if @date > 0 || g.sale.vendor.name === "Cash" %>
-                  <%= @date.abs %> <%= @date.abs > 1 ? "Days" : "Day" %> ( <%= g.sale.date + g.sale.credit_limit  %> )
+              <% if (g.sale.credit_limit.present?) %>
+                  <% @date = ((g.sale.date + g.sale.credit_limit) - Date.today ).to_f%>
+                <%  end %>
+              <% if g.sale.customer.customer_name === "Cash" %>
+                  None
               <% else %>
                   <span style="color: #a94442; " title="Credit Limit Crossed"> <%= @date.abs %> <%= @date.abs > 1 ? "Days" : "Day" %> ( <%= g.sale.date + g.sale.credit_limit  %> )</span>
               <% end %>

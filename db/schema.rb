@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170505075021) do
+ActiveRecord::Schema.define(version: 20170511104226) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20170505075021) do
     t.string   "logo"
     t.string   "ward_no"
     t.integer  "tax"
+    t.string   "country"
   end
 
   create_table "current_fiscal_years", force: :cascade do |t|
@@ -66,7 +67,7 @@ ActiveRecord::Schema.define(version: 20170505075021) do
 
   create_table "items", force: :cascade do |t|
     t.string   "name"
-    t.integer  "unit_it"
+    t.integer  "unit_id"
     t.string   "item_code"
     t.integer  "item_group_id"
     t.text     "description"
@@ -121,7 +122,7 @@ ActiveRecord::Schema.define(version: 20170505075021) do
     t.date     "date"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
-    t.string   "bill_number"
+    t.integer  "bill_number"
     t.decimal  "discount",      precision: 10, scale: 2
     t.integer  "credit_limit"
     t.decimal  "tax_amount",    precision: 10, scale: 2

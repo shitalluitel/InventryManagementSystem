@@ -110,6 +110,15 @@
               </li>
 
               <li>
+                <a href="<%=  %>">
+                    <span>
+                      <i class="fa fa-history fa-fw">&nbsp;</i>
+                    </span>
+                  Logs
+                </a>
+              </li>
+
+              <li>
                 <a href="<%= units_path %>">
                     <span>
                       <i class="fa fa-balance-scale fa-fw">&nbsp;</i>
@@ -136,6 +145,42 @@
               </li>
             </ul>
           </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-cog">&nbsp;</i>Report<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+
+              <li>
+                <a href="<%= purchases_report_pdfs_path %>">
+                    <span>
+                      <i class="fa fa-history fa-fw">&nbsp;</i>
+                    </span>
+                  Purchase
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                    <span>
+                      <i class="fa fa-history fa-fw">&nbsp;</i>
+                    </span>
+                  Sales
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                    <span>
+                      <i class="fa fa-balance-scale fa-fw">&nbsp;</i>
+                    </span>
+                  Items
+                </a>
+              </li>
+            </ul>
+          </li>
+
         </ul>
 
         <ul class="nav navbar-nav navbar-right">

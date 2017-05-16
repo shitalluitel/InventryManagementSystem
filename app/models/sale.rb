@@ -6,4 +6,12 @@ class Sale < ApplicationRecord
   validates :date, presence: true
   validates :bill_number, presence: true, uniqueness: true
   validates :discount, presence: true
+
+  def self.SaleSearch(start,last)
+    if start.present? && last.present?
+      where("date >= ? and date <= ? ",start, last).order("date ASC")
+    else
+      all
+    end
+  end
 end

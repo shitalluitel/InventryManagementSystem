@@ -30,14 +30,14 @@
             <tbody>
             <% @purchase.each_with_index do |f, i| %>
                 <% if f.vendor.name === "Cash" %>
-                    <tr title="Credit Limit None" data-toggle="tooltip" class="bg-success">
+                    <tr class="bg-success">
                 <% else %>
                     <% if ((f.date + f.credit_limit) - Date.today).to_f < 5 && ((f.date + f.credit_limit) - Date.today).to_f > 0%>
-                        <tr title="Payment Date: <%= f.date + f.credit_limit  %>" data-toggle="tooltip" style="background-color: rgb(255, 198, 193);">
+                        <tr style="background-color: rgb(255, 198, 193);">
                     <% elsif ((f.date + f.credit_limit) - Date.today).to_f <= 0 %>
-                        <tr title="Payment Date: <%= f.date + f.credit_limit  %>" data-toggle="tooltip" style="background-color: #ffa594;">
+                        <tr style="background-color: #ffa594;">
                     <% elsif ((f.date + f.credit_limit) - Date.today).to_f >5  %>
-                        <tr title="Payment Date: <%= f.date + f.credit_limit  %>" data-toggle="tooltip">
+                        <tr>
                     <% end %>
                 <% end %>
                 <td><%= (@page.to_i - 1) * @perpage+ i+1 %></td>
@@ -60,11 +60,15 @@
                 <td>
                   <%= f.fiscal_year %>
                 </td>
-                <td class="col-md-2">
-                  <%@date = ((f.date + f.credit_limit) - Date.today ).to_f%>
+                <% if f.vendor.name === "Cash" %>
+                    <td title="Transaction In cash" data-toggle="tooltip" class="col-md-2">
+                <% else %>
+                    <td title="Payment Day: <%= f.date + f.credit_limit %>" data-toggle="tooltip">
+                <% end %>
                   <% if f.vendor.name === "Cash" %>
                       In Cash
                   <% else %>
+                      <%@date = ((f.date + f.credit_limit) - Date.today ).to_f%>
                       <% if @date > 0  %>
                           <%= @date %>
                       <% else %>
