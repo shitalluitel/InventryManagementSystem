@@ -22,7 +22,7 @@
         </div>
         <div class="row">
           <div class="col-md-5 ">
-            <%= image_tag CompanyProfile.first().logo.thumb.url, :class => "img img-student img-responsive img-thumbnail pull-right" %>
+            <%= image_tag CompanyProfile.first().logo.thumb.url, :class => "img img-student img-responsive image-margin pull-right" %>
           </div>
           <div class="col-md-6 form-login">
             <%= form_for(resource,class: "form-horizontal", as: resource_name, url: session_path(resource_name)) do |f| %>

@@ -2,30 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b545199c-1e2d-4123-96e0-eb835c926c53" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pdfs/purchase_report.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pdfs/sale_report.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/pdf_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/pdfs_controller.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/public/my/upload/directory/Screenshot_from_2017-02-16_21-55-08.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/public/my/upload/directory/thumb_Screenshot_from_2017-02-16_21-55-08.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/style.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/items_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/items_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/purchases_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/purchases_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/sales_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/sales_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/item.rb" afterPath="$PROJECT_DIR$/app/models/item.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/purchase.rb" afterPath="$PROJECT_DIR$/app/models/purchase.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/sale.rb" afterPath="$PROJECT_DIR$/app/models/sale.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/index.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/company_profiles/index.html.erb" afterPath="$PROJECT_DIR$/app/views/company_profiles/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/items/index.html.erb" afterPath="$PROJECT_DIR$/app/views/items/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/login.erb" afterPath="$PROJECT_DIR$/app/views/layouts/login.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/purchases/index.html.erb" afterPath="$PROJECT_DIR$/app/views/purchases/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sale_items/show.html.erb" afterPath="$PROJECT_DIR$/app/views/sale_items/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sales/index.html.erb" afterPath="$PROJECT_DIR$/app/views/sales/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_breadcrumb.erb" afterPath="$PROJECT_DIR$/app/views/shared/_breadcrumb.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_navigation.erb" afterPath="$PROJECT_DIR$/app/views/shared/_navigation.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/LinkStore/app/assets/stylesheets/application.css" afterPath="$USER_HOME$/LinkStore/app/assets/stylesheets/application.css" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/LinkStore/app/assets/stylesheets/homestyle.css" afterPath="$USER_HOME$/LinkStore/app/assets/stylesheets/homestyle.css" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/LinkStore/app/assets/stylesheets/style.css" afterPath="$USER_HOME$/LinkStore/app/assets/stylesheets/style.css" />
@@ -72,31 +54,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
+            <state relative-caret-position="221">
+              <caret line="267" column="23" selection-start-line="267" selection-start-column="23" selection-end-line="267" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/company_profiles/index.html.erb">
+      <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="92" column="173" selection-start-line="92" selection-start-column="69" selection-end-line="92" selection-end-column="173" />
+            <state relative-caret-position="135">
+              <caret line="24" column="119" selection-start-line="24" selection-start-column="119" selection-end-line="24" selection-end-column="119" />
               <folding />
             </state>
           </provider>
@@ -112,31 +84,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="purchases_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="purchase_report.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pdfs/purchase_report.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="38" column="14" selection-start-line="4" selection-start-column="7" selection-end-line="38" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="purchases_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/purchases_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="74" column="92" selection-start-line="74" selection-start-column="92" selection-end-line="74" selection-end-column="92" />
+            <state relative-caret-position="255">
+              <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="link.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/LinkStore/app/models/link.rb">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/purchases/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sales_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/sales_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+            <state relative-caret-position="326">
+              <caret line="162" column="30" selection-start-line="162" selection-start-column="30" selection-end-line="162" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -201,17 +173,17 @@
         <option value="$PROJECT_DIR$/app/views/items/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pdfs/purchase_report.html.erb" />
         <option value="$PROJECT_DIR$/app/views/sales/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/purchases/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pdfs/sale_report.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/pdfs_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/login.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/app/views/admin/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/stocks_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/purchase.rb" />
         <option value="$PROJECT_DIR$/app/controllers/purchases_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/purchases/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/style.css" />
       </list>
     </option>
   </component>
@@ -258,7 +230,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -371,7 +343,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -387,7 +359,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$USER_HOME$/TestProject" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="purchase&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/purchases_controller.rb&#10;style&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/stylesheets/style.css&#10;routes&#9;FILE&#9;file:///home/shital/InventorySystem/config/routes.rb&#10;sales/index&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/sales/index.html.erb&#10;fiscal_years/form&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/fiscal_years/_form.html.erb&#10;items/index&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/items/index.html.erb&#10;sales&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/sales_controller.rb&#10;dmin&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/admin_controller.rb&#10;index&#9;FILE&#9;file:///home/shital/LinkStore/app/views/categories/index.html.erb&#10;cate&#9;FILE&#9;file:///home/shital/LinkStore/app/controllers/categories_controller.rb&#10;category&#9;FILE&#9;file:///home/shital/LinkStore/app/models/category.rb&#10;for&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/sales/_form.html.erb&#10;form&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/sales/_form.html.erb&#10;item&#9;FILE&#9;file:///home/shital/InventorySystem/app/models/item.rb&#10;categor&#9;FILE&#9;file:///home/shital/LinkStore/app/controllers/categories_controller.rb&#10;items_con&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/items_controller.rb&#10;categories/inde&#9;FILE&#9;file:///home/shital/LinkStore/app/views/categories/index.html.erb&#10;items/inde&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/items/index.html.erb&#10;navigation&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/shared/_navigation.erb&#10;application.c&#9;FILE&#9;file:///home/shital/LinkStore/app/assets/stylesheets/application.css&#10;application.css&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/stylesheets/application.css&#10;admin_&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/admin_controller.rb&#10;middleware.rb&#9;FILE&#9;file:///home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pdfkit-0.8.2/lib/pdfkit/middleware.rb&#10;application&#9;FILE&#9;file:///home/shital/InventorySystem/config/application.rb&#10;pplication&#9;FILE&#9;file:///home/shital/InventorySystem/config/application.rb&#10;application.rb&#9;FILE&#9;file:///home/shital/InventorySystem/config/application.rb&#10;gem&#9;FILE&#9;file:///home/shital/LinkStore/Gemfile&#10;nav&#9;FILE&#9;file:///home/shital/LinkStore/app/views/shared/_navigationhome.erb&#10;inde&#9;FILE&#9;file:///home/shital/LinkStore/app/views/home/index.html.erb&#10;home&#9;FILE&#9;file:///home/shital/LinkStore/app/assets/stylesheets/homestyle.css&#10;application.js&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/javascripts/application.js&#10;app&#9;FILE&#9;file:///home/shital/LinkStore/app/assets/stylesheets/application.css&#10;navi&#9;FILE&#9;file:///home/shital/LinkStore/app/views/shared/_navigationhome.erb&#10;na&#9;FILE&#9;file:///home/shital/LinkStore/app/views/shared/_navigationhome.erb&#10;homes&#9;FILE&#9;file:///home/shital/LinkStore/app/assets/stylesheets/homestyle.css&#10;gemfile&#9;FILE&#9;file:///home/shital/LinkStore/Gemfile&#10;link_controller&#9;FILE&#9;file:///home/shital/LinkStore/app/controllers/links_controller.rb&#10;topics_&#9;FILE&#9;file:///home/shital/LinkStore/app/controllers/topics_controller.rb&#10;style.c&#9;FILE&#9;file:///home/shital/LinkStore/app/assets/stylesheets/style.css&#10;production&#9;FILE&#9;file:///home/shital/LinkStore/config/environments/production.rb&#10;development.rb&#9;FILE&#9;file:///home/shital/LinkStore/config/environments/development.rb&#10;gemf&#9;FILE&#9;file:///home/shital/LinkStore/Gemfile&#10;link&#9;FILE&#9;file:///home/shital/LinkStore/app/controllers/links_controller.rb&#10;links&#9;FILE&#9;file:///home/shital/LinkStore/app/controllers/links_controller.rb&#10;production.r&#9;FILE&#9;file:///home/shital/LinkStore/config/environments/production.rb&#10;esume.r&#9;FILE&#9;file:///home/shital/TestProject/app/models/resume.rb&#10;user.rb&#9;FILE&#9;file:///home/shital/TestProject/app/models/user.rb&#10;resume&#9;FILE&#9;file:///home/shital/TestProject/app/controllers/resumes_controller.rb&#10;config/env/de&#9;FILE&#9;file:///home/shital/TestProject/config/environments/development.rb&#10;items/form&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/items/_form.html.erb" />
+    <property name="SearchEverywhereHistoryKey" value="new&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/devise/sessions/new.html.erb&#10;purchase_re&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/pdfs/purchase_report.html.erb&#10;purchases/index&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/purchases/index.html.erb&#10;purchase&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/purchases_controller.rb&#10;style&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/stylesheets/style.css&#10;routes&#9;FILE&#9;file:///home/shital/InventorySystem/config/routes.rb&#10;sales/index&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/sales/index.html.erb&#10;fiscal_years/form&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/fiscal_years/_form.html.erb&#10;items/index&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/items/index.html.erb&#10;sales&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/sales_controller.rb&#10;dmin&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/admin_controller.rb&#10;index&#9;FILE&#9;file:///home/shital/LinkStore/app/views/categories/index.html.erb&#10;cate&#9;FILE&#9;file:///home/shital/LinkStore/app/controllers/categories_controller.rb&#10;category&#9;FILE&#9;file:///home/shital/LinkStore/app/models/category.rb&#10;for&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/sales/_form.html.erb&#10;form&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/sales/_form.html.erb&#10;item&#9;FILE&#9;file:///home/shital/InventorySystem/app/models/item.rb&#10;categor&#9;FILE&#9;file:///home/shital/LinkStore/app/controllers/categories_controller.rb&#10;items_con&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/items_controller.rb&#10;categories/inde&#9;FILE&#9;file:///home/shital/LinkStore/app/views/categories/index.html.erb&#10;items/inde&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/items/index.html.erb&#10;navigation&#9;FILE&#9;file:///home/shital/InventorySystem/app/views/shared/_navigation.erb&#10;application.c&#9;FILE&#9;file:///home/shital/LinkStore/app/assets/stylesheets/application.css&#10;application.css&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/stylesheets/application.css&#10;admin_&#9;FILE&#9;file:///home/shital/InventorySystem/app/controllers/admin_controller.rb&#10;middleware.rb&#9;FILE&#9;file:///home/shital/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pdfkit-0.8.2/lib/pdfkit/middleware.rb&#10;application&#9;FILE&#9;file:///home/shital/InventorySystem/config/application.rb&#10;pplication&#9;FILE&#9;file:///home/shital/InventorySystem/config/application.rb&#10;application.rb&#9;FILE&#9;file:///home/shital/InventorySystem/config/application.rb&#10;gem&#9;FILE&#9;file:///home/shital/LinkStore/Gemfile&#10;nav&#9;FILE&#9;file:///home/shital/LinkStore/app/views/shared/_navigationhome.erb&#10;inde&#9;FILE&#9;file:///home/shital/LinkStore/app/views/home/index.html.erb&#10;home&#9;FILE&#9;file:///home/shital/LinkStore/app/assets/stylesheets/homestyle.css&#10;application.js&#9;FILE&#9;file:///home/shital/InventorySystem/app/assets/javascripts/application.js&#10;app&#9;FILE&#9;file:///home/shital/LinkStore/app/assets/stylesheets/application.css&#10;navi&#9;FILE&#9;file:///home/shital/LinkStore/app/views/shared/_navigationhome.erb&#10;na&#9;FILE&#9;file:///home/shital/LinkStore/app/views/shared/_navigationhome.erb&#10;homes&#9;FILE&#9;file:///home/shital/LinkStore/app/assets/stylesheets/homestyle.css&#10;gemfile&#9;FILE&#9;file:///home/shital/LinkStore/Gemfile&#10;link_controller&#9;FILE&#9;file:///home/shital/LinkStore/app/controllers/links_controller.rb&#10;topics_&#9;FILE&#9;file:///home/shital/LinkStore/app/controllers/topics_controller.rb&#10;style.c&#9;FILE&#9;file:///home/shital/LinkStore/app/assets/stylesheets/style.css&#10;production&#9;FILE&#9;file:///home/shital/LinkStore/config/environments/production.rb&#10;development.rb&#9;FILE&#9;file:///home/shital/LinkStore/config/environments/development.rb&#10;gemf&#9;FILE&#9;file:///home/shital/LinkStore/Gemfile&#10;link&#9;FILE&#9;file:///home/shital/LinkStore/app/controllers/links_controller.rb&#10;links&#9;FILE&#9;file:///home/shital/LinkStore/app/controllers/links_controller.rb&#10;production.r&#9;FILE&#9;file:///home/shital/LinkStore/config/environments/production.rb&#10;esume.r&#9;FILE&#9;file:///home/shital/TestProject/app/models/resume.rb&#10;user.rb&#9;FILE&#9;file:///home/shital/TestProject/app/models/user.rb" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -689,34 +661,35 @@
       <workItem from="1494576493162" duration="7816000" />
       <workItem from="1494747612428" duration="11022000" />
       <workItem from="1494840238790" duration="1919000" />
-      <workItem from="1494898381136" duration="3655000" />
+      <workItem from="1494898381136" duration="7296000" />
+      <workItem from="1494924879759" duration="839000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="973769000" />
+    <option name="totallyTimeSpent" value="978249000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1366" height="683" extended-state="6" />
+    <frame x="0" y="24" width="1366" height="683" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22878788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23257576" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26969698" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39370078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35905513" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22992127" sideWeight="0.49707174" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35905513" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28661418" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -777,7 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -915,7 +887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,13 +911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/purchases/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/fiscal_years/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
@@ -958,7 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
           <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -973,23 +936,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -997,13 +943,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="51" column="57" selection-start-line="51" selection-start-column="57" selection-end-line="51" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
+        <state relative-caret-position="765">
           <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
           <folding />
         </state>
@@ -1013,15 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="80" column="24" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pdfs/purchase_report.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1029,7 +965,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1037,7 +972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1045,7 +979,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1053,7 +986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1061,7 +993,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1069,31 +1000,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/LinkStore/app/models/link.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/sales_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/company_profiles/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="92" column="173" selection-start-line="92" selection-start-column="69" selection-end-line="92" selection-end-column="173" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1105,10 +1011,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/company_profiles/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="89" column="51" selection-start-line="89" selection-start-column="51" selection-end-line="89" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/LinkStore/app/models/link.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/sales_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/purchases_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="74" column="92" selection-start-line="74" selection-start-column="92" selection-end-line="74" selection-end-column="92" />
+        <state relative-caret-position="255">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pdfs/purchase_report.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="14" selection-start-line="4" selection-start-column="7" selection-end-line="38" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/purchases/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="162" column="30" selection-start-line="162" selection-start-column="30" selection-end-line="162" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="24" column="119" selection-start-line="24" selection-start-column="119" selection-end-line="24" selection-end-column="119" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="267" column="23" selection-start-line="267" selection-start-column="23" selection-end-line="267" selection-end-column="23" />
           <folding />
         </state>
       </provider>

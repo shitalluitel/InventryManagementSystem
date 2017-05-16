@@ -1,9 +1,67 @@
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function () {
+    $(".name-form").hide();
+    $(".date-form").hide();
+    $(".submit-form").hide();
+  });
+
+</script>
 <div class="purchase">
   <div class="row">
     <div class="col-md-12">
 
       <div class="row">
-        <div class="col-md-6 pull-right">
+        <div class="col-md-11">
+          <%= form_tag purchases_path, method: 'get', class: "form-inline" do %>
+              <a class="hide-pdf" style="margin-left: 15px;" href="?utf8=✓&start_date=<%= Date.today - (30 * 3 + 1) %>&end_date=<%= Date.today %>">Last 3 Months</a>
+              <a class="hide-pdf" style="margin-left:15px; margin-right:15px;" href="?utf8=✓&start_date=<%= Date.today - (30 * 6 + 2) %>&end_date=<%= Date.today %>">Last 6 Months</a>
+              <a class="hide-pdf" style="margin-right: 15px;" href="?utf8=✓&start_date=<%= Date.today - (30 * 12 + 5) %>&end_date=<%= Date.today %>">Last 12 Months</a>
+
+              <div class="form-group" style="border-left: 1px solid #cfcfcf; padding-left: 20px;">
+                <select class="form-control" id="selected-value">
+                  <option value=""> Search By</option>
+                  <option value="Date">Date</option>
+                  <option value="Name">Supplier Name</option>
+                </select>
+              </div>
+              <div class="form-group date-form" >
+                <div id='datetimepicker1'>
+                  <%= text_field_tag :start_date,params[:start_date],  :class => "form-control datepicker",:value =>
+                      if params[:start_date].present?
+                        params[:start_date]
+                      else
+                        Date.today - 30
+                      end,
+                                     :placeholder => "Start Date" %>
+                </div>
+              </div>
+
+              <div class="form-group date-form">
+                <label > To </label>
+                <%= text_field_tag :end_date, params[:end_date], :class => "datepicker form-control ", :value =>
+                    if params[:end_date].present?
+                      params[:end_date]
+                    else
+                      Date.today
+                    end ,
+                                   :placeholder => "End Date" %>
+              </div>
+
+              <div class="form-group name-form">
+                <%= text_field_tag :name, params[:name], :class => "datepicker form-control ", :value =>
+                    if params[:name].present?
+                      params[:name]
+                    end ,
+                                   :placeholder => "Items Name" %>
+              </div>
+              <div class="form-group submit-form">
+                <%= submit_tag "View Report", :name => nil, :class => "btn btn-default" %>&nbsp;
+                <a href="<%= purchases_report_pdfs_path %>"><i class="fa fa-refresh" style="color: rgba(0, 0, 0, 0.6); font-size: x-large;"></i></a>
+              </div>
+
+          <% end %>
+        </div>
+        <div class="col-md-1 pull-right">
           <a class="btn btn-primary pull-right" href="<%= new_purchase_path %>"><span><i class="fa fa-plus fa-fw">&nbsp;</i></span>
             Add New</a>
         </div>
@@ -95,4 +153,22 @@
   $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
   });
+
+  $('body').on('change','#selected-value',function () {
+    var selected = $("#selected-value");
+
+    if (selected.val() === "Date"){
+      $(".date-form").show();
+      $(".name-form").hide();
+      $(".submit-form").show();
+    }else if (selected.val() === "Name"){
+      $(".name-form").show();
+      $(".submit-form").show();
+      $(".date-form").hide();
+    }else{
+      $(".name-form").hide();
+      $(".submit-form").hide();
+      $(".date-form").hide();
+    }
+  })
 </script>

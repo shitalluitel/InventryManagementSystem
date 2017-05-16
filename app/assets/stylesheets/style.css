@@ -264,8 +264,8 @@ fieldset .well{
     box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.37);
 }
 
-.title-size{
-
+.image-margin{
+    margin-right: 15px;
 }
 /*ends here*/
 /*for pdf*/
