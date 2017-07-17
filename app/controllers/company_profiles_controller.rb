@@ -17,7 +17,7 @@ class CompanyProfilesController < ApplicationController
       redirect_to :company_profiles
     else
       flash[:error] = "Unable to add " + @company_profile.name.capitalize + " company."
-      redirect_to @company_profile
+      render "new"
     end
   end
 
@@ -35,7 +35,7 @@ class CompanyProfilesController < ApplicationController
       redirect_to :company_profiles
     else
       flash[:error] = "Unable to update " + @company_profile.name.capitalize + " company."
-      redirect_to @company_profile
+      render "edit"
     end
   end
 
