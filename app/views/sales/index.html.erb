@@ -1,9 +1,54 @@
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function () {
+    $(".name-form").hide();
+    $(".date-form").hide();
+    $(".submit-form").hide();
+  });
+
+</script>
+
 <div class="sale">
   <div class="row">
     <div class="col-md-12">
 
       <div class="row">
-        <div class="col-md-6 pull-right">
+        <div class="col-md-11">
+          <%= form_tag sales_path, method: 'get', class: "form-inline" do %>
+              <a class="hide-pdf" style="margin-left: 15px;" href="?utf8=✓&start_date=<%= Date.today - (30 * 3 + 1) %>&end_date=<%= Date.today %>">Last 3 Months</a>
+              <a class="hide-pdf" style="margin-left:15px; margin-right:15px;" href="?utf8=✓&start_date=<%= Date.today - (30 * 6 + 2) %>&end_date=<%= Date.today %>">Last 6 Months</a>
+              <a class="hide-pdf" style="margin-right: 15px;" href="?utf8=✓&start_date=<%= Date.today - (30 * 12 + 5) %>&end_date=<%= Date.today %>">Last 12 Months</a>
+
+              <div class="form-group" >
+                <div id='datetimepicker1'>
+                  <%= text_field_tag :start_date,params[:start_date],  :class => "form-control datepicker",:value =>
+                      if params[:start_date].present?
+                        params[:start_date]
+                      else
+                        Date.today - 30
+                      end,
+                                     :placeholder => "Start Date" %>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label > To </label>
+                <%= text_field_tag :end_date, params[:end_date], :class => "datepicker form-control ", :value =>
+                    if params[:end_date].present?
+                      params[:end_date]
+                    else
+                      Date.today
+                    end ,
+                                   :placeholder => "End Date" %>
+              </div>
+              <div class="form-group submit-form">
+                <%= submit_tag "View Report", :name => nil, :class => "btn btn-default" %>&nbsp;
+                <a href="<%= purchases_path %>"><i class="fa fa-undo" style="color: rgba(0, 0, 0, 0.6); font-size: x-large;"></i></a>
+              </div>
+
+          <% end %>
+        </div>
+
+        <div class="col-md-1">
           <a class="btn btn-primary pull-right" href="<%= new_sale_path %>"><span><i class="fa fa-plus fa-fw">&nbsp;</i></span>
             Add New</a>
         </div>
@@ -92,8 +137,27 @@
   </div>
 
 </div>
+
 <script type="text/javascript" charset="utf-8">
   $(document).ready(function () {
     $('[data-toggle="toggle"]').tooltip();
+  });
+
+  $('body').on('change','#selected-value',function () {
+    var selected = $("#selected-value");
+
+    if (selected.val() === "Date"){
+      $(".date-form").show();
+      $(".name-form").hide();
+      $(".submit-form").show();
+    }else if (selected.val() === "Name"){
+      $(".name-form").show();
+      $(".submit-form").show();
+      $(".date-form").hide();
+    }else{
+      $(".name-form").hide();
+      $(".submit-form").hide();
+      $(".date-form").hide();
+    }
   });
 </script>

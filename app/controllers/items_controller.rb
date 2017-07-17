@@ -24,11 +24,11 @@ class ItemsController < ApplicationController
   def edit
     @title = "Edit"
     add_breadcrumb "Edit"
-    @item = Item.find(params[:id])
+    @item = Item.find_by_id(params[:id])
   end
 
   def update
-    @item = Item.find(params[:id])
+    @item = Item.find_by_id(params[:id])
     if @item.update(item_params)
       @msg = "Item Updated."
       create_logs(@msg)

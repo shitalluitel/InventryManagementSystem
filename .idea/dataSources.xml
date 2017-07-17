@@ -7,17 +7,17 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/zefinsys_development</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="PostgreSQL - LinkStore_development@localhost" uuid="02336148-ad1e-4922-b57b-bafe7dc5e4f4">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/LinkStore_development</jdbc-url>
-    </data-source>
     <data-source source="LOCAL" name="PostgreSQL - TestProject_development@localhost" uuid="a0729da2-ee81-4ef9-bd84-c59fa0cf31cc">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/TestProject_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="PostgreSQL - LinkStore_development@localhost" uuid="139abdfb-3758-42b1-904f-307787feafe8">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/LinkStore_development</jdbc-url>
     </data-source>
   </component>
 </project>

@@ -72,6 +72,7 @@ class SalesController < ApplicationController
   def index
     @title = "List"
     @perpage = 20
+    @sale_report = Sale.search(params[:start_date], params[:end_date])
     @sales = Sale.paginate(:page => params[:page], :per_page => @perpage)
     @page = params[:page] || 1
   end

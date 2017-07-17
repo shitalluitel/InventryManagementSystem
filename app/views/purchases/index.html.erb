@@ -4,8 +4,8 @@
     $(".date-form").hide();
     $(".submit-form").hide();
   });
-
 </script>
+
 <div class="purchase">
   <div class="row">
     <div class="col-md-12">
@@ -56,7 +56,7 @@
               </div>
               <div class="form-group submit-form">
                 <%= submit_tag "View Report", :name => nil, :class => "btn btn-default" %>&nbsp;
-                <a href="<%= purchases_report_pdfs_path %>"><i class="fa fa-refresh" style="color: rgba(0, 0, 0, 0.6); font-size: x-large;"></i></a>
+                <a href="<%= purchases_path %>"><i class="fa fa-undo" style="color: rgba(0, 0, 0, 0.6); font-size: x-large;"></i></a>
               </div>
 
           <% end %>
@@ -149,6 +149,7 @@
   </div>
 
 </div>
+
 <script type="text/javascript" charset="utf-8">
   $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
@@ -170,5 +171,5 @@
       $(".submit-form").hide();
       $(".date-form").hide();
     }
-  })
+  });
 </script>

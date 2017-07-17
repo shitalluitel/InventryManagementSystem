@@ -110,15 +110,6 @@
               </li>
 
               <li>
-                <a href="<%=  %>">
-                    <span>
-                      <i class="fa fa-history fa-fw">&nbsp;</i>
-                    </span>
-                  Logs
-                </a>
-              </li>
-
-              <li>
                 <a href="<%= units_path %>">
                     <span>
                       <i class="fa fa-balance-scale fa-fw">&nbsp;</i>
@@ -153,29 +144,20 @@
             <ul class="dropdown-menu">
 
               <li>
-                <a href="<%= purchases_report_pdfs_path %>">
+                <a href="<%= sales_report_pdfs_path %>">
                     <span>
-                      <i class="fa fa-history fa-fw">&nbsp;</i>
-                    </span>
-                  Purchase
-                </a>
-              </li>
-
-              <li>
-                <a href="#">
-                    <span>
-                      <i class="fa fa-history fa-fw">&nbsp;</i>
+                      <i class="fa fa-shopping-cart fa-fw">&nbsp;</i>
                     </span>
                   Sales
                 </a>
               </li>
 
               <li>
-                <a href="#">
+                <a href="<%= purchases_report_pdfs_path %>">
                     <span>
-                      <i class="fa fa-balance-scale fa-fw">&nbsp;</i>
+                      <i class="fa fa-shopping-basket fa-fw">&nbsp;</i>
                     </span>
-                  Items
+                  Purchase
                 </a>
               </li>
             </ul>

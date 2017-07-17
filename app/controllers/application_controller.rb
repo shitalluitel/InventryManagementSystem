@@ -20,5 +20,9 @@ class ApplicationController < ActionController::Base
     @log.description = msg
     @log.save
   end
+  #
+  # def not_found
+  #   raise ActionController::RoutingError.new('Not Found')
+  # end
 
 end
