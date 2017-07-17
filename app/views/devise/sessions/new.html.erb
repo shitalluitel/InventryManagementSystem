@@ -22,7 +22,7 @@
         </div>
         <div class="row">
           <div class="col-md-5 ">
-            <% userphoto = CompanyProfile.first() %>
+            <% userphoto = CompanyProfile.all.first() %>
             <% if userphoto.logo.url.nil? %>
                 <%= image_tag("picture.gif", alt: "profile ficture", class: "profile-picture") %>
             <% else %>
