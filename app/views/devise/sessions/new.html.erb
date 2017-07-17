@@ -22,7 +22,12 @@
         </div>
         <div class="row">
           <div class="col-md-5 ">
-            <%= image_tag CompanyProfile.first().logo.thumb.url, :class => "img img-student img-responsive image-margin pull-right" %>
+            <% userphoto = CompanyProfile.first() %>
+            <% if userphoto.photo.url.nil? %>
+                <%= image_tag("picture.gif", alt: "profile ficture", class: "profile-picture") %>
+            <% else %>
+                <%= image_tag userphoto.logo.thumb.url, :class => "img img-student img-responsive image-margin pull-right" %>
+            <%end %>
           </div>
           <div class="col-md-6 form-login">
             <%= form_for(resource,class: "form-horizontal", as: resource_name, url: session_path(resource_name)) do |f| %>
