@@ -7,7 +7,12 @@ class SalesController < ApplicationController
     @sale = Sale.new
     @sale_item = @sale.sale_items.build
     @item = Item.joins(:stock).where("quantity > ?", 0)
-    @tax = CompanyProfile.first.tax
+    @c_tax = CompanyProfile.all.first()
+    if @c_tax.present?
+      @tax = @c_tax.tax
+    else
+      @tax = 0
+    end
   end
 
   def create
