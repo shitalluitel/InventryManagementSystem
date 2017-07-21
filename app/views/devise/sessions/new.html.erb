@@ -22,14 +22,15 @@
         </div>
         <div class="row">
           <div class="col-md-5 ">
-            <% userphoto = CompanyProfile.all.first() %>
-            <% if userphoto.nil? %>
+            <% userphoto = CompanyProfile.first() %>
+            <% if userphoto.logo.url.nil? %>
+                <h1>Error</h1>
                 <%= image_tag("picture.gif", alt: "profile ficture", class: "profile-picture") %>
             <% else %>
                 <% if userphoto.logo.url.nil? %>
                     <%= image_tag("picture.gif", alt: "profile ficture", class: "profile-picture") %>
                 <% else %>
-                    <%= image_tag userphoto.logo.thumb.url, :class => "img img-student img-responsive image-margin pull-right" %>
+                    <%= image_tag userphoto.logo.thumb.url, :class => "img img-responsive " %>
                 <%end %>
             <% end %>
           </div>
