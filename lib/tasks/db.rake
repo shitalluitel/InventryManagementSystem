@@ -11,7 +11,7 @@ namespace :db do
 
   desc "Create the default vendor"
   task :default_vendor => :environment do
-    Customer.create(customer_name: 'Cash', address: "-", phone_number: '-')
+    Vendor.create(name: 'Cash', address: "-", phone_no: '-')
   end
 
   desc "Create the default company profile"
